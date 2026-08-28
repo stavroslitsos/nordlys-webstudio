@@ -26,6 +26,23 @@ forventer `index.html` der. Annonsematerialet ligger under `annonser/`.
 - Overskriv aldri lokale endringer eller konflikter blindt.
 - Commit aldri passord, tokens, API-nøkler, `.env`-filer eller credentials.
 
+## Fast publiseringsregel for nettsiden
+
+Når en ferdig og kontrollert arbeidsøkt endrer en eller flere offentlige
+nettsidefiler, skal Codex alltid publisere nettsideendringen etter at den private
+hovedversjonen er committet og pushet. Stavros skal ikke måtte be særskilt om
+publisering.
+
+Nettsidefiler er i utgangspunktet `index.html`, `style.css`, `script.js`,
+`images/`, `robots.txt`, `sitemap.xml` og `CNAME`. Bare nødvendige offentlige
+filer skal overføres til det offentlige repositoryet
+`stavroslitsos/sykkelutleie`; `annonser/`, prosjektstatus og privat kontekst skal
+aldri følge med.
+
+Hvis ingen nettsidefiler er endret, skal ingen publisering utføres. Uferdige
+eller ukontrollerte endringer skal heller ikke publiseres. Etter publisering skal
+den levende nettsiden kontrolleres.
+
 ## Prosjektminne
 
 - `README.md`: permanent prosjektbeskrivelse og struktur.

@@ -18,6 +18,13 @@ Sist oppdatert: 2026-08-28
 - Opprettet det private GitHub-repositoryet `stavroslitsos/Work-automation`.
 - Koblet den lokale arbeidskopien til `origin` og pushet første versjon til
   `main`.
+- Flyttet den gamle Dropbox-mappen `Work automation` og lenken
+  `Claude Annonser` til `Claude Code prosjekter/PENDING for DELETE`. Flyttingen
+  er gjenopprettbar; ingenting er permanent slettet.
+- Arkivert identifiserte gamle Codex-oppgaver som pekte til de flyttede
+  Dropbox-elementene.
+- Lagt inn fast regel om at ferdige nettsideendringer alltid skal publiseres,
+  mens økter uten nettsideendringer ikke skal publisere noe.
 
 ## Viktige funn
 
@@ -35,8 +42,10 @@ Sist oppdatert: 2026-08-28
 
 1. Bestemme sikker publiseringsmåte for bare nettsiden til det eksisterende
    offentlige repositoryet.
-2. Klone og teste prosjektet på Mac nummer 2.
-3. Først deretter markere Dropbox-versjonene som arkiv/backup.
+2. Registrere `/Users/stavros/Codex Projects/Work automation` som det aktive
+   prosjektet i Codex-sidepanelet.
+3. Klone og teste prosjektet på Mac nummer 2.
+4. Kontrollere innholdet i `PENDING for DELETE` før eventuell permanent sletting.
 
 Ikke start migreringen av Fiken før dette prosjektet fungerer på begge
 maskinene.
