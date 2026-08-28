@@ -39,9 +39,13 @@ forventer `index.html` der. Annonsematerialet ligger under `annonser/`.
 - Ikke koble eller push dette samlede prosjektet til det offentlige
   `stavroslitsos/sykkelutleie` uten en uttrykkelig og kontrollert
   publiseringsløsning. `annonser/` inneholder privat prosjektkontekst.
-- Kontroller `git status` og hent siste versjon før filer endres.
+- Kontroller `git status` og kjør `git pull --ff-only` før arbeid når
+  arbeidskopien er ren.
 - Inspiser `git diff` før commit.
-- Commit og push relevante, ferdige endringer med en tydelig melding.
+- Commit relevante, ferdige og kontrollerte endringer med en tydelig melding,
+  og push automatisk til GitHub. Stavros skal ikke måtte be særskilt om push.
+- Push aldri uferdig eller ukontrollert arbeid. Etter push skal lokal commit og
+  upstream være identiske og arbeidskopien ren.
 - Overskriv aldri lokale endringer eller konflikter blindt.
 - Commit aldri passord, tokens, API-nøkler, `.env`-filer eller credentials.
 
