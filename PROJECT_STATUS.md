@@ -15,26 +15,28 @@ Sist oppdatert: 2026-08-28
 - Utelatt lokale Claude-innstillinger og store, dupliserte råbildemapper fra
   den samlede kopien.
 - Konsolidert toppnivådokumentasjonen.
+- Opprettet det private GitHub-repositoryet `stavroslitsos/Work-automation`.
+- Koblet den lokale arbeidskopien til `origin` og pushet første versjon til
+  `main`.
 
 ## Viktige funn
 
 - Det offentlige nettsiderepositoryet kan ikke brukes ukritisk til den samlede
   mappen fordi `annonser/` inneholder privat prosjektkontekst og
   personopplysninger.
-- GitHub CLI (`gh`) er ikke installert på denne Mac-en per 2026-08-28.
+- GitHub CLI (`gh`) er ikke installert på denne Mac-en per 2026-08-28. Første
+  repository ble derfor opprettet via den innloggede GitHub-nettsiden; vanlig
+  `git push` fungerer med maskinens eksisterende Git-innlogging.
 - Dropbox-versjonen av nettsiden hadde lokale, ikke-committede endringer. De
   relevante arbeidsfilene er bevart i den nye kopien; de store råbildemappene
   er fortsatt trygt bevart i Dropbox.
 
 ## Neste steg
 
-1. Opprette eller velge et privat GitHub-repository for hele prosjektet.
-2. Bestemme sikker publiseringsmåte for bare nettsiden til det eksisterende
+1. Bestemme sikker publiseringsmåte for bare nettsiden til det eksisterende
    offentlige repositoryet.
-3. Koble denne lokale arbeidskopien til det private repositoryet.
-4. Push første kontrollerte versjon.
-5. Klone og teste prosjektet på Mac nummer 2.
-6. Først deretter markere Dropbox-versjonene som arkiv/backup.
+2. Klone og teste prosjektet på Mac nummer 2.
+3. Først deretter markere Dropbox-versjonene som arkiv/backup.
 
 Ikke start migreringen av Fiken før dette prosjektet fungerer på begge
 maskinene.

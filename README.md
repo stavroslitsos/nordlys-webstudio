@@ -43,10 +43,14 @@ Det eksisterende repositoryet `stavroslitsos/sykkelutleie` er offentlig og
 publiserer nettsiden. Det samlede prosjektet inneholder også privat kontekst og
 skal derfor ikke pushes dit ukritisk.
 
-Før en GitHub-tilkobling opprettes må vi velge og kontrollere en løsning som:
+Det private hovedrepositoryet er:
 
-1. bruker et privat repository som hovedkilde for hele prosjektet, og
-2. publiserer bare nettsidefilene offentlig uten å eksponere `annonser/`.
+`https://github.com/stavroslitsos/Work-automation`
+
+Publiseringsløsningen skal:
+
+1. bruke dette private repositoryet som hovedkilde for hele prosjektet, og
+2. publisere bare nettsidefilene offentlig uten å eksponere `annonser/`.
 
 ## Viktige regler
 
