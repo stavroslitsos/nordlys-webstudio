@@ -9,7 +9,7 @@ Sist oppdatert: 2026-08-28
 - Bekreftet at nettsiden allerede har Git-historikk og et offentlig GitHub-
   repository: `stavroslitsos/sykkelutleie`.
 - Opprettet en ny samlet arbeidskopi utenfor Dropbox i
-  `/Users/stavros/Codex Projects/sykkelutleie-prosjekt`.
+  `/Users/stavros/Codex Projects/Work automation`.
 - Kopiert nettsiden og annonse-/automatiseringsmaterialet uten å endre
   Dropbox-originalene.
 - Utelatt lokale Claude-innstillinger og store, dupliserte råbildemapper fra
