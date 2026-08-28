@@ -2,6 +2,24 @@
 
 Les `README.md` og `PROJECT_STATUS.md` før arbeidet starter.
 
+## Codex-oppgaver på nye maskiner
+
+`.codex/project-tasks.json` er prosjektets autoritative manifest for faste
+Codex-oppgaver. Ved førstegangsoppsett etter kloning skal Codex:
+
+1. registrere repositorymappen som prosjekt i Codex
+2. lese manifestet
+3. kontrollere hvilke oppgaver som allerede finnes under dette prosjektet
+4. opprette hver manglende oppgave med nøyaktig tittel og `initial_prompt` fra
+   manifestet
+5. aldri opprette duplikater eller knytte gamle Dropbox-oppgaver til den nye
+   Git-arbeidskopien
+
+Chatinnhold synkroniseres ikke av Git. Varig kontekst, beslutninger og status
+skal derfor skrives til prosjektfilene. Når brukeren endrer ønsket
+oppgaveinndeling, skal manifestet oppdateres og pushes slik at samme struktur kan
+gjenskapes på andre maskiner.
+
 ## Prosjektets formål
 
 Dette prosjektet samler:

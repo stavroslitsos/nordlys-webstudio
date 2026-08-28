@@ -4,6 +4,12 @@ Sist oppdatert: 2026-08-28
 
 ## Fullført
 
+- Definert en fast, Git-versjonert Codex-oppgaveinndeling i
+  `.codex/project-tasks.json`: `Nettside – bikerentaloslo.no` og
+  `Automatisering Annonser`.
+- Lagt inn idempotente førstegangsregler i `AGENTS.md`, slik at Codex ved
+  kloning på en ny maskin kan opprette manglende oppgaver uten duplikater.
+
 - Kartlagt de tre oppgitte Dropbox-kildene.
 - Bekreftet at `Claude Annonser` er en symbolsk lenke til `Work automation`.
 - Bekreftet at nettsiden allerede har Git-historikk og et offentlig GitHub-

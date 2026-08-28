@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "project_name": "Work-automation",
+  "setup_on_new_machine": true,
+  "tasks": [
+    {
+      "title": "Nettside – bikerentaloslo.no",
+      "purpose": "Utvikling, vedlikehold, publisering og kontroll av den offentlige nettsiden bikerentaloslo.no.",
+      "initial_prompt": "Les AGENTS.md, README.md og PROJECT_STATUS.md før du begynner. Arbeidsområdet for denne oppgaven er nettsiden bikerentaloslo.no. Følg publiseringsreglene i AGENTS.md og oppdater prosjektstatus når viktige beslutninger eller ferdige resultater endrer prosjektets videre arbeid."
+    },
+    {
+      "title": "Automatisering Annonser",
+      "purpose": "Sykkelutleie, annonser og markedsføring samt automatisering for Finn, Facebook og Hygglo.",
+      "initial_prompt": "Les AGENTS.md, README.md, PROJECT_STATUS.md, annonser/AGENTS.md og annonser/README.md før du begynner. Denne oppgaven samler sykkelutleie, annonser og markedsføring samt automatisering for Finn, Facebook og Hygglo. Oppdater prosjektstatus og relevant dokumentasjon når viktige beslutninger eller ferdige resultater endrer prosjektets videre arbeid."
+    }
+  ]
+}

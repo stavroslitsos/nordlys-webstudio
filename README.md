@@ -18,6 +18,8 @@ nye Git-baserte arbeidskopien utenfor Dropbox.
 
 ```text
 sykkelutleie-prosjekt/
+├── .codex/
+│   └── project-tasks.json
 ├── README.md
 ├── AGENTS.md
 ├── CLAUDE.md
@@ -32,6 +34,19 @@ sykkelutleie-prosjekt/
     ├── facebook-sykkelutleie-markedsforing.md
     └── arbeidsfiler og bilder
 ```
+
+## Fast oppgaveinndeling i Codex
+
+Prosjektet skal ha to faste Codex-oppgaver:
+
+1. `Nettside – bikerentaloslo.no`
+2. `Automatisering Annonser` – samler sykkelutleie, annonser og markedsføring
+   samt automatisering for Finn, Facebook og Hygglo
+
+Den maskinlesbare definisjonen ligger i `.codex/project-tasks.json`. Ved
+førstegangsoppsett på en ny maskin leser Codex manifestet og oppretter bare
+oppgaver som mangler. Git synkroniserer manifestet og prosjektkonteksten, men
+ikke selve samtalehistorikken.
 
 Nettsiden beholdes på toppnivå for å være kompatibel med eksisterende GitHub
 Pages-oppsett. Når flere sykler kommer til, oppdateres nettsidedata, bilder,
