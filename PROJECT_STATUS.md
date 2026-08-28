@@ -4,6 +4,11 @@ Sist oppdatert: 2026-08-28
 
 ## Fullført
 
+- Slått sammen den varige konteksten fra de eldre Dropbox-baserte oppgavene
+  `CV og Søknader` og `Driftstilskudd – Søk` i
+  `cv-og-soknader/README.md`.
+- Lagt `CV og Søknader` til som tredje fast oppgave i
+  `.codex/project-tasks.json`.
 - Definert en fast, Git-versjonert Codex-oppgaveinndeling i
   `.codex/project-tasks.json`: `Nettside – bikerentaloslo.no` og
   `Automatisering Annonser`.

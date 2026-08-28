@@ -28,6 +28,7 @@ Dette prosjektet samler:
 - informasjon om syklene
 - annonser og markedsføring
 - automatisering knyttet til Finn, Facebook og Hygglo
+- CV, kompetanseprofil, jobbsøk, søknader og driftstilskudd
 
 Nettsiden ligger på toppnivå fordi den eksisterende GitHub Pages-publiseringen
 forventer `index.html` der. Annonsematerialet ligger under `annonser/`.
@@ -66,6 +67,8 @@ den levende nettsiden kontrolleres.
 - `README.md`: permanent prosjektbeskrivelse og struktur.
 - `PROJECT_STATUS.md`: status, åpne punkter og neste steg.
 - `annonser/README.md`: detaljert arbeidsflyt og historikk for annonser.
+- `cv-og-soknader/README.md`: arbeidsflyt og sammenslått kontekst for CV,
+  jobbsøk, søknader og driftstilskudd.
 - `CLAUDE.md`: kompatibilitetsfil for Claude; den skal ikke være en separat
   konkurrerende statuskilde.
 
