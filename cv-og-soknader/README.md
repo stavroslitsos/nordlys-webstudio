@@ -46,8 +46,21 @@ Profilen omfatter blant annet:
   farmakologi
 - klinisk erfaring, undervisning og studentveiledning
 - forskning, publikasjoner og konferansebidrag
-- pågående spesialistløp i idrettsmedisin; dette skal ikke omtales som fullført
-  spesialistgodkjenning før det er dokumentert
+- pågående spesialistløp i idrettsmedisin gjennom Norsk
+  Manuellterapeutforening (NMF); dette skal ikke omtales som fullført
+  spesialistgodkjenning før seminaret er gjennomført og godkjenningen er
+  dokumentert
+
+### Spesialistløp i idrettsmedisin
+
+- `FULLFØRT` – **Henvisning til spesialist**, 60 timer, fullført 22. august
+  2026. Kursbevis utstedt av Norsk Manuellterapeutforening, sertifikatnummer
+  192155792.
+- `PENDING` – **Seminar i idrettsmedisin**, planlagt 16. oktober 2026.
+- Forventet resultat etter fullført seminar og dokumentert godkjenning:
+  **Spesialist i idrettsmedisin, MNMF**. Tittelen skal ikke føres som oppnådd i
+  CV eller søknader før gjennomføring og eventuell formell godkjenning er
+  dokumentert.
 
 Den strukturerte Dropbox-profilen utelater unødvendige identifikatorer og
 pasientopplysninger. Slike opplysninger skal heller ikke legges inn i Git.
@@ -80,8 +93,11 @@ oppgaven krever det og gjeldende sikkerhetsregler tillater det.
   2025 og skal ikke behandles som aktiv uten ny kontroll.
 - Kompetanseprofilen ble utvidet med farmakologi og ultralyd som relevant faglig
   bredde.
-- Kurset `Henvisning til spesialist`, 60 timer, fullført 22. august 2026, ble
-  registrert som del av et pågående spesialistløp i idrettsmedisin.
+- Kurset `Henvisning til spesialist`, 60 timer, fullført 22. august 2026, er
+  dokumentert med kursbevis fra Norsk Manuellterapeutforening. Seminar i
+  idrettsmedisin 16. oktober 2026 er registrert som `PENDING`; forventet
+  spesialisttittel skal ikke oppgis som oppnådd før fullføring og dokumentert
+  godkjenning.
 - Det ble gjort prøvesøk etter fysioterapi-, manuellterapi- og
   driftstilskuddsstillinger. Alle tidligere treff er historikk og må verifiseres
   på nytt før bruk.
