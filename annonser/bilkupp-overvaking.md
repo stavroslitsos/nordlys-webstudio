@@ -145,16 +145,21 @@ kopiere inn alle normalprisede biler.
 
 ## Prioritert kontaktkø
 
-Ingen henvendelser er sendt i denne kartleggingsfasen.
+Innbytteforespørsel ble sendt 2026-09-04 til de fem prioriterte annonsene.
+Meldingen oppgir Mercedes C250 Coupé 2017 (W205/C205), reg.nr. UR98251, VIN
+WDD2053451F616163 og oppgraderingene. FINNs førstegangsskjema avviste ekstern
+Dropbox-URL, så meldingen sier at komplett bildemappe og video kan sendes straks.
+Delingslenken er klar for ettersending:
+[bilder og video i Dropbox](https://www.dropbox.com/scl/fo/gsxsy6qcvribw59muzphm/AIpH4R0sdcVT00IVzsM2lFI?rlkey=patcgr95wsct609o8yak72wcs&dl=0).
 
-| Prioritet | Bil | Hvorfor interessant | Må kontrolleres før bud |
+| Prioritet | Bil | Status | Må kontrolleres før kjøp |
 |---:|---|---|---|
-| 1 | [Panamera 2014, 299 999 kr](https://www.finn.no/mobility/item/472827369) | Laveste Panamera som består km-filteret | Hybridstatus, service og skader |
-| 2 | [S63 2007 Oslo, 389 000 kr](https://www.finn.no/mobility/item/475469420) | Laveste S63 og nylig satt ned 30 000 kr | Alder, M156-motor, luftfjæring, historikk og stylingendringer |
-| 3 | [S63 2014 Oslo, 648 000 kr](https://www.finn.no/mobility/item/474576984) | Laveste dokumenterte W222 og lokal | M157-motor, 4MATIC, luftfjæring, historikk og skader |
-| 4 | [C43 2016, 489 900 kr](https://www.finn.no/mobility/item/474778474) | Laveste sikre C43 i tabellen | Historikk, skader, garanti og faktisk totalpris |
-| 5 | [C43 2018 Oslo, 498 000 kr](https://www.finn.no/mobility/item/472233996) | Lokal og blant de billigste | Historikk, skader, garanti og innbyttemulighet |
-| 6 | [C43/C450 2016, 500 000 kr](https://www.finn.no/mobility/item/469420477) | Lav pris | Bekreft modell/typegodkjenning før kontakt |
+| 1 | [Panamera 2014, 299 999 kr](https://www.finn.no/mobility/item/472827369) | Forespørsel sendt 2026-09-04 | Hybridstatus, service og skader |
+| 2 | [S63 2007 Oslo, 389 000 kr](https://www.finn.no/mobility/item/475469420) | Forespørsel sendt 2026-09-04 | Alder, M156-motor, luftfjæring, historikk og stylingendringer |
+| 3 | [S63 2014 Oslo, 648 000 kr](https://www.finn.no/mobility/item/474576984) | Forespørsel sendt 2026-09-04 | M157-motor, 4MATIC, luftfjæring, historikk og skader |
+| 4 | [C43 2016, 489 900 kr](https://www.finn.no/mobility/item/474778474) | Forespørsel sendt 2026-09-04 | Historikk, skader, garanti og faktisk totalpris |
+| 5 | [C43 2018 Oslo, 498 000 kr](https://www.finn.no/mobility/item/472233996) | Forespørsel sendt 2026-09-04 | Historikk, skader, garanti og innbyttemulighet |
+| 6 | [C43/C450 2016, 500 000 kr](https://www.finn.no/mobility/item/469420477) | Ikke kontaktet; modell må avklares | Bekreft modell/typegodkjenning før kontakt |
 
 ## Fast arbeidsflyt
 

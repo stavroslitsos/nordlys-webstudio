@@ -271,6 +271,17 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 
 **Sist oppdatert: 2026-09-04**
 
+- 2026-09-04: Opprettet en delbar Dropbox-lenke til de 50 bilbildene og én
+  video i mappen `Forespørsel innbytte`. Sendte bekreftet innbytteforespørsel
+  via FINN til fem prioriterte biler: Panamera 472827369, S63 475469420 og
+  474576984, samt C43 474778474 og 472233996. Meldingen oppgir Mercedes C250
+  Coupé 2017, reg.nr. UR98251, VIN WDD2053451F616163, sjelden utgave og
+  oppgraderingene svart panserstripe, bakspoiler, AMG-diffuser, sidevinger,
+  røde bremsekalipere og Panamericana-grill. Den forklarer at bildene med svart
+  panserstripe er de nyeste. FINNs førstegangsskjema avviste ekstern URL;
+  meldingen sier derfor at komplett bildemappe/video kan sendes straks, og
+  Dropbox-lenken ligger klar i `bilkupp-overvaking.md` for ettersending.
+
 - 2026-09-04: Stavros avklarte at «S43» betyr **Mercedes-AMG S63**, og satte
   en fast øvre grense på **150 000 km** for alle bilkandidater. Oversikten ble
   ryddet for biler over grensen, og 15 kontrollerte S63-annonser på FINN ble
