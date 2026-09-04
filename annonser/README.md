@@ -271,6 +271,14 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 
 **Sist oppdatert: 2026-09-04**
 
+- 2026-09-04: Stavros avklarte at «S43» betyr **Mercedes-AMG S63**, og satte
+  en fast øvre grense på **150 000 km** for alle bilkandidater. Oversikten ble
+  ryddet for biler over grensen, og 15 kontrollerte S63-annonser på FINN ble
+  lagt inn. AutoDB, Car4Sale, Porsche Finder Norge, Kulbruk, TASS og Motorstat
+  ble lagt til i kilderegisteret. Drive-søket viste hovedsakelig nyere biler og
+  én S63 som dupliserte FINN-annonsen, men med ulik pris. Kontaktkøen ble
+  rangert på nytt. Ingen forespørsler er sendt.
+
 - 2026-09-04: Opprettet den varige oversikten
   [`bilkupp-overvaking.md`](bilkupp-overvaking.md) for Mercedes-AMG C43,
   Mercedes «S43» (må avklares), Porsche 911 fra 2014 og Porsche Panamera fra
