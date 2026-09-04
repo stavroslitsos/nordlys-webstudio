@@ -153,6 +153,8 @@ En ulistet presentasjonsside er opprettet for ettersending:
 [bilder, video og bilpresentasjon](https://bikerentaloslo.no/bil/ur98251/).
 Siden er ikke lenket fra sykkelutleien og ber søkemotorer om å ikke indeksere
 den, men alle som får adressen kan åpne den.
+Denne nettadressen skal brukes som fast bildevedlegg i nye innbytteforespørsler
+for UR98251, og ettersendes i eksisterende dialoger når FINN tillater lenker.
 
 | Prioritet | Bil | Status | Må kontrolleres før kjøp |
 |---:|---|---|---|

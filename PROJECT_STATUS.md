@@ -12,6 +12,11 @@ Sist oppdatert: 2026-09-04
 - Opprettet en ulistet, søkemotorblokkert presentasjonsside for innbyttebilen
   Mercedes C250 Coupé 2017 (UR98251), med 50 bilder, video og oversikt over
   oppgraderinger. Offentlig adresse: `https://bikerentaloslo.no/bil/ur98251/`.
+- Samlet prosjektoversikt, sykkelnettside, bilpresentasjonssider og
+  annonseautomatisering i én fast Codex-oppgave:
+  `Automatisering Annonser: +bikerental,BilSite`. De overlappende oppgavene
+  `Work – Prosjektoversikt og status` og `Nettside – bikerentaloslo.no` er
+  arkivert, og manifestet er redusert fra tre til to faste oppgaver.
 - Slått sammen den varige konteksten fra de eldre Dropbox-baserte oppgavene
   `CV og Søknader` og `Driftstilskudd – Søk` i
   `cv-og-soknader/README.md`.

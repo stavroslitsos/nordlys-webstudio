@@ -39,12 +39,12 @@ sykkelutleie-prosjekt/
 
 ## Fast oppgaveinndeling i Codex
 
-Prosjektet skal ha tre faste Codex-oppgaver:
+Prosjektet skal ha to faste Codex-oppgaver:
 
-1. `Nettside – bikerentaloslo.no`
-2. `Automatisering Annonser` – samler sykkelutleie, annonser og markedsføring
-   samt automatisering for Finn, Facebook og Hygglo
-3. `CV og Søknader` – samler kompetanseprofil, jobbsøk, driftstilskudd og
+1. `Automatisering Annonser: +bikerental,BilSite` – samler prosjektoversikt,
+   bikerentaloslo.no, bilpresentasjonssider, sykkelutleie, annonser og
+   markedsføring samt automatisering for Finn, Facebook og Hygglo
+2. `CV og Søknader` – samler kompetanseprofil, jobbsøk, driftstilskudd og
    målrettede søknader
 
 Den maskinlesbare definisjonen ligger i `.codex/project-tasks.json`. Ved
