@@ -269,7 +269,16 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > Oppdater denne seksjonen på slutten av hver økt, uansett hvilken maskin som
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
-**Sist oppdatert: 2026-08-26**
+**Sist oppdatert: 2026-09-04**
+
+- 2026-09-04: Søkte gjennom alle **51 treff** på Finn for «SafeDrive Pro» og
+  sendte direkte melding til **46 relevante selgere**. Til de **7 annonsene i
+  Oslo** ble følgende sendt: «Hei, jeg kan kjøre innom i dag og kjøpe den for
+  350kr. på forhånd takk.» Til de **39 annonsene utenfor Oslo** ble følgende
+  sendt: «Hei, jeg kan kjøpe den for 350kr og dekker frakt. På forhånd takk.»
+  Alle 46 samtaler viste meldingen som sendt. Fem irrelevante søketreff ble
+  utelatt: MC-etui, Tesla-feste, tilbehørspakke og to bilkameraer. Avventer svar
+  fra selgerne.
 
 - 2026-08-26: Egen arbeidsoppgave for **Facebook-grupper** er lest inn og gjort
   klar. Gjennomgått aktive produkter, tidligere Facebook-innlegg, kjente
