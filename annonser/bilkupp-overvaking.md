@@ -149,8 +149,10 @@ Innbytteforespørsel ble sendt 2026-09-04 til de fem prioriterte annonsene.
 Meldingen oppgir Mercedes C250 Coupé 2017 (W205/C205), reg.nr. UR98251, VIN
 WDD2053451F616163 og oppgraderingene. FINNs førstegangsskjema avviste ekstern
 Dropbox-URL, så meldingen sier at komplett bildemappe og video kan sendes straks.
-Delingslenken er klar for ettersending:
-[bilder og video i Dropbox](https://www.dropbox.com/scl/fo/gsxsy6qcvribw59muzphm/AIpH4R0sdcVT00IVzsM2lFI?rlkey=patcgr95wsct609o8yak72wcs&dl=0).
+En ulistet presentasjonsside er opprettet for ettersending:
+[bilder, video og bilpresentasjon](https://bikerentaloslo.no/bil/ur98251/).
+Siden er ikke lenket fra sykkelutleien og ber søkemotorer om å ikke indeksere
+den, men alle som får adressen kan åpne den.
 
 | Prioritet | Bil | Status | Må kontrolleres før kjøp |
 |---:|---|---|---|

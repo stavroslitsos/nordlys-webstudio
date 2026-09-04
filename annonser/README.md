@@ -495,6 +495,14 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 - Stavros har allerede flere Hygglo-utleieannonser (bl.a. Abilica vektvest,
   Kayoba romaskin, to sykler, Mercedes AMG, Dr Pen microneedling).
 
+### Innbyttebil – offentlig presentasjon
+
+- 2026-09-04: Opprettet en ulistet presentasjonsside for Mercedes C250 Coupé
+  2017, UR98251, med 50 bilder, video, VIN og synlige oppgraderinger.
+  Adresse: `https://bikerentaloslo.no/bil/ur98251/`. Siden er merket `noindex`
+  og er ikke lenket fra resten av nettstedet, men er offentlig for mottakere
+  som har adressen.
+
 ### Gjenstår / mulige neste steg
 - Evt. Facebook for RAM Mounts (norsk MC-/sykkelgruppe) og vektvest.
 

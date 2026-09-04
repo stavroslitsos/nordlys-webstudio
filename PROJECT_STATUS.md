@@ -9,6 +9,9 @@ Sist oppdatert: 2026-09-04
   Porsche 911 fra 2014 og Porsche Panamera fra 2014. Kandidater over 150 000 km
   er ekskludert. Innbytteforespørsel er sendt til de fem høyest prioriterte
   kandidatene; bildelenke og kontaktstatus er dokumentert i oversikten.
+- Opprettet en ulistet, søkemotorblokkert presentasjonsside for innbyttebilen
+  Mercedes C250 Coupé 2017 (UR98251), med 50 bilder, video og oversikt over
+  oppgraderinger. Offentlig adresse: `https://bikerentaloslo.no/bil/ur98251/`.
 - Slått sammen den varige konteksten fra de eldre Dropbox-baserte oppgavene
   `CV og Søknader` og `Driftstilskudd – Søk` i
   `cv-og-soknader/README.md`.
@@ -59,10 +62,8 @@ Sist oppdatert: 2026-09-04
 
 ## Neste steg
 
-1. Bestemme sikker publiseringsmåte for bare nettsiden til det eksisterende
-   offentlige repositoryet.
-2. Klone og teste prosjektet på Mac nummer 2.
-3. Kontrollere innholdet i `PENDING for DELETE` før eventuell permanent sletting.
+1. Klone og teste prosjektet på Mac nummer 2.
+2. Kontrollere innholdet i `PENDING for DELETE` før eventuell permanent sletting.
 
 Ikke start migreringen av Fiken før dette prosjektet fungerer på begge
 maskinene.
