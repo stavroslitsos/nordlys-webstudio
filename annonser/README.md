@@ -271,6 +271,15 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 
 **Sist oppdatert: 2026-09-04**
 
+- 2026-09-04: Opprettet den varige oversikten
+  [`bilkupp-overvaking.md`](bilkupp-overvaking.md) for Mercedes-AMG C43,
+  Mercedes «S43» (må avklares), Porsche 911 fra 2014 og Porsche Panamera fra
+  2014. Registeret dekker FINN, Auksjonen, Retrade, iAuto, Bilbutikk, Drive,
+  Facebook Marketplace/grupper, Nettbil, Bruktdel og Delebil. Første
+  markedsgjennomgang og prioritert kontaktkø er lagt inn. FINN hadde de relevante
+  aktive treffene; ingen målmodeller ble funnet hos Auksjonen eller Retrade i
+  første søk. Ingen bilselgere er kontaktet ennå.
+
 - 2026-09-04: Søkte gjennom alle **51 treff** på Finn for «SafeDrive Pro» og
   sendte direkte melding til **46 relevante selgere**. Til de **7 annonsene i
   Oslo** ble følgende sendt: «Hei, jeg kan kjøre innom i dag og kjøpe den for

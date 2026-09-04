@@ -1,9 +1,13 @@
 # Prosjektstatus
 
-Sist oppdatert: 2026-08-28
+Sist oppdatert: 2026-09-04
 
 ## Fullført
 
+- Opprettet et varig kilderegister og en første markedsoversikt for bilkupp i
+  `annonser/bilkupp-overvaking.md`, med søk etter Mercedes-AMG C43, Mercedes
+  «S43» (uavklart modell), Porsche 911 fra 2014 og Porsche Panamera fra 2014.
+  Ingen bilselgere ble kontaktet i kartleggingsfasen.
 - Slått sammen den varige konteksten fra de eldre Dropbox-baserte oppgavene
   `CV og Søknader` og `Driftstilskudd – Søk` i
   `cv-og-soknader/README.md`.
