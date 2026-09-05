@@ -76,9 +76,9 @@ primærdokumentasjon når juridisk presisjon er nødvendig:
 
 ## Kobling til driftstilskuddssøk
 
-Den planlagte ChatGPT-oppgaven `Ukentlig søk etter driftstilskudd` er etablert
+Den planlagte ChatGPT-oppgaven `Søk etter driftstilskudd annenhver uke` er etablert
 for å finne aktive kommunale driftstilskudd, driftsavtaler, refusjonsavtaler og
-relevante fysioterapi- og manuellterapistillinger. Søket er planlagt ukentlig
+relevante fysioterapi- og manuellterapistillinger. Søket er planlagt annenhver
 mandag morgen i tidssonen `Europe/Oslo`.
 
 Resultatene skal:
