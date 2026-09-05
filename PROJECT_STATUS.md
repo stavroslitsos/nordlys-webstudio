@@ -5,7 +5,7 @@ Sist oppdatert: 2026-09-05
 ## Fullført
 
 - Opprettet en ulistet, søkemotorblokkert presentasjonsside for Mercedes-AMG
-  C43 Coupé 2017 (DR18433), med 25 bilder, video, ytelsestall, utstyr,
+  C43 Coupé 2017 (DR18433), med 35 bilder, to videoer, ytelsestall, utstyr,
   oppgraderinger, nedlastbar QR-kode og metadata for thumbnail/forhåndsvisning
   når lenken deles i chat. Offentlig adresse:
   `https://bikerentaloslo.no/messel-c43/`.
