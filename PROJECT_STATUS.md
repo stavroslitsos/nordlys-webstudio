@@ -4,6 +4,10 @@ Sist oppdatert: 2026-09-05
 
 ## Fullført
 
+- Opprettet en ulistet, søkemotorblokkert presentasjonsside for Mercedes-AMG
+  C43 Coupé 2017 (DR18433), med 25 bilder, video, ytelsestall, utstyr,
+  oppgraderinger og nedlastbar QR-kode. Offentlig adresse:
+  `https://bikerentaloslo.no/bil/dr18433/`.
 - Fast regel avklart for nye innbytteforespørsler om Mercedes C250 UR98251:
   bruk bilpresentasjonen `https://bikerentaloslo.no/bil/ur98251/` som
   bildevedlegg. Den erstatter Dropbox-lenken og kravet om tre lokale bilder i

@@ -28,6 +28,9 @@ sykkelutleie-prosjekt/
 ├── style.css
 ├── script.js
 ├── images/
+├── bil/
+│   ├── ur98251/
+│   └── dr18433/
 ├── annonser/
     ├── README.md
     ├── AGENTS.md
@@ -55,6 +58,10 @@ ikke selve samtalehistorikken.
 Nettsiden beholdes på toppnivå for å være kompatibel med eksisterende GitHub
 Pages-oppsett. Når flere sykler kommer til, oppdateres nettsidedata, bilder,
 annonser og status samlet i dette prosjektet.
+
+Ulistede bilpresentasjoner ligger under `bil/<registreringsnummer>/`. De er
+offentlig tilgjengelige for mottakere som har adressen, men er merket `noindex`
+og lenkes ikke fra nettstedets ordinære sider.
 
 ## GitHub og publisering
 
