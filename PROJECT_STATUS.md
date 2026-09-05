@@ -6,7 +6,7 @@ Sist oppdatert: 2026-09-05
 
 - Opprettet en Git-basert rådgiversti for `Nesbru Klinikken Rådgiver` i
   `nesbru-klinikken-radgiver/README.md`, koblet til kompetanseprofilen,
-  `CV og Søknader` og den ukentlige planlagte oppgaven for driftstilskuddssøk.
+  `CV og Søknader` og den planlagte oppgaven for driftstilskuddssøk annenhver uke.
   Lagt rådgiveroppgaven inn i `.codex/project-tasks.json`, slik at den kan
   gjenopprettes uten duplikater på andre maskiner.
 - Etablert `cv-og-soknader/kompetanseprofil/INDEX.md` som autoritativ Git-sti
