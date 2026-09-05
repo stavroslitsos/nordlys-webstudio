@@ -1,9 +1,13 @@
 # Prosjektstatus
 
-Sist oppdatert: 2026-09-04
+Sist oppdatert: 2026-09-05
 
 ## Fullført
 
+- Fast regel avklart for nye innbytteforespørsler om Mercedes C250 UR98251:
+  bruk bilpresentasjonen `https://bikerentaloslo.no/bil/ur98251/` som
+  bildevedlegg. Den erstatter Dropbox-lenken og kravet om tre lokale bilder i
+  nye forespørsler.
 - Opprettet et varig kilderegister og en første markedsoversikt for bilkupp i
   `annonser/bilkupp-overvaking.md`, med søk etter Mercedes-AMG C43 og S63,
   Porsche 911 fra 2014 og Porsche Panamera fra 2014. Kandidater over 150 000 km

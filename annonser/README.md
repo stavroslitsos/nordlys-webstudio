@@ -103,11 +103,10 @@ Detaljer om innbyttebilen (til gjenbruk/oppdatering):
 - Ønsket pris ved salg: **350 000 kr**
 - Topp stand, nye vinter- og sommerdekk, pene felger, røde kalipere, original
   farge (ingen folie), alltid innendørs parkert, børsteløs vasket ~1×/uke.
-- **Faste vedlegg til hvert innbytteforslag:**
-  `Bilde 07.02.2026, 20 37 11`, `Bilde 07.02.2026, 20 43 31 (1)` og
-  `Bilde 07.02.2026, 20 43 31` (bruk filene med riktig filendelse når de er
-  tilgjengelige i prosjektmappen). Bildene lastes opp som vedlegg i FINN-
-  meldingen, ikke som Dropbox-lenke.
+- **Fast bildevedlegg til nye innbytteforespørsler:**
+  `https://bikerentaloslo.no/bil/ur98251/`. Presentasjonssiden viser 50 bilder,
+  video og oppgraderinger for bilen og skal legges ved nye forespørsler i stedet
+  for Dropbox-lenken og de tre tidligere lokale bildene.
 
 ---
 
@@ -197,15 +196,16 @@ at Stavros forklarer på nytt.
 11. **Fortløpende annonser og «FIREFOX»:** Annonser og meldinger håndteres
     fortløpende når Stavros ber om det. Skriver Stavros **FIREFOX**, betyr det
     at agenten skal fjernstyre Firefox og behandle de aktuelle åpne fanene.
-12. **Ingen eksterne lenker i Finn-meldinger.** Dropbox-lenken til Mercedes-
-    bildene skal aldri legges inn i Finns kontaktskjema; den gjør at skjemaet
-    avvises. Skriv i stedet «Bilder kan sendes ved interesse», og send lenken
-    først senere dersom selgeren ber om den.
+12. **Bruk den faste bilpresentasjonen, ikke Dropbox.** Ved nye
+    innbytteforespørsler for Mercedes C250 UR98251 skal
+    `https://bikerentaloslo.no/bil/ur98251/` brukes som bildevedlegg. Ikke bruk
+    den gamle Dropbox-lenken.
 13. **Lim inn ferdig tekst.** Utarbeid meldingen først og lim hele teksten inn
     i feltet i én operasjon. Ikke tast den bokstav for bokstav; det er tregere
     og unødvendig.
-14. **Bilder ved innbytte:** Legg alltid ved de tre faste Mercedes-bildene som
-    filer i Finn-meldingen. Ikke bruk Dropbox-lenke.
+14. **Bilder ved innbytte:** Bilpresentasjonen for UR98251 er fast
+    bildevedlegg ved nye forespørsler. De tre lokale Mercedes-bildene er ikke
+    lenger obligatoriske ved nye forespørsler.
 
 ---
 
@@ -269,7 +269,12 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > Oppdater denne seksjonen på slutten av hver økt, uansett hvilken maskin som
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
-**Sist oppdatert: 2026-09-04**
+**Sist oppdatert: 2026-09-05**
+
+- 2026-09-05: Ny fast føring for Mercedes C250 UR98251: bruk
+  `https://bikerentaloslo.no/bil/ur98251/` som bildevedlegg i alle nye
+  innbytteforespørsler. Presentasjonen erstatter Dropbox-lenken og kravet om de
+  tre lokale bilbildene for nye henvendelser.
 
 - 2026-09-04: Opprettet en delbar Dropbox-lenke til de 50 bilbildene og én
   video i mappen `Forespørsel innbytte`. Sendte bekreftet innbytteforespørsel
