@@ -29,8 +29,8 @@ sykkelutleie-prosjekt/
 ├── script.js
 ├── images/
 ├── bil/
-│   ├── ur98251/
-│   └── dr18433/
+│   └── ur98251/
+├── messel-c43/
 ├── annonser/
     ├── README.md
     ├── AGENTS.md
@@ -59,9 +59,10 @@ Nettsiden beholdes på toppnivå for å være kompatibel med eksisterende GitHub
 Pages-oppsett. Når flere sykler kommer til, oppdateres nettsidedata, bilder,
 annonser og status samlet i dette prosjektet.
 
-Ulistede bilpresentasjoner ligger under `bil/<registreringsnummer>/`. De er
-offentlig tilgjengelige for mottakere som har adressen, men er merket `noindex`
-og lenkes ikke fra nettstedets ordinære sider.
+Ulistede bilpresentasjoner kan ligge under `bil/<registreringsnummer>/` eller
+en avtalt kortadresse som `messel-c43/`. De er offentlig tilgjengelige for
+mottakere som har adressen, men er merket `noindex` og lenkes ikke fra
+nettstedets ordinære sider.
 
 ## GitHub og publisering
 
