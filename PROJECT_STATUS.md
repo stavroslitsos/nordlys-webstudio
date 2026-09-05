@@ -4,6 +4,17 @@ Sist oppdatert: 2026-09-05
 
 ## Fullført
 
+- Opprettet en Git-basert rådgiversti for `Nesbru Klinikken Rådgiver` i
+  `nesbru-klinikken-radgiver/README.md`, koblet til kompetanseprofilen,
+  `CV og Søknader` og den ukentlige planlagte oppgaven for driftstilskuddssøk.
+  Lagt rådgiveroppgaven inn i `.codex/project-tasks.json`, slik at den kan
+  gjenopprettes uten duplikater på andre maskiner.
+- Etablert `cv-og-soknader/kompetanseprofil/INDEX.md` som autoritativ Git-sti
+  for kompetanseprofilen. Den inneholder foreløpig bare dokumentert
+  grunninformasjon fra eksisterende Git-kontekst og skal utvides med
+  kildeverifiserte opplysninger. Dropbox skal ikke brukes som aktiv kilde i
+  denne arbeidsflyten.
+
 - Opprettet en ulistet, søkemotorblokkert presentasjonsside for Mercedes-AMG
   C43 Coupé 2017 (DR18433), med 35 bilder, to videoer, ytelsestall, utstyr,
   oppgraderinger, nedlastbar QR-kode og metadata for thumbnail/forhåndsvisning

@@ -1,4 +1,4 @@
-# AGENTS.md – Sykkelutleie og annonser
+# AGENTS.md – Work-automation
 
 Les `README.md` og `PROJECT_STATUS.md` før arbeidet starter.
 
@@ -29,6 +29,7 @@ Dette prosjektet samler:
 - annonser og markedsføring
 - automatisering knyttet til Finn, Facebook og Hygglo
 - CV, kompetanseprofil, jobbsøk, søknader og driftstilskudd
+- strategisk, administrativ og juridisk orientert rådgiverkontekst for Nesbru Klinikken
 
 Nettsiden ligger på toppnivå fordi den eksisterende GitHub Pages-publiseringen
 forventer `index.html` der. Annonsematerialet ligger under `annonser/`.
@@ -73,6 +74,10 @@ den levende nettsiden kontrolleres.
 - `annonser/README.md`: detaljert arbeidsflyt og historikk for annonser.
 - `cv-og-soknader/README.md`: arbeidsflyt og sammenslått kontekst for CV,
   jobbsøk, søknader og driftstilskudd.
+- `cv-og-soknader/kompetanseprofil/INDEX.md`: Git-basert kompetanseprofil og
+  dokumentasjonsstatus.
+- `nesbru-klinikken-radgiver/README.md`: varig rådgiverkontekst, beslutningsregler
+  og kobling til kompetanseprofil og driftstilskuddssøk.
 - `CLAUDE.md`: kompatibilitetsfil for Claude; den skal ikke være en separat
   konkurrerende statuskilde.
 

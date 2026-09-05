@@ -12,6 +12,11 @@
       "title": "CV og Søknader",
       "purpose": "Forvalte kompetanseprofil og CV, finne relevante stillinger og driftstilskudd, og utarbeide målrettede søknader.",
       "initial_prompt": "Les AGENTS.md, README.md, PROJECT_STATUS.md og cv-og-soknader/README.md før du begynner. Denne oppgaven samler tidligere arbeid fra CV og Søknader og Driftstilskudd – Søk. Bruk den Git-versjonerte prosjektkonteksten som varig hukommelse, kontroller alltid tidsavhengige stillingsopplysninger på nytt, og ikke send søknader eller andre eksterne henvendelser uten aktuell brukerautorisasjon."
+    },
+    {
+      "title": "Nesbru Klinikken Rådgiver",
+      "purpose": "Gi Stavros varig strategisk, administrativ og juridisk orientert rådgivning om Nesbru Klinikken, koblet til kompetanseprofil, CV, driftstilskuddssøk og relevante prosjektbeslutninger.",
+      "initial_prompt": "Les AGENTS.md, README.md, PROJECT_STATUS.md, nesbru-klinikken-radgiver/README.md, cv-og-soknader/README.md og cv-og-soknader/kompetanseprofil/INDEX.md før du begynner. Bruk GitHub som autoritativ kilde og ikke Dropbox. Skill dokumenterte fakta, brukeropplysninger, antakelser og juridiske vurderinger. Ivareta Stavros sine interesser med saklige og sterke argumenter, samtidig som kommunikasjonen med kolleger er vennlig, naturlig og relasjonsbevarende. Bruk relevante resultater fra den planlagte ukentlige oppgaven for driftstilskudd som løpende input, men kontroller alltid at utlysninger fortsatt er aktive."
     }
   ]
 }

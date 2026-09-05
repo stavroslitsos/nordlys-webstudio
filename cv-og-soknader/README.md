@@ -32,10 +32,14 @@ Dette arbeidsområdet samler de tidligere Codex-oppgavene `CV og Søknader` og
 
 ## Kompetansegrunnlag
 
-Den detaljerte kompetanseprofilen ble bygget fra dokumenter i Dropbox og ligger
-foreløpig her på maskiner hvor Dropbox er tilgjengelig:
+GitHub er autoritativ kilde for denne arbeidsflyten. Den strukturerte
+kompetanseprofilen skal ligge her:
 
-`Dropbox/0. PRINTE UT/3.Attester Jobb-Utdannelse/Kompetanseprofil/INDEX.md`
+`cv-og-soknader/kompetanseprofil/INDEX.md`
+
+Filen inneholder nå et kontrollert Git-basert grunnlag og skal utvides etter
+hvert som dokumenterte opplysninger migreres eller legges til. Dropbox skal
+ikke brukes som aktiv kilde for ChatGPT-/Codex-prosjektene.
 
 Profilen omfatter blant annet:
 
@@ -62,11 +66,19 @@ Profilen omfatter blant annet:
   CV eller søknader før gjennomføring og eventuell formell godkjenning er
   dokumentert.
 
-Den strukturerte Dropbox-profilen utelater unødvendige identifikatorer og
-pasientopplysninger. Slike opplysninger skal heller ikke legges inn i Git.
-Hvis Dropbox-kilden ikke finnes på en ny maskin, skal Codex bruke denne
-Git-konteksten som startpunkt og be om eller finne dokumentasjon før mer
-detaljerte påstander brukes.
+Kompetanseprofilen skal utelate unødvendige identifikatorer og
+pasientopplysninger. Slike opplysninger skal ikke legges inn i Git. Når det
+mangler dokumentasjon for detaljerte påstander, skal Codex markere dette og be
+om eller finne dokumentasjon før opplysningene brukes eksternt.
+
+## Integrasjon med Nesbru Klinikken Rådgiver
+
+`Nesbru Klinikken Rådgiver` skal lese dette arbeidsområdet og kompetanseprofilen
+når utdanning, erfaring, spesialistkompetanse eller aktuelle driftstilskudd har
+betydning for interne strategier, styrearbeid, søknader eller argumentasjon.
+Resultater fra den ukentlige planlagte oppgaven `Ukentlig søk etter
+driftstilskudd` behandles som tidsavhengige treff og må kontrolleres mot aktiv
+utlysning før de brukes.
 
 ## Faste søkekilder
 
