@@ -76,8 +76,8 @@ om eller finne dokumentasjon før opplysningene brukes eksternt.
 `Nesbru Klinikken Rådgiver` skal lese dette arbeidsområdet og kompetanseprofilen
 når utdanning, erfaring, spesialistkompetanse eller aktuelle driftstilskudd har
 betydning for interne strategier, styrearbeid, søknader eller argumentasjon.
-Resultater fra den ukentlige planlagte oppgaven `Ukentlig søk etter
-driftstilskudd` behandles som tidsavhengige treff og må kontrolleres mot aktiv
+Resultater fra den planlagte oppgaven `Søk etter driftstilskudd annenhver uke`
+behandles som tidsavhengige treff og må kontrolleres mot aktiv
 utlysning før de brukes.
 
 ## Faste søkekilder
