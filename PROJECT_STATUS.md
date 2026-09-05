@@ -9,6 +9,7 @@ Sist oppdatert: 2026-09-05
   oppgraderinger, nedlastbar QR-kode og metadata for thumbnail/forhåndsvisning
   når lenken deles i chat. Offentlig adresse:
   `https://bikerentaloslo.no/messel-c43/`.
+  Den opprinnelige videoen ble senere erstattet med to nye videoer.
 - Fast regel avklart for nye innbytteforespørsler om Mercedes C250 UR98251:
   bruk bilpresentasjonen `https://bikerentaloslo.no/bil/ur98251/` som
   bildevedlegg. Den erstatter Dropbox-lenken og kravet om tre lokale bilder i
