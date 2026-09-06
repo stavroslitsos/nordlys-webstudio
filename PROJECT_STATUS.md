@@ -22,7 +22,7 @@ Sist oppdatert: 2026-09-05
   `https://bikerentaloslo.no/messel-c43/`.
   Den opprinnelige videoen ble senere erstattet med to nye videoer.
 - Fast regel avklart for nye innbytteforespørsler om Mercedes C250 UR98251:
-  bruk bilpresentasjonen `https://bikerentaloslo.no/bil/ur98251/` som
+  bruk bilpresentasjonen `https://bikerentaloslo.no/stavros/ur98251/` som
   bildevedlegg. Den erstatter Dropbox-lenken og kravet om tre lokale bilder i
   nye forespørsler.
 - Opprettet et varig kilderegister og en første markedsoversikt for bilkupp i
@@ -32,7 +32,9 @@ Sist oppdatert: 2026-09-05
   kandidatene; bildelenke og kontaktstatus er dokumentert i oversikten.
 - Opprettet en ulistet, søkemotorblokkert presentasjonsside for innbyttebilen
   Mercedes C250 Coupé 2017 (UR98251), med 50 bilder, video og oversikt over
-  oppgraderinger. Offentlig adresse: `https://bikerentaloslo.no/bil/ur98251/`.
+  oppgraderinger. Foretrukket offentlig adresse:
+  `https://bikerentaloslo.no/stavros/ur98251/`. Den opprinnelige adressen
+  `https://bikerentaloslo.no/bil/ur98251/` beholdes for eldre delinger.
 - Samlet prosjektoversikt, sykkelnettside, bilpresentasjonssider og
   annonseautomatisering i én fast Codex-oppgave:
   `Automatisering Annonser: +bikerental,BilSite`. De overlappende oppgavene
