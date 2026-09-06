@@ -29,7 +29,7 @@ sykkelutleie-prosjekt/
 ├── style.css
 ├── script.js
 ├── images/
-├── bil/
+├── stavros/
 │   └── ur98251/
 ├── messel-c43/
 ├── annonser/
