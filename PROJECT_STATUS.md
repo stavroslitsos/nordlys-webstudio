@@ -1,9 +1,15 @@
 # Prosjektstatus
 
-Sist oppdatert: 2026-09-05
+Sist oppdatert: 2026-09-06
 
 ## Fullført
 
+- 2026-09-06: Forenklet den faste Codex-strukturen etter Stavros sitt valg.
+  `CV og Søknader` og `Nesbru Klinikken Rådgiver` er fjernet fra
+  `.codex/project-tasks.json` og arkivert lokalt i Codex. Den festede Work-chatten
+  `Nesbruklinikken Rådgiver: Jobb, CV, Stillinger` håndterer heretter CV,
+  jobbsøk, stillinger og Nesbru-rådgivning. Git-konteksten for arbeidsområdene
+  beholdes som varig prosjektminne.
 - Opprettet en Git-basert rådgiversti for `Nesbru Klinikken Rådgiver` i
   `nesbru-klinikken-radgiver/README.md`, koblet til kompetanseprofilen,
   `CV og Søknader` og den planlagte oppgaven for driftstilskuddssøk annenhver uke.
@@ -90,8 +96,5 @@ Sist oppdatert: 2026-09-05
 
 ## Neste steg
 
-1. Klone og teste prosjektet på Mac nummer 2.
-2. Kontrollere innholdet i `PENDING for DELETE` før eventuell permanent sletting.
-
-Ikke start migreringen av Fiken før dette prosjektet fungerer på begge
-maskinene.
+1. Fortsette ordinært arbeid fra Git-baserte prosjektmapper og holde Dropbox
+   ute av den aktive arbeidsflyten.

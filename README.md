@@ -12,8 +12,9 @@ Prosjektet er bygget fra de tidligere Dropbox-mappene:
 - `Claude Annonser` – denne var en lenke til `Work automation`, ikke en egen
   mappe med unikt innhold
 
-Dropbox-originalene er foreløpig urørte sikkerhetskopier. Denne mappen er den
-nye Git-baserte arbeidskopien utenfor Dropbox.
+Denne mappen er den aktive Git-baserte arbeidskopien utenfor Dropbox. De gamle
+Dropbox-overgangskopiene er ikke aktive prosjektkilder og kan fjernes når den
+kontrollerte migreringen er avsluttet.
 
 ## Struktur
 
@@ -47,16 +48,17 @@ sykkelutleie-prosjekt/
 
 ## Fast oppgaveinndeling i Codex
 
-Prosjektet skal ha tre faste Codex-oppgaver:
+Prosjektet skal ha én fast Codex-oppgave:
 
 1. `Automatisering Annonser: +bikerental,BilSite` – samler prosjektoversikt,
    bikerentaloslo.no, bilpresentasjonssider, sykkelutleie, annonser og
    markedsføring samt automatisering for Finn, Facebook og Hygglo
-2. `CV og Søknader` – samler kompetanseprofil, jobbsøk, driftstilskudd og
-   målrettede søknader
-3. `Nesbru Klinikken Rådgiver` – bruker kompetanseprofilen og relevante
-   driftstilskuddstreff som del av strategisk, administrativ og juridisk
-   orientert rådgivning om Nesbru Klinikken
+
+CV, jobbsøk, stillinger og rådgivning om Nesbru Klinikken håndteres i den
+festede Work-chatten `Nesbruklinikken Rådgiver: Jobb, CV, Stillinger`.
+Git-versjonert kontekst under `cv-og-soknader/` og
+`nesbru-klinikken-radgiver/` beholdes som varig prosjektminne, men skal ikke
+opprette egne faste Codex-oppgaver.
 
 Den maskinlesbare definisjonen ligger i `.codex/project-tasks.json`. Ved
 førstegangsoppsett på en ny maskin leser Codex manifestet og oppretter bare
@@ -91,6 +93,6 @@ Publiseringsløsningen skal:
 
 - Ikke arbeid videre i både Dropbox-kopien og Git-kopien som to aktive
   hovedversjoner.
-- Ikke slett Dropbox-originalene før migreringen og synkroniseringen er testet.
+- Dropbox-overgangskopier skal ikke brukes som aktive prosjektmapper.
 - Ikke legg hemmeligheter eller innloggingsdata i Git.
 - Les `PROJECT_STATUS.md` ved starten av en ny arbeidsøkt.
