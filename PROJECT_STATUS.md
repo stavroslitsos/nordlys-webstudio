@@ -4,6 +4,10 @@ Sist oppdatert: 2026-09-07
 
 ## Fullført
 
+- 2026-09-07: Agder Auto AS ga prosjektets høyeste dokumenterte innbyttetilbud
+  så langt: 350 000 kr for Mercedes C250 UR98251, forutsatt at alt er på stell,
+  i forbindelse med Porsche Panamera 2015 (FINN 475268024). Relevante biler hos
+  Agder Auto skal prioriteres ved framtidige søk og sammenligninger.
 - 2026-09-07: Sendte 31 bekreftede innbytteforespørsler til alle aktive,
   ukontaktede FINN-kandidater i biloversikten, inkludert Mercedes-Benz CLS63
   AMG 2012 (475304500) og Porsche Panamera S E-Hybrid 2016 (466664610).

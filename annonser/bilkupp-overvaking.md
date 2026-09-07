@@ -169,6 +169,16 @@ Det ble sendt 31 nye forespørsler med ønsket verdi på 350 000 kr og lenken ov
 «Meldingen er sendt» for hver utsending. Annonsene 471813671, 473885957,
 471488420 og 475069541 manglet aktivt kontaktskjema og ble ikke sendt.
 
+### Beste dokumenterte innbyttetilbud
+
+- **Agder Auto AS:** 350 000 kr for Mercedes C250 Coupé UR98251, forutsatt at
+  alt er på stell. Tilbudet kom 2026-09-07 etter forespørselen om Porsche
+  Panamera 2015, FINN-kode [475268024](https://www.finn.no/mobility/item/475268024),
+  reg.nr. ZZ22167.
+- Dette er høyeste dokumenterte innbyttetilbud så langt. Ved framtidige bilsøk
+  skal relevante biler hos Agder Auto prioriteres, slik at dette tilbudsnivået
+  kan brukes som utgangspunkt for innbytte eller sammenligning.
+
 | Prioritet | Bil | Status | Må kontrolleres før kjøp |
 |---:|---|---|---|
 | 1 | [Panamera 2014, 299 999 kr](https://www.finn.no/mobility/item/472827369) | Forespørsel sendt 2026-09-04 | Hybridstatus, service og skader |
@@ -179,6 +189,7 @@ Det ble sendt 31 nye forespørsler med ønsket verdi på 350 000 kr og lenken ov
 | 6 | [C43/C450 2016, 500 000 kr](https://www.finn.no/mobility/item/469420477) | Forespørsel sendt 2026-09-07 | Bekreft modell/typegodkjenning før kjøp |
 | 7 | [CLS63 AMG 2012, 699 999 kr](https://www.finn.no/mobility/item/475304500) | Forespørsel sendt 2026-09-07 | Japan-import, servicehistorikk, M157-motor, luftfjæring, garanti og skader |
 | 8 | [Panamera S E-Hybrid 2016, 419 999 kr](https://www.finn.no/mobility/item/466664610) | Forespørsel sendt 2026-09-07 | Hybridbatteri, komplett servicehistorikk, luftfjæring, garanti og skader |
+| 9 | [Panamera 2015, 449 000 kr](https://www.finn.no/mobility/item/475268024) | Agder Auto tilbød 350 000 kr i innbytte 2026-09-07, betinget av kontroll | Avklar endelig innbytteverdi etter besiktigelse og mellomlegg |
 
 ## Fast arbeidsflyt
 

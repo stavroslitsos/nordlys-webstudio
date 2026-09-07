@@ -271,6 +271,13 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 
 **Sist oppdatert: 2026-09-07**
 
+- 2026-09-07: Agder Auto AS svarte på forespørselen om Porsche Panamera 2015
+  (FINN 475268024, reg.nr. ZZ22167) og tilbød **350 000 kr** for Mercedes C250
+  UR98251 i innbytte, forutsatt at alt er på stell. Dette er høyeste
+  dokumenterte innbyttetilbud så langt. Relevante biler hos Agder Auto skal
+  prioriteres i framtidige søk for å bevare eller bruke dette tilbudsnivået som
+  sammenligningsgrunnlag.
+
 - 2026-09-07: Sendte bekreftet innbytteforespørsel via FINN til alle 31 aktive,
   ukontaktede biler i den dokumenterte biloversikten. Dette omfatter åtte
   C43/C450, CLS63 475304500, elleve S63, to Porsche 911 og ni Panamera,
