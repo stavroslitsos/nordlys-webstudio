@@ -228,6 +228,7 @@ at Stavros forklarer på nytt.
 | Scott Scale 930 29" MTB str. M (2 hjulsett) | ✅ 13 000 kr (Basis gratis) | – | ✅ 350 kr/dag (av Stavros) |
 | Xiaomi M365 el-sparkesykkel (reparasjonsobjekt) | ✅ 500 kr, [FINN 475861262](https://www.finn.no/recommerce/forsale/item/475861262) *(til kontroll)* | – | n/a |
 | Delux T9 enhåndstastatur / gaming keypad | ✅ 300 kr, [FINN 475861567](https://www.finn.no/recommerce/forsale/item/475861567) *(til kontroll)* | – | n/a |
+| Tastaturer og mus – Logitech, Contour og Apple (samleannonse) | ✅ 2 500 kr samlet, enkeltpriser i teksten, [FINN 475861821](https://www.finn.no/recommerce/forsale/item/475861821) *(til kontroll)* | – | n/a |
 
 ## Codex-oppgaver – organisering
 
@@ -277,6 +278,16 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
 **Sist oppdatert: 2026-09-07**
+
+- 2026-09-07: Opprettet og sendte inn samleannonsen **«Tastaturer og mus –
+  Logitech, Contour og Apple – samlet eller enkeltvis»** med alle 23 relevante
+  bilder lastet opp samlet. Annonsen omfatter 3 tastaturer og 12 mus, har
+  pakkepris 2 500 kr og enkeltpriser fra 50 til 600 kr. Den opplyser tydelig om
+  det knekte batteridekselet på det hvite Dacota-tastaturet. Medium Fiks ferdig-
+  pakke med direkte kjøp og bud ble aktivert; FINN gikk videre uten et betalt
+  eksponeringsvalg. FINN-kode **475861821**;
+  [annonse](https://www.finn.no/recommerce/forsale/item/475861821). Status etter
+  innsending: «Til kontroll» hos FINN.
 
 - 2026-09-07: Ny fast effektivitetsregel: relevante produktbilder skal
   batchmarkeres i filvelgeren og lastes opp samlet med ett trykk på «Åpne»,
