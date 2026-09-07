@@ -206,6 +206,11 @@ at Stavros forklarer på nytt.
 14. **Bilder ved innbytte:** Bilpresentasjonen for UR98251 er fast
     bildevedlegg ved nye forespørsler. De tre lokale Mercedes-bildene er ikke
     lenger obligatoriske ved nye forespørsler.
+15. **Last opp produktbilder samlet.** Når flere relevante bilder ligger i
+    samme mappe og kan identifiseres som én serie, skal alle markeres samtidig
+    i filvelgeren og lastes opp med ett trykk på «Åpne». Ikke velg eller last
+    opp bildene ett og ett når samlet markering er mulig; effektiv tidsbruk er
+    en fast prioritet.
 
 ---
 
@@ -272,6 +277,10 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
 **Sist oppdatert: 2026-09-07**
+
+- 2026-09-07: Ny fast effektivitetsregel: relevante produktbilder skal
+  batchmarkeres i filvelgeren og lastes opp samlet med ett trykk på «Åpne»,
+  ikke velges ett og ett når samlet markering er mulig.
 
 - 2026-09-07: Opprettet og sendte inn FINN-annonsen **«Delux T9
   enhåndstastatur / gaming keypad – USB»** med 6 bilder, pris 300 kr og tilstand
