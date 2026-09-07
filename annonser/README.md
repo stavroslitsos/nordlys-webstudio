@@ -207,10 +207,12 @@ at Stavros forklarer på nytt.
     bildevedlegg ved nye forespørsler. De tre lokale Mercedes-bildene er ikke
     lenger obligatoriske ved nye forespørsler.
 15. **Last opp produktbilder samlet.** Når flere relevante bilder ligger i
-    samme mappe og kan identifiseres som én serie, skal alle markeres samtidig
-    i filvelgeren og lastes opp med ett trykk på «Åpne». Ikke velg eller last
-    opp bildene ett og ett når samlet markering er mulig; effektiv tidsbruk er
-    en fast prioritet.
+    samme mappe, skal filnavnene først leses direkte fra chatvedleggene. Finn
+    deretter nøyaktig de samme filene i filvelgeren og marker hele serien med
+    en gang, for eksempel `IMG_4932 2.HEIC`–`IMG_4936 2.HEIC`, før ett trykk på
+    «Åpne». Ikke bruk tid på å identifisere filene på nytt i mappen, og ikke
+    velg eller last opp bildene ett og ett når samlet markering er mulig.
+    Effektiv tidsbruk er en fast prioritet.
 
 ---
 
@@ -300,8 +302,10 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
   innsending: «Til kontroll» hos FINN.
 
 - 2026-09-07: Ny fast effektivitetsregel: relevante produktbilder skal
-  batchmarkeres i filvelgeren og lastes opp samlet med ett trykk på «Åpne»,
-  ikke velges ett og ett når samlet markering er mulig.
+  identifiseres fra filnavnene i chatvedleggene, finnes direkte som samme serie
+  i filvelgeren, batchmarkeres og lastes opp samlet med ett trykk på «Åpne».
+  Filene skal ikke identifiseres på nytt eller velges ett og ett når samlet
+  markering er mulig.
 
 - 2026-09-07: Opprettet og sendte inn FINN-annonsen **«Delux T9
   enhåndstastatur / gaming keypad – USB»** med 6 bilder, pris 300 kr og tilstand
