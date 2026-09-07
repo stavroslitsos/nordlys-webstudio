@@ -221,6 +221,7 @@ at Stavros forklarer på nytt.
 | ~~RAM Mounts X-Grip (MC/sykkel)~~ **SOLGT** | (var 600 kr) | – | n/a |
 | Fit Cuffs BFR-sett | n/a | – | ✅ 100 kr/dag |
 | Scott Scale 930 29" MTB str. M (2 hjulsett) | ✅ 13 000 kr (Basis gratis) | – | ✅ 350 kr/dag (av Stavros) |
+| Xiaomi M365 el-sparkesykkel (reparasjonsobjekt) | ✅ 500 kr, [FINN 475861262](https://www.finn.no/recommerce/forsale/item/475861262) *(til kontroll)* | – | n/a |
 
 ## Codex-oppgaver – organisering
 
@@ -270,6 +271,14 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
 **Sist oppdatert: 2026-09-07**
+
+- 2026-09-07: Opprettet og sendte inn FINN-annonsen **«Xiaomi M365
+  el-sparkesykkel – reparasjonsobjekt»** med 8 bilder, pris/minstepris 500 kr,
+  tilstand «Må fikses» og kun henting. Annonsen opplyser tydelig at displayet er
+  ødelagt og mangler deksel, at sparkesykkelen er uladet og uten lader, og at
+  motor, batteri, lys og øvrige funksjoner derfor ikke er testet. Gratis
+  Basis-pakke ble valgt. FINN-kode **475861262**; [annonse](https://www.finn.no/recommerce/forsale/item/475861262).
+  Status etter innsending: «Til kontroll» hos FINN.
 
 - 2026-09-07: Agder Auto AS svarte på forespørselen om Porsche Panamera 2015
   (FINN 475268024, reg.nr. ZZ22167) og tilbød **350 000 kr** for Mercedes C250
