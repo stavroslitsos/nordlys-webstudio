@@ -222,6 +222,7 @@ at Stavros forklarer på nytt.
 | Fit Cuffs BFR-sett | n/a | – | ✅ 100 kr/dag |
 | Scott Scale 930 29" MTB str. M (2 hjulsett) | ✅ 13 000 kr (Basis gratis) | – | ✅ 350 kr/dag (av Stavros) |
 | Xiaomi M365 el-sparkesykkel (reparasjonsobjekt) | ✅ 500 kr, [FINN 475861262](https://www.finn.no/recommerce/forsale/item/475861262) *(til kontroll)* | – | n/a |
+| Delux T9 enhåndstastatur / gaming keypad | ✅ 300 kr, [FINN 475861567](https://www.finn.no/recommerce/forsale/item/475861567) *(til kontroll)* | – | n/a |
 
 ## Codex-oppgaver – organisering
 
@@ -271,6 +272,13 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
 **Sist oppdatert: 2026-09-07**
+
+- 2026-09-07: Opprettet og sendte inn FINN-annonsen **«Delux T9
+  enhåndstastatur / gaming keypad – USB»** med 6 bilder, pris 300 kr og tilstand
+  «Godt brukt». Liten Fiks ferdig-pakke med direkte kjøp og bud ble aktivert,
+  og gratis Basis-pakke ble valgt. FINN-kode **475861567**;
+  [annonse](https://www.finn.no/recommerce/forsale/item/475861567). Status etter
+  innsending: «Til kontroll» hos FINN.
 
 - 2026-09-07: Opprettet og sendte inn FINN-annonsen **«Xiaomi M365
   el-sparkesykkel – reparasjonsobjekt»** med 8 bilder, pris/minstepris 500 kr,
