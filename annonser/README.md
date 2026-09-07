@@ -280,7 +280,16 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > Oppdater denne seksjonen på slutten av hver økt, uansett hvilken maskin som
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
-**Sist oppdatert: 2026-09-07**
+**Sist oppdatert: 2026-09-08**
+
+- 2026-09-08: Sendte bekreftede innbytteforespørsler via FINN til de to unike
+  Porsche Taycan 4S-annonsene Stavros oppga. **Autoinvest AS**, FINN 475327229:
+  2020-modell, 78 000 km og 529 900 kr. **Xbil AS**, FINN 475398959:
+  2020-modell, 113 800 km og 439 000 kr. Begge fikk tilbud om Mercedes C250
+  UR98251 med ønsket verdi 350 000 kr og lenken
+  `https://bikerentaloslo.no/stavros/ur98251/`. FINN viste «Meldingen er sendt»
+  for begge. Den gjentatte lenken til 475398959 ble behandlet som duplikat og
+  ikke sendt en gang til.
 
 - 2026-09-07: Opprettet og publiserte FINN-annonsen **«JBL Everest Elite 100
   Bluetooth-hodesett med støydemping»** med 5 bilder, pris 300 kr og tilstand

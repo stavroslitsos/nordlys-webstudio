@@ -1,9 +1,15 @@
 # Prosjektstatus
 
-Sist oppdatert: 2026-09-07
+Sist oppdatert: 2026-09-08
 
 ## Fullført
 
+- 2026-09-08: Sendte og fikk FINN-bekreftelse på innbytteforespørsel til to
+  unike Porsche Taycan 4S-kandidater: Autoinvest AS (FINN 475327229) og Xbil AS
+  (FINN 475398959). Begge forespørslene tilbyr Mercedes C250 UR98251 med ønsket
+  verdi 350 000 kr og inkluderer den faste presentasjonen
+  `https://bikerentaloslo.no/stavros/ur98251/`. Duplikatlenken til 475398959 ble
+  ignorert, slik at samme selger ikke mottok meldingen to ganger.
 - 2026-09-07: Agder Auto AS ga prosjektets høyeste dokumenterte innbyttetilbud
   så langt: 350 000 kr for Mercedes C250 UR98251, forutsatt at alt er på stell,
   i forbindelse med Porsche Panamera 2015 (FINN 475268024). Relevante biler hos
