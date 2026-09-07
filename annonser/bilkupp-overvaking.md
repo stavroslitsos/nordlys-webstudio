@@ -163,6 +163,12 @@ den, men alle som får adressen kan åpne den.
 Denne nettadressen skal brukes som fast bildevedlegg i nye innbytteforespørsler
 for UR98251, og ettersendes i eksisterende dialoger når FINN tillater lenker.
 
+Den 2026-09-07 ble alle aktive, ukontaktede kandidater i oversikten gjennomgått.
+Det ble sendt 31 nye forespørsler med ønsket verdi på 350 000 kr og lenken over:
+åtte C43/C450, én CLS63, elleve S63, to Porsche 911 og ni Panamera. FINN viste
+«Meldingen er sendt» for hver utsending. Annonsene 471813671, 473885957,
+471488420 og 475069541 manglet aktivt kontaktskjema og ble ikke sendt.
+
 | Prioritet | Bil | Status | Må kontrolleres før kjøp |
 |---:|---|---|---|
 | 1 | [Panamera 2014, 299 999 kr](https://www.finn.no/mobility/item/472827369) | Forespørsel sendt 2026-09-04 | Hybridstatus, service og skader |
@@ -170,9 +176,9 @@ for UR98251, og ettersendes i eksisterende dialoger når FINN tillater lenker.
 | 3 | [S63 2014 Oslo, 648 000 kr](https://www.finn.no/mobility/item/474576984) | Forespørsel sendt 2026-09-04 | M157-motor, 4MATIC, luftfjæring, historikk og skader |
 | 4 | [C43 2016, 489 900 kr](https://www.finn.no/mobility/item/474778474) | Forespørsel sendt 2026-09-04 | Historikk, skader, garanti og faktisk totalpris |
 | 5 | [C43 2018 Oslo, 498 000 kr](https://www.finn.no/mobility/item/472233996) | Forespørsel sendt 2026-09-04 | Historikk, skader, garanti og innbyttemulighet |
-| 6 | [C43/C450 2016, 500 000 kr](https://www.finn.no/mobility/item/469420477) | Ikke kontaktet; modell må avklares | Bekreft modell/typegodkjenning før kontakt |
-| 7 | [CLS63 AMG 2012, 699 999 kr](https://www.finn.no/mobility/item/475304500) | Forespørsel klargjort 2026-09-06 | Japan-import, servicehistorikk, M157-motor, luftfjæring, garanti og skader |
-| 8 | [Panamera S E-Hybrid 2016, 419 999 kr](https://www.finn.no/mobility/item/466664610) | Forespørsel klargjort 2026-09-07 | Hybridbatteri, komplett servicehistorikk, luftfjæring, garanti og skader |
+| 6 | [C43/C450 2016, 500 000 kr](https://www.finn.no/mobility/item/469420477) | Forespørsel sendt 2026-09-07 | Bekreft modell/typegodkjenning før kjøp |
+| 7 | [CLS63 AMG 2012, 699 999 kr](https://www.finn.no/mobility/item/475304500) | Forespørsel sendt 2026-09-07 | Japan-import, servicehistorikk, M157-motor, luftfjæring, garanti og skader |
+| 8 | [Panamera S E-Hybrid 2016, 419 999 kr](https://www.finn.no/mobility/item/466664610) | Forespørsel sendt 2026-09-07 | Hybridbatteri, komplett servicehistorikk, luftfjæring, garanti og skader |
 
 ## Fast arbeidsflyt
 

@@ -271,11 +271,15 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 
 **Sist oppdatert: 2026-09-07**
 
-- 2026-09-07: Kontrollert aktive FINN-annonser for Mercedes-Benz CLS63 AMG
-  2012 (475304500) og Porsche Panamera S E-Hybrid 2016 (466664610), begge hos
-  Auto Viken. Innbytteforespørsler med fast UR98251-presentasjon er klargjort,
-  men ikke markert som sendt: FINN krever at Stavros fullfører engangskoden for
-  innlogging før utsending kan verifiseres.
+- 2026-09-07: Sendte bekreftet innbytteforespørsel via FINN til alle 31 aktive,
+  ukontaktede biler i den dokumenterte biloversikten. Dette omfatter åtte
+  C43/C450, CLS63 475304500, elleve S63, to Porsche 911 og ni Panamera,
+  inkludert 466664610. Alle meldingene oppgir ønsket verdi på 350 000 kr for
+  Mercedes C250 UR98251 og inneholder den faste presentasjonslenken
+  `https://bikerentaloslo.no/stavros/ur98251/`. FINN viste «Meldingen er sendt»
+  for hver av de 31. Fire eldre annonser kunne ikke kontaktes fordi annonsen
+  eller kontaktskjemaet ikke lenger var aktivt: 471813671, 473885957,
+  471488420 og 475069541.
 
 - 2026-09-05: Ny fast føring for Mercedes C250 UR98251: bruk
   `https://bikerentaloslo.no/stavros/ur98251/` som bildevedlegg i alle nye

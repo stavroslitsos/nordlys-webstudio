@@ -4,11 +4,12 @@ Sist oppdatert: 2026-09-07
 
 ## Fullført
 
-- 2026-09-07: La Mercedes-Benz CLS63 AMG 2012 (FINN 475304500) til i den faste
-  modelloversikten og førte både denne og Porsche Panamera S E-Hybrid 2016
-  (FINN 466664610) inn i kontaktkøen. Begge forespørslene er klargjort med den
-  faste UR98251-presentasjonen, men venter på at Stavros fullfører FINNs
-  engangskode før utsending kan verifiseres.
+- 2026-09-07: Sendte 31 bekreftede innbytteforespørsler til alle aktive,
+  ukontaktede FINN-kandidater i biloversikten, inkludert Mercedes-Benz CLS63
+  AMG 2012 (475304500) og Porsche Panamera S E-Hybrid 2016 (466664610).
+  Forespørslene oppgir ønsket verdi på 350 000 kr for UR98251 og inkluderer
+  den faste presentasjonen `https://bikerentaloslo.no/stavros/ur98251/`.
+  Fire eldre annonser kunne ikke kontaktes fordi aktivt kontaktskjema manglet.
 - 2026-09-06: Forenklet den faste Codex-strukturen etter Stavros sitt valg.
   `CV og Søknader` og `Nesbru Klinikken Rådgiver` er fjernet fra
   `.codex/project-tasks.json` og arkivert lokalt i Codex. Den festede Work-chatten
