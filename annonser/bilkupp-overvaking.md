@@ -1,6 +1,6 @@
 # Bilkupp – kilder, treff og kontaktkø
 
-Sist oppdatert: **2026-09-04**
+Sist oppdatert: **2026-09-07**
 
 Dette er den varige arbeidslisten for å finne prisgunstige biler, delebiler og
 reparasjonsobjekter. Nye nettsteder og aktuelle annonser legges til her. En
@@ -10,6 +10,7 @@ et kupp; det må vurderes før kontakt og kjøp.
 ## Modeller som overvåkes
 
 - Mercedes-AMG C43, alle aktuelle karosserier og årsmodeller
+- Mercedes-AMG CLS63, alle aktuelle karosserier og årsmodeller
 - Mercedes-AMG S63, alle aktuelle karosserier og årsmodeller
 - Porsche 911, årsmodell 2014 eller nyere
 - Porsche Panamera, årsmodell 2014 eller nyere
@@ -59,6 +60,12 @@ med i kandidatoversikten eller kontaktkøen. 150 000 km er tillatt.
 Merk: En annonse i Alta kaller en 2016 C450 for «C43 AMG». Modellidentiteten må
 kontrolleres før den eventuelt tas inn i kontaktkøen:
 [475069541](https://www.finn.no/mobility/item/475069541).
+
+### FINN – Mercedes-AMG CLS63
+
+| År/type | Km | Pris | Sted/selger | Annonse |
+|---|---:|---:|---|---|
+| 2012 CLS63 AMG, 558 hk | 82 000 | 699 999 kr | Vestby / Auto Viken | [475304500](https://www.finn.no/mobility/item/475304500) |
 
 ### FINN – Mercedes-AMG S63
 
@@ -150,7 +157,7 @@ Meldingen oppgir Mercedes C250 Coupé 2017 (W205/C205), reg.nr. UR98251, VIN
 WDD2053451F616163 og oppgraderingene. FINNs førstegangsskjema avviste ekstern
 Dropbox-URL, så meldingen sier at komplett bildemappe og video kan sendes straks.
 En ulistet presentasjonsside er opprettet for ettersending:
-[bilder, video og bilpresentasjon](https://bikerentaloslo.no/bil/ur98251/).
+[bilder, video og bilpresentasjon](https://bikerentaloslo.no/stavros/ur98251/).
 Siden er ikke lenket fra sykkelutleien og ber søkemotorer om å ikke indeksere
 den, men alle som får adressen kan åpne den.
 Denne nettadressen skal brukes som fast bildevedlegg i nye innbytteforespørsler
@@ -164,6 +171,8 @@ for UR98251, og ettersendes i eksisterende dialoger når FINN tillater lenker.
 | 4 | [C43 2016, 489 900 kr](https://www.finn.no/mobility/item/474778474) | Forespørsel sendt 2026-09-04 | Historikk, skader, garanti og faktisk totalpris |
 | 5 | [C43 2018 Oslo, 498 000 kr](https://www.finn.no/mobility/item/472233996) | Forespørsel sendt 2026-09-04 | Historikk, skader, garanti og innbyttemulighet |
 | 6 | [C43/C450 2016, 500 000 kr](https://www.finn.no/mobility/item/469420477) | Ikke kontaktet; modell må avklares | Bekreft modell/typegodkjenning før kontakt |
+| 7 | [CLS63 AMG 2012, 699 999 kr](https://www.finn.no/mobility/item/475304500) | Forespørsel klargjort 2026-09-06 | Japan-import, servicehistorikk, M157-motor, luftfjæring, garanti og skader |
+| 8 | [Panamera S E-Hybrid 2016, 419 999 kr](https://www.finn.no/mobility/item/466664610) | Forespørsel klargjort 2026-09-07 | Hybridbatteri, komplett servicehistorikk, luftfjæring, garanti og skader |
 
 ## Fast arbeidsflyt
 
