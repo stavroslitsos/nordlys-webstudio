@@ -229,6 +229,7 @@ at Stavros forklarer på nytt.
 | Xiaomi M365 el-sparkesykkel (reparasjonsobjekt) | ✅ 500 kr, [FINN 475861262](https://www.finn.no/recommerce/forsale/item/475861262) *(til kontroll)* | – | n/a |
 | Delux T9 enhåndstastatur / gaming keypad | ✅ 300 kr, [FINN 475861567](https://www.finn.no/recommerce/forsale/item/475861567) *(til kontroll)* | – | n/a |
 | Tastaturer og mus – Logitech, Contour og Apple (samleannonse) | ✅ 2 500 kr samlet, enkeltpriser i teksten, [FINN 475861821](https://www.finn.no/recommerce/forsale/item/475861821) *(til kontroll)* | – | n/a |
+| JBL Everest Elite 100 Bluetooth-hodesett | ✅ 300 kr, [FINN 475861966](https://www.finn.no/475861966) *(aktiv)* | – | n/a |
 
 ## Codex-oppgaver – organisering
 
@@ -278,6 +279,15 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
 **Sist oppdatert: 2026-09-07**
+
+- 2026-09-07: Opprettet og publiserte FINN-annonsen **«JBL Everest Elite 100
+  Bluetooth-hodesett med støydemping»** med 5 bilder, pris 300 kr og tilstand
+  «Godt brukt». Bildene ble batchmarkert og lastet opp samlet. FINNs
+  bildegjenkjenning avklarte at produktet er JBL Everest Elite 100, ikke Samsung
+  Level U som først antatt; annonsen ble korrigert før publisering. Liten Fiks
+  ferdig-pakke med direkte kjøp og bud samt gratis Basis-pakke ble valgt.
+  FINN-kode **475861966**; [annonse](https://www.finn.no/475861966). Status etter
+  endelig lagring: «Aktiv» hos FINN.
 
 - 2026-09-07: Opprettet og sendte inn samleannonsen **«Tastaturer og mus –
   Logitech, Contour og Apple – samlet eller enkeltvis»** med alle 23 relevante
