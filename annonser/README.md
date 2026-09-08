@@ -282,6 +282,15 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 
 **Sist oppdatert: 2026-09-08**
 
+- 2026-09-08: Registrerte to nye forhandlersvar for Mercedes C250 Coupé
+  UR98251 i `bilkupp-overvaking.md`. **Autostrada Notodden AS**, ved salgssjef
+  Geir Arne Svartdal, beskriver bilen som svært pen og vil vurdere innbyttet
+  sterkt, men har foreløpig ikke gitt et konkret beløp. **Auto Viken AS** har
+  oppgitt 280 000–300 000 kr i innbytte. Agder Auto AS står fortsatt øverst med
+  det dokumenterte tilbudet på 350 000 kr. Autostrada følges opp for konkret
+  verdi; Auto Viken beholdes som markedsreferanse og prioriteres bare ved et
+  forbedret tilbud eller særlig gunstig total mellompris.
+
 - 2026-09-08: Sendte bekreftede innbytteforespørsler via FINN til de to unike
   Porsche Taycan 4S-annonsene Stavros oppga. **Autoinvest AS**, FINN 475327229:
   2020-modell, 78 000 km og 529 900 kr. **Xbil AS**, FINN 475398959:
