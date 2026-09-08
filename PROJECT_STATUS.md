@@ -4,6 +4,12 @@ Sist oppdatert: 2026-09-08
 
 ## Fullført
 
+- 2026-09-08: Oppdaterte forhandleroversikten for Mercedes C250 Coupé
+  UR98251. Autostrada Notodden AS er registrert som positiv innbyttekandidat
+  uten konkret beløp ennå, mens Auto Viken AS har oppgitt 280 000–300 000 kr.
+  Agder Auto AS beholder førsteprioritet med 350 000 kr; Autostrada skal følges
+  opp for et konkret tilbud.
+
 - 2026-09-08: Sendte og fikk FINN-bekreftelse på innbytteforespørsel til to
   unike Porsche Taycan 4S-kandidater: Autoinvest AS (FINN 475327229) og Xbil AS
   (FINN 475398959). Begge forespørslene tilbyr Mercedes C250 UR98251 med ønsket
