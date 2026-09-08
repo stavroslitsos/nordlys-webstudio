@@ -169,15 +169,16 @@ Det ble sendt 31 nye forespørsler med ønsket verdi på 350 000 kr og lenken ov
 «Meldingen er sendt» for hver utsending. Annonsene 471813671, 473885957,
 471488420 og 475069541 manglet aktivt kontaktskjema og ble ikke sendt.
 
-### Beste dokumenterte innbyttetilbud
+### Forhandlersvar og prioritering
 
-- **Agder Auto AS:** 350 000 kr for Mercedes C250 Coupé UR98251, forutsatt at
-  alt er på stell. Tilbudet kom 2026-09-07 etter forespørselen om Porsche
-  Panamera 2015, FINN-kode [475268024](https://www.finn.no/mobility/item/475268024),
-  reg.nr. ZZ22167.
-- Dette er høyeste dokumenterte innbyttetilbud så langt. Ved framtidige bilsøk
-  skal relevante biler hos Agder Auto prioriteres, slik at dette tilbudsnivået
-  kan brukes som utgangspunkt for innbytte eller sammenligning.
+| Prioritet | Forhandler og bil | Dokumentert respons | Vurdering / neste handling |
+|---:|---|---|---|
+| 1 | **Agder Auto AS** – Porsche Panamera 2015, FINN [475268024](https://www.finn.no/mobility/item/475268024), reg.nr. ZZ22167 | **350 000 kr** for Mercedes C250 Coupé UR98251, forutsatt at alt er på stell. Mottatt 2026-09-07. | Høyeste dokumenterte innbyttetilbud. Prioriter relevante biler hos Agder Auto og bruk 350 000 kr som sammenligningsgrunnlag. |
+| 2 | **Autostrada Notodden AS** – Mercedes-Benz S63 2016, FINN [474931329](https://www.finn.no/mobility/item/474931329) | Salgssjef Geir Arne Svartdal skrev 2026-09-08 at ønsket pris for C250-en er nær deres vurderte salgspris, men at bilen er svært pen. Han spurte om prisjustering og ville likevel vurdere innbyttet sterkt. **Ingen konkret innbytteverdi er gitt ennå.** | Positiv og relevant kandidat. Følg opp med ønsket nivå og be om et konkret innbyttetilbud før eventuell reise eller avtale. |
+| 3 | **Auto Viken AS** – Mercedes-Benz S63 2015, FINN-annonsen vist i svar [CH25088] | Oppga **280 000–300 000 kr** i innbytte 2026-09-08. | Konkret, men 50 000–70 000 kr under Agder Auto og målet på 350 000 kr. Behold som markedsreferanse; prioriteres først dersom tilbudet forbedres eller total mellompris blir særlig gunstig. |
+
+**Kontaktopplysning fra Auto Viken-svaret:** Verpetveien 50, 1543 Vestby,
+telefon 94 44 89 99, [autoviken.no](https://autoviken.no/).
 
 | Prioritet | Bil | Status | Må kontrolleres før kjøp |
 |---:|---|---|---|
