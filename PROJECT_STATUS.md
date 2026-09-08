@@ -10,6 +10,10 @@ Sist oppdatert: 2026-09-08
   Agder Auto AS beholder førsteprioritet med 350 000 kr; Autostrada skal følges
   opp for et konkret tilbud.
 
+- 2026-09-08: Sendte og fikk FINN-bekreftelse på innbytteforespørsel til Car
+  Market AS for Porsche Panamera GTS 2013 (FINN 470430765) og Autospektrum AS
+  Oslo for Porsche Panamera 4 E-Hybrid 2018 (FINN 475459590). Begge fikk ønsket
+  innbytteverdi 350 000 kr for Mercedes C250 UR98251 og presentasjonslenken.
 - 2026-09-08: Sendte og fikk FINN-bekreftelse på innbytteforespørsel til to
   unike Porsche Taycan 4S-kandidater: Autoinvest AS (FINN 475327229) og Xbil AS
   (FINN 475398959). Begge forespørslene tilbyr Mercedes C250 UR98251 med ønsket

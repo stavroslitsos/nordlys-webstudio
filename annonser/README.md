@@ -291,6 +291,14 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
   verdi; Auto Viken beholdes som markedsreferanse og prioriteres bare ved et
   forbedret tilbud eller særlig gunstig total mellompris.
 
+- 2026-09-08: Sendte bekreftede innbytteforespørsler via FINN til **Car Market
+  AS**, Porsche Panamera GTS 2013 (FINN 470430765, 110 191 km, 549 900 kr), og
+  **Autospektrum AS Oslo**, Porsche Panamera 4 E-Hybrid 2018 (FINN 475459590,
+  125 000 km, 579 900 kr). Begge meldingene oppga ønsket innbytteverdi
+  350 000 kr for Mercedes C250 UR98251 og inkluderte
+  `https://bikerentaloslo.no/stavros/ur98251/`. FINN viste «Meldingen er sendt»
+  for begge.
+
 - 2026-09-08: Sendte bekreftede innbytteforespørsler via FINN til de to unike
   Porsche Taycan 4S-annonsene Stavros oppga. **Autoinvest AS**, FINN 475327229:
   2020-modell, 78 000 km og 529 900 kr. **Xbil AS**, FINN 475398959:
