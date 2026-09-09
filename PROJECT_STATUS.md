@@ -4,8 +4,10 @@ Sist oppdatert: 2026-09-09
 
 ## Fullført
 
-- 2026-09-09: Opprettet den selvstendige tjenestesiden **Nordlys Webstudio**
-  under `/nordlys-web/`. Siden tilbyr skreddersydde statiske nettsider til
+- 2026-09-09: Opprettet den selvstendige tjenestesiden **Nordlys Webstudio**.
+  Siden ble deretter flyttet fra bikerentaloslo.no til den avklarte adressen
+  `https://stavroslitsos.com/nordlys-web/` og den gamle offentlige kopien ble
+  fjernet. Siden tilbyr skreddersydde statiske nettsider til
   7 500 kr, med lanseringspris 5 000 kr for de fem første, forklarer behovet
   for domene og GitHub-konto og har kontaktskjema koblet til den eksisterende
   Web3Forms-mottaksløsningen. Stavros Litsos brukes ikke som synlig merkenavn.

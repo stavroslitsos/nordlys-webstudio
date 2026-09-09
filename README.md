@@ -33,7 +33,6 @@ sykkelutleie-prosjekt/
 ├── stavros/
 │   └── ur98251/
 ├── messel-c43/
-├── nordlys-web/
 ├── annonser/
     ├── README.md
     ├── AGENTS.md
@@ -75,9 +74,10 @@ en avtalt kortadresse som `messel-c43/`. De er offentlig tilgjengelige for
 mottakere som har adressen, men er merket `noindex` og lenkes ikke fra
 nettstedets ordinære sider.
 
-Den selvstendige tjenestesiden **Nordlys Webstudio** ligger under
-`nordlys-web/` og markedsfører statiske nettsider for enkeltpersoner og små
-bedrifter uten å bruke Stavros Litsos som synlig avsendermerke.
+Den selvstendige tjenestesiden **Nordlys Webstudio** vedlikeholdes i
+`stavroslitsos.com`-prosjektet og publiseres på
+`https://stavroslitsos.com/nordlys-web/`. Markedsføringsmateriale kan fortsatt
+ligge under `annonser/` i dette prosjektet.
 
 ## GitHub og publisering
 
