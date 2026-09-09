@@ -1,8 +1,13 @@
 # Prosjektstatus
 
-Sist oppdatert: 2026-09-08
+Sist oppdatert: 2026-09-09
 
 ## Fullført
+
+- 2026-09-09: Synkroniserte alle registrerte lokale Git-prosjekter og alle
+  tilknyttede Work-automation-worktrees mot siste `origin/main`. Rettet den
+  faste UR98251-lenken i oppgavemanifestet og operative annonseinstruksjoner
+  til `https://bikerentaloslo.no/stavros/ur98251/`.
 
 - 2026-09-08: Oppdaterte forhandleroversikten for Mercedes C250 Coupé
   UR98251. Autostrada Notodden AS er registrert som positiv innbyttekandidat

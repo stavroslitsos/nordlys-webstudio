@@ -104,7 +104,7 @@ Detaljer om innbyttebilen (til gjenbruk/oppdatering):
 - Topp stand, nye vinter- og sommerdekk, pene felger, røde kalipere, original
   farge (ingen folie), alltid innendørs parkert, børsteløs vasket ~1×/uke.
 - **Fast bildevedlegg til nye innbytteforespørsler:**
-  `https://bikerentaloslo.no/bil/ur98251/`. Presentasjonssiden viser 50 bilder,
+  `https://bikerentaloslo.no/stavros/ur98251/`. Presentasjonssiden viser 50 bilder,
   video og oppgraderinger for bilen og skal legges ved nye forespørsler i stedet
   for Dropbox-lenken og de tre tidligere lokale bildene.
 
@@ -198,7 +198,7 @@ at Stavros forklarer på nytt.
     at agenten skal fjernstyre Firefox og behandle de aktuelle åpne fanene.
 12. **Bruk den faste bilpresentasjonen, ikke Dropbox.** Ved nye
     innbytteforespørsler for Mercedes C250 UR98251 skal
-    `https://bikerentaloslo.no/bil/ur98251/` brukes som bildevedlegg. Ikke bruk
+    `https://bikerentaloslo.no/stavros/ur98251/` brukes som bildevedlegg. Ikke bruk
     den gamle Dropbox-lenken.
 13. **Lim inn ferdig tekst.** Utarbeid meldingen først og lim hele teksten inn
     i feltet i én operasjon. Ikke tast den bokstav for bokstav; det er tregere
@@ -598,7 +598,8 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 
 - 2026-09-04: Opprettet en ulistet presentasjonsside for Mercedes C250 Coupé
   2017, UR98251, med 50 bilder, video, VIN og synlige oppgraderinger.
-  Adresse: `https://bikerentaloslo.no/bil/ur98251/`. Siden er merket `noindex`
+  Opprinnelig adresse var `/bil/ur98251/`; gjeldende adresse er
+  `https://bikerentaloslo.no/stavros/ur98251/`. Siden er merket `noindex`
   og er ikke lenket fra resten av nettstedet, men er offentlig for mottakere
   som har adressen.
 
