@@ -232,6 +232,7 @@ at Stavros forklarer på nytt.
 | Delux T9 enhåndstastatur / gaming keypad | ✅ 300 kr, [FINN 475861567](https://www.finn.no/recommerce/forsale/item/475861567) *(til kontroll)* | – | n/a |
 | Tastaturer og mus – Logitech, Contour og Apple (samleannonse) | ✅ 2 500 kr samlet, enkeltpriser i teksten, [FINN 475861821](https://www.finn.no/recommerce/forsale/item/475861821) *(til kontroll)* | – | n/a |
 | JBL Everest Elite 100 Bluetooth-hodesett | ✅ 300 kr, [FINN 475861966](https://www.finn.no/475861966) *(aktiv)* | – | n/a |
+| Nordlys Webstudio – nettsidetjeneste | Utkast 476012757, klart – krever 199 kr betaling | Sendt til Småjobber Oslo/Akershus (venter godkjenning) og GREEKS IN OSLO | n/a |
 
 ## Codex-oppgaver – organisering
 
@@ -280,7 +281,17 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
 > Oppdater denne seksjonen på slutten av hver økt, uansett hvilken maskin som
 > kjører den, slik at neste økt raskt kan lese seg opp på hvor ting står.
 
-**Sist oppdatert: 2026-09-08**
+**Sist oppdatert: 2026-09-09**
+
+- 2026-09-09: Markedsføring av **Nordlys Webstudio** startet med lenken
+  `https://stavroslitsos.com/nordlys-web/`. FINN-utkast **476012757** er ferdig
+  utfylt i Næringsvirksomhet → Annet, pris 7 500 kr og introduksjonstilbud
+  5 000 kr. Publisering er ikke betalt: billigste FINN-pakke er Basis til
+  199 kr. Facebook-innlegg er sendt til **Småjobber – Oslo og Akershus**
+  (venter administratorgodkjenning) og **GREEKS IN OSLO**. Oslo Expats,
+  Norway Buy, Sale and Rent og Students' Market Oslo ble kontrollert, men ikke
+  brukt fordi gruppeformålet eller publiseringsformatet ikke passer ordinær
+  tjenestereklame.
 
 - 2026-09-08: Registrerte to nye forhandlersvar for Mercedes C250 Coupé
   UR98251 i `bilkupp-overvaking.md`. **Autostrada Notodden AS**, ved salgssjef
@@ -406,7 +417,6 @@ Norway = kun Tesla, ikke relevant). RAM Mounts bør i norske MC-/sykkelgrupper.
   Alle 46 samtaler viste meldingen som sendt. Fem irrelevante søketreff ble
   utelatt: MC-etui, Tesla-feste, tilbehørspakke og to bilkameraer. Avventer svar
   fra selgerne.
-
 - 2026-08-26: Egen arbeidsoppgave for **Facebook-grupper** er lest inn og gjort
   klar. Gjennomgått aktive produkter, tidligere Facebook-innlegg, kjente
   medlemsgrupper, gruppereglene og åpne punkter i både README og
