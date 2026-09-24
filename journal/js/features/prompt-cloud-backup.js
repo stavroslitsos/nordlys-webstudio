@@ -1,9 +1,10 @@
+import { GOOGLE_CLIENT_ID } from "../../nordlys-google-config.js";
 const MICROSOFT_CLIENT_ID = "";
 const MICROSOFT_AUTHORITY = "https://login.microsoftonline.com/consumers/oauth2/v2.0";
 const MICROSOFT_SCOPES = ["Files.ReadWrite.AppFolder"];
 
 function googleClientId() {
-  const id = String(localStorage.getItem('nordlys_google_client_id') || '').trim();
+  const id = String(localStorage.getItem('nordlys_google_client_id') || GOOGLE_CLIENT_ID).trim();
   if (!/^[0-9]+-[a-zA-Z0-9_-]+\.apps\.googleusercontent\.com$/.test(id)) {
     throw new Error('Google Drive må settes opp først. Åpne Google Drive-oppsett fra Nøkler og oppsett.');
   }

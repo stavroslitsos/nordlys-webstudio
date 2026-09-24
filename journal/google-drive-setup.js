@@ -1,6 +1,7 @@
+import { GOOGLE_CLIENT_ID } from "./nordlys-google-config.js";
 const input = document.getElementById('client-id');
 const status = document.getElementById('status');
-try { input.value = localStorage.getItem('nordlys_google_client_id') || ''; } catch {}
+try { input.value = localStorage.getItem('nordlys_google_client_id') || GOOGLE_CLIENT_ID; } catch {}
 document.getElementById('drive-config').addEventListener('submit', event => {
   event.preventDefault();
   const id = input.value.trim();
