@@ -38,6 +38,26 @@ function compactWorkspaceSettings(){
   const el=document.getElementById(id);if(el)note.append(el);
  }
  dock.append(note);
+ const card=document.querySelector('.nj-input-card');
+ const recordingActions=document.getElementById('startButton')?.parentElement;
+ if(card&&recordingActions){
+  recordingActions.classList.add('nj-recording-actions');
+  card.append(recordingActions);
+  const status=document.getElementById('statusMessage');if(status)card.append(status);
+ }
+ const noteHeader=document.getElementById('noteGenerationTitle')?.parentElement;
+ if(noteHeader){
+  noteHeader.classList.add('nj-note-heading');
+  noteHeader.querySelector('.bottom-section-header-spacer')?.remove();
+  const actions=document.getElementById('noteActionButtons');
+  const utility=document.getElementById('noteTimer')?.parentElement;
+  if(actions)noteHeader.append(actions);
+  if(utility){utility.classList.add('nj-note-utility');noteHeader.append(utility);}
+ }
+ const promptHeader=document.getElementById('customPromptTitle')?.parentElement;
+ const backupRow=document.querySelector('.prompt-backup-row');
+ if(promptHeader&&backupRow){promptHeader.append(backupRow);promptHeader.classList.add('nj-prompt-heading');}
+
 }
 compactWorkspaceSettings();
 window.addEventListener('load',compactWorkspaceSettings);

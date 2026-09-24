@@ -66,3 +66,23 @@
 @media(max-width:1199px){
  .nj-workspace-stage>.workspace-preset-bar{margin-bottom:0!important;min-height:50px;padding:6px 10px}
 }
+
+/* Compact actions stay next to the content they control. */
+.nj-recording-actions{margin-top:8px;gap:5px!important}
+.nj-recording-actions button{font-size:12px!important;min-height:25px!important;padding:4px 8px!important}
+.nj-recording-actions label,.nj-recording-actions select{font-size:11px!important}
+.nj-recording-actions select{padding:2px 5px!important;max-width:100px}
+.nj-input-card #statusMessage{font-size:11px;line-height:1.3;margin-top:4px;color:#536c80}
+.nj-note-heading,.nj-prompt-heading{flex-wrap:wrap;justify-content:flex-start!important;gap:6px 10px!important;margin:0 0 6px!important;min-height:30px}
+.nj-note-heading h3,.nj-prompt-heading h3{font-size:17px!important;margin-right:auto!important}
+.nj-note-heading #noteActionButtons{margin:0!important;gap:5px!important}
+.nj-note-heading #generateNoteButton,.nj-note-heading #abortNoteButton{font-size:12px!important;min-height:27px!important;padding:5px 9px!important;margin:0!important}
+.nj-note-utility{display:flex!important;flex:1 1 100%;align-items:center!important;margin:0!important;gap:6px!important}
+.nj-note-utility #noteTimer{font-size:11px!important}
+.nj-note-utility button,.nj-note-utility label,.nj-note-utility .auto-clear-label{font-size:11px!important}
+.nj-prompt-heading .prompt-backup-row{margin:0!important;min-height:0!important}
+.nj-prompt-heading .prompt-backup-actions{gap:5px}
+.nj-prompt-heading .prompt-backup-actions button{font-size:12px!important;padding:5px 8px!important;margin:0!important}
+.nj-prompt-heading .prompt-include-toggle{font-size:12px!important}
+#promptBackupStatus:empty{display:none}
+.workspace-preset-frame .bottom-half{padding-top:10px!important}
