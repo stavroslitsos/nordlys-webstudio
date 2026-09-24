@@ -649,6 +649,9 @@ async function showPromptBackupCloudStep(provider) {
         ? formatPromptBackupText(text.unlockedCloudNotice, { provider: providerName })
         : isExport ? text.exportCloudNotice : text.importCloudNotice;
   }
+  if (isExport && promptBackupModal.cloudNotice) {
+    promptBackupModal.cloudNotice.textContent += " " + (provider === "oneDrive" ? text.confirmOneDriveExport : text.confirmGoogleDriveExport);
+  }
   if (promptBackupModal.passwordLabel) {
     promptBackupModal.passwordLabel.textContent = isExport ? text.newPassword : text.currentPassword;
   }
@@ -802,12 +805,6 @@ async function runPromptCloudAction() {
     return;
   }
 
-  if (isExport) {
-    const confirmText = provider === "oneDrive"
-      ? text.confirmOneDriveExport
-      : text.confirmGoogleDriveExport;
-    if (!window.confirm(confirmText)) return;
-  }
 
   let succeeded = false;
   let generalTermsSaved = false;

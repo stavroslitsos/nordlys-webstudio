@@ -624,7 +624,8 @@ async function connect(provider, onStatus = () => {}) {
     return requestMicrosoftAccessToken();
   }
   onStatus("googleSignIn");
-  await loadGoogleIdentityServices();
+  // Invoke the popup directly within the click when the SDK is ready.
+  if (!window.google?.accounts?.oauth2) await loadGoogleIdentityServices();
   return requestGoogleAccessToken();
 }
 
@@ -836,7 +837,17 @@ async function loadWorkspacePresetsFromGoogleDrive(password, onStatus = () => {}
 }
 
 const unavailable = async () => { throw new Error("Skykopi er ikke konfigurert for Nordlys Journal. Bruk lokal JSON-eksport/import."); };
+const KEY_BACKUP_FILENAME = "nordlys-keys-backup.enc.json";
+async function saveEncryptedKeys(accessToken, payload) {
+  if (payload?.format !== "nordlys.keys.v1") throw new Error("Expected encrypted keys.");
+  await uploadToGoogleDrive(accessToken, KEY_BACKUP_FILENAME, payload);
+}
+async function loadEncryptedKeys(accessToken) {
+  return downloadFromGoogleDrive(accessToken, KEY_BACKUP_FILENAME, "API key backup");
+}
 export const PromptCloudBackup = Object.freeze({
+  saveEncryptedKeys,
+  loadEncryptedKeys,
   filename: PROMPT_BACKUP_FILENAME,
   generalTermsFilename: GENERAL_TERMS_BACKUP_FILENAME,
   workspacePresetsFilename: WORKSPACE_PRESETS_BACKUP_FILENAME,

@@ -1,3 +1,4 @@
+import { PromptCloudBackup } from './js/features/prompt-cloud-backup.js';
 import { encryptKeys, decryptKeys } from './nordlys-crypto.js';
 import { PromptManager } from './js/promptManager.js';
 const fields = {soniox_api_key:'soniox-key',openai_api_key:'openai-key',mistral_api_key:'mistral-key',requesty_api_key:'requesty-key',bedrock_backend_url:'bedrock-url',bedrock_backend_secret:'bedrock-secret'};
@@ -24,7 +25,7 @@ $('import-keys').addEventListener('click',()=>$('key-file').click());
 $('key-file').addEventListener('change',async()=>{try{const file=$('key-file').files[0];if(!file)return;if(file.size>1000000)throw new Error('Nøkkelfilen er for stor.');const data=JSON.parse(await file.text());if(data.format==='nordlys.keys.v1'){pending=data;openBackup('import');}else fill(data);}catch{status('Kunne ikke lese nøkkelfilen. Bruk JSON fra originalen eller en kryptert Nordlys-fil.');}finally{$('key-file').value='';}});
 $('backup-cancel').addEventListener('click',()=>$('backup-dialog').close());
 $('backup-dialog').addEventListener('close',()=>{$('backup-form').reset();pending=null;});
-$('backup-form').addEventListener('submit',async event=>{event.preventDefault();const pass=$('backup-password').value;const exporting=$('backup-dialog').dataset.mode==='export';$('backup-error').textContent='';if(exporting&&pass!==$('backup-confirm').value){$('backup-error').textContent='Passordene er ikke like.';return;}$('backup-submit').disabled=true;try{if(exporting){const payload=await encryptKeys(values(),pass);const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='nordlys-nokler-kryptert.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);status('Kryptert nøkkelfil er lastet ned.');}else{fill(await decryptKeys(pending,pass));}$('backup-dialog').close();}catch{$('backup-error').textContent='Kunne ikke behandle filen. Kontroller passord og filformat.';}finally{$('backup-submit').disabled=false;}});
+$('backup-form').addEventListener('submit',async event=>{event.preventDefault();const pass=$('backup-password').value;const mode=$('backup-dialog').dataset.mode;const cloud=mode.startsWith('drive-');const exporting=mode==='export'||mode==='drive-export';$('backup-error').textContent='';if(exporting&&pass!==$('backup-confirm').value){$('backup-error').textContent='Passordene er ikke like.';return;}$('backup-submit').disabled=true;try{if(cloud){const token=await PromptCloudBackup.connect('googleDrive');if(exporting){const payload=await encryptKeys(values(),pass);await PromptCloudBackup.saveEncryptedKeys(token,payload);const restored=await decryptKeys(await PromptCloudBackup.loadEncryptedKeys(token),pass);if(JSON.stringify(restored)!==JSON.stringify(values()))throw new Error('Kontrollen av sikkerhetskopien mislyktes.');persist();status('API-nøklene er lagret kryptert i Google Drive. Gjenoppretting er kontrollert.');}else{fill(await decryptKeys(await PromptCloudBackup.loadEncryptedKeys(token),pass));persist();status('API-nøklene er hentet fra Google Drive og klare i denne fanen.');}}else if(exporting){const payload=await encryptKeys(values(),pass);const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='nordlys-nokler-kryptert.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);status('Kryptert nøkkelfil er lastet ned.');}else{fill(await decryptKeys(pending,pass));}$('backup-dialog').close();}catch(error){$('backup-error').textContent=cloud?'Kunne ikke behandle Drive-kopien: '+error.message:'Kunne ikke behandle filen. Kontroller passord og filformat.';}finally{$('backup-submit').disabled=false;}});
 // Only initialize empty slots. Never replace the user's imported prompt library.
 if(!localStorage.getItem('nordlys_prompt_seeded')){
  PromptManager.setPromptProfileId('default');
@@ -33,3 +34,19 @@ if(!localStorage.getItem('nordlys_prompt_seeded')){
  seeds.forEach(([name,prompt],i)=>{const slot=String(i+1);if(!PromptManager.getPrompt(slot)){PromptManager.savePrompt(slot,prompt);PromptManager.setSlotDisplayName(slot,name,'default');}});
  localStorage.setItem('nordlys_prompt_seeded','1');
 }
+
+async function openDriveKeys(exporting) {
+ if(exporting&&!Object.values(values()).some(Boolean)){status('Importer nøkkelfilen din først.');return;}
+ status('Klargjør Google-innlogging …');
+ try {
+  await PromptCloudBackup.prepareGoogleSignIn();
+  openBackup(exporting?'export':'import');
+  $('backup-dialog').dataset.mode=exporting?'drive-export':'drive-import';
+  $('backup-title').textContent=exporting?'Lagre nøkler i Google Drive':'Hent nøkler fra Google Drive';
+  $('backup-description').textContent=exporting?'Velg minst 12 tegn. Nøklene krypteres før opplasting. Nordlys sin forrige nøkkelkopi erstattes. Husk passordet for å hente dem senere.':'Skriv inn passordet til Nordlys sin nøkkelkopi i Google Drive.';
+  $('backup-submit').textContent=exporting?'Lagre i Google Drive':'Hent fra Google Drive';
+  status('');
+ } catch(error){status(error.message);}
+}
+$('drive-save-keys').addEventListener('click',()=>openDriveKeys(true));
+$('drive-load-keys').addEventListener('click',()=>openDriveKeys(false));
