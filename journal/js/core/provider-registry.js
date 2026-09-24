@@ -12,7 +12,7 @@ export const DEFAULTS = {
   transcribeProvider: 'soniox',
   sonioxRegion: 'eu',
   sonioxSpeakerLabels: 'off',
-  noteProvider: 'aws-bedrock',
+  noteProvider: 'openai-gpt56-sol',
   openaiModel: 'gpt-5.6-sol',
   openaiEffectiveProvider: 'openai-gpt56-sol',
   openaiReasoning: 'medium',
