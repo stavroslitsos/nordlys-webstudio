@@ -1,0 +1,25 @@
+{
+  "name": "Nordlys Journal",
+  "id": "nordlys-journal",
+  "version": "0.1.0",
+  "updated": "2026-09-24",
+  "repository": "https://github.com/stavroslitsos/nordlys-webstudio",
+  "branch": "main",
+  "website": "https://nordlyswebstudio.no/journal/",
+  "sourceDirectory": "journal",
+  "documentationDirectory": "_project-docs/nordlys-journal",
+  "manifest": "_project-docs/nordlys-journal/MANIFEST.md",
+  "hosting": "GitHub Pages",
+  "defaults": {
+    "transcription": "soniox",
+    "region": "eu",
+    "notes": "openai-gpt56-sol",
+    "mode": "streaming"
+  },
+  "backup": {
+    "provider": "Google Drive",
+    "scope": "https://www.googleapis.com/auth/drive.appdata",
+    "keysAndPromptsRoundtripVerified": true
+  },
+  "sensitiveDataIncluded": false
+}
