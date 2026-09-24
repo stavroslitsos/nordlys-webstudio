@@ -544,6 +544,11 @@ function initTopLevelManager() {
   const frameHost = document.createElement("div");
   frameHost.className = "workspace-preset-frame-host";
   nativeRecording.parentNode.insertBefore(frameHost, nativeRecording);
+  const compactStage = document.createElement("div");
+  compactStage.className = "nj-workspace-stage";
+  frameHost.before(compactStage);
+  compactStage.append(toolbar.bar, frameHost);
+
   const modal = buildModal();
   document.body.appendChild(modal.backdrop);
 

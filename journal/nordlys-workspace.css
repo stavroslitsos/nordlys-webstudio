@@ -34,3 +34,35 @@
 @media(max-width:900px){.nj-recording-controls{gap:8px}.nj-recording-controls .transcribe-provider-row{width:100%;order:2}.nj-recording-controls #recordTimer{order:3}.nj-recording-controls #openaiUsageLink{order:1}}
 
 [id*="OneDrive"]{display:none!important}
+
+
+/* Shared workspace bar at left; each active frame's settings occupy the right. */
+.nj-workspace-stage{position:relative;min-width:0}
+.nj-settings-dock{box-sizing:border-box;padding:10px 18px;background:#f7faff;border-bottom:1px solid var(--nj-line);display:flex;flex-direction:column;gap:6px}
+.nj-settings-dock .nj-recording-controls{gap:5px 10px}
+.nj-settings-dock h3{font-size:14px!important}
+.nj-settings-dock .transcribe-provider-row{gap:6px;flex-wrap:wrap}
+.nj-settings-dock label,.nj-settings-dock select,.nj-settings-dock #recordTimer{font-size:12px!important}
+.nj-settings-dock select{padding:3px;max-width:165px}
+.nj-settings-dock #soniox-eu-help{display:none}
+.nj-settings-dock #openaiUsageLink{font-size:11px}
+.nj-note-settings{display:flex;align-items:center;flex-wrap:wrap;gap:5px 10px;font-size:13px}
+.nj-note-settings #note-provider-container{display:contents!important}
+.nj-note-settings #gpt5-reasoning-container,.nj-note-settings #requesty-nano-reasoning-container{margin:0!important}
+.nj-note-settings #noteAutoClearToggleWrap{margin-left:0!important}
+.nj-settings-dock .model-price-label{display:none}
+.workspace-preset-frame .recording-area{padding-top:4px!important}
+.workspace-preset-frame .bottom-section-header{margin-bottom:6px!important}
+.workspace-preset-frame .custom-prompt-area{padding-top:0!important}
+@media(min-width:1200px){
+ .nj-workspace-stage>.workspace-preset-bar{position:absolute;z-index:2;top:0;left:0;width:39%;min-height:100px;margin:0!important;padding:8px!important;gap:5px;flex-wrap:wrap;border-radius:0;border-top:0}
+ .nj-workspace-stage .workspace-preset-label{margin-left:0;font-size:12px}
+ .nj-workspace-stage .workspace-preset-io{padding:5px 9px;min-height:30px;font-size:12px}
+ .nj-workspace-stage .workspace-preset-chip{min-height:35px;font-size:13px}
+ .nj-workspace-stage .workspace-preset-add{width:32px;height:32px;font-size:20px}
+ .nj-workspace-stage .workspace-preset-list{max-width:100%;padding:0}
+ .nj-settings-dock{margin-left:39%;min-height:100px}
+}
+@media(max-width:1199px){
+ .nj-workspace-stage>.workspace-preset-bar{margin-bottom:0!important;min-height:50px;padding:6px 10px}
+}

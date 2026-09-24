@@ -16,3 +16,28 @@ if(document.modelContext?.registerTool){
  for(const tool of tools){try{Promise.resolve(document.modelContext.registerTool(tool,{signal:lifetime.signal})).catch(()=>{});}catch{}}
  window.addEventListener('pagehide',()=>lifetime.abort(),{once:true});
 }
+
+
+// Keep the actual controls in their workspace document so provider handlers,
+// persisted settings and concurrent workspaces continue to use the same nodes.
+function compactWorkspaceSettings(){
+ if(!document.documentElement.classList.contains('workspace-preset-frame'))return;
+ const recording=document.querySelector('.recording-area');
+ const controls=document.querySelector('.nj-recording-controls');
+ if(!recording||!controls||document.querySelector('.nj-settings-dock'))return;
+ const dock=document.createElement('section');
+ dock.className='nj-settings-dock';
+ dock.setAttribute('aria-label','Opptaks- og notatinnstillinger');
+ recording.before(dock);
+ dock.append(controls);
+ const note=document.createElement('div');
+ note.className='nj-note-settings';
+ const label=document.createElement('strong');label.textContent='Notat';
+ note.append(label);
+ for(const id of ['note-provider-container','gpt5-reasoning-container','requesty-nano-reasoning-container']){
+  const el=document.getElementById(id);if(el)note.append(el);
+ }
+ dock.append(note);
+}
+compactWorkspaceSettings();
+window.addEventListener('load',compactWorkspaceSettings);
