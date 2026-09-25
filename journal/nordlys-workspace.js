@@ -73,3 +73,18 @@ function showKeyRestore(){
  notice.append(message,link);top.after(notice);
 }
 showKeyRestore();window.addEventListener('load',showKeyRestore);
+
+
+// Apply compact visible wording to dynamic timer/button labels without replacing controls.
+function installCompactLabels(){
+ const ids=['noteGenerationTitle','generateNoteButton','abortNoteButton','nj-transcript-label','copyNoteButton','miniPanelToggleButton'];
+ const replacements=[['Notatgenerering','Notat'],['Generer notat','Generer'],['Generate Note','Generer'],['Abort Note','Abort'],['Samtaletekst','Samtale'],['Fullføringstimer','Tid'],['Completion Timer','Tid'],['Note Generation Timer','Tid'],['Mini-panel','Panel'],['Copy','Kopier']];
+ const roots=ids.map(id=>document.getElementById(id)).filter(Boolean);
+ const panel=document.querySelector('button[aria-label="Open mini panel"]');if(panel&&!roots.includes(panel))roots.push(panel);
+ const apply=()=>{for(const root of roots){const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while((n=walker.nextNode())){let text=n.nodeValue;for(const [from,to] of replacements)text=text.replaceAll(from,to);if(text!==n.nodeValue)n.nodeValue=text;}}};
+ apply();
+ const observer=new MutationObserver(apply);
+ for(const root of roots)observer.observe(root,{subtree:true,childList:true,characterData:true});
+ window.addEventListener('pagehide',()=>observer.disconnect(),{once:true});
+}
+installCompactLabels();

@@ -548,6 +548,21 @@ function initTopLevelManager() {
   compactStage.className = "nj-workspace-stage";
   frameHost.before(compactStage);
   compactStage.append(toolbar.bar, frameHost);
+  const settingsToggle = document.createElement("details");
+  settingsToggle.className = "nj-settings-toggle";
+  const settingsSummary = document.createElement("summary");
+  settingsSummary.textContent = "Innstillinger · arbeidsrom, opptak og modell";
+  settingsToggle.append(settingsSummary);
+  compactStage.before(settingsToggle);
+  function syncSettingsVisibility() {
+    compactStage.classList.toggle("nj-settings-expanded", settingsToggle.open);
+    for (const frame of frameHost.querySelectorAll("iframe")) {
+      try { frame.contentDocument?.documentElement.classList.toggle("nj-settings-expanded", settingsToggle.open); } catch {}
+    }
+  }
+  settingsToggle.addEventListener("toggle", syncSettingsVisibility);
+  frameHost.addEventListener("load", syncSettingsVisibility, true);
+
 
   const modal = buildModal();
   document.body.appendChild(modal.backdrop);

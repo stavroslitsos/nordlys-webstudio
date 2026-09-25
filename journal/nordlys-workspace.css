@@ -89,3 +89,17 @@
 
 .nj-key-restore{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:10px 20px;background:#fff7df;border-bottom:1px solid #e7d59b;color:#594b20;font-size:14px}
 .nj-key-restore a{padding:7px 12px;border-radius:6px;background:#087d71;color:white;white-space:nowrap;text-decoration:none}
+
+/* Collapsed by default; same-origin workspaces mirror the outer disclosure. */
+.nj-settings-toggle{margin:0;padding:7px 18px;background:#f7faff;border-bottom:1px solid var(--nj-line);font-size:13px;color:#345266}
+.nj-settings-toggle summary{cursor:pointer;width:fit-content;padding:4px 0;font-weight:600}
+.nj-settings-toggle summary:focus-visible{outline:2px solid #087d71;outline-offset:3px}
+.nj-workspace-stage:not(.nj-settings-expanded)>.workspace-preset-bar{display:none!important}
+html.workspace-preset-frame:not(.nj-settings-expanded) .nj-settings-dock{display:none!important}
+.nj-note-heading{gap:5px 8px!important}
+.nj-note-heading h3{margin-right:4px!important;flex:0 0 auto}
+.nj-note-utility{flex:1 1 auto!important;min-width:0;gap:6px!important}
+.nj-note-utility>div:last-child{gap:4px!important}
+.nj-note-heading #noteActionButtons{order:2}
+.nj-note-utility{order:1}
+@media(max-width:720px){.nj-note-utility{flex-basis:100%!important;order:3}}
