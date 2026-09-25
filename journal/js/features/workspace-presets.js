@@ -1,3 +1,4 @@
+import { addPasswordManagerFields, offerPasswordSave } from "./backup-password-manager.js";
 import { PromptManager } from "../promptManager.js";
 import { PromptCloudBackup } from "./prompt-cloud-backup.js";
 import { CloudBackupSession } from "./cloud-backup-session.js";
@@ -1669,19 +1670,22 @@ function initTopLevelManager() {
       : useUnlockedPassword
         ? fmt(copy.unlockedPassword, { provider: providerName })
         : exporting ? copy.exportNotice : copy.importNotice;
-    const password = document.createElement("input"); password.type = "password"; password.className = "workspace-modal-field"; password.placeholder = copy.password; password.autocomplete = exporting ? "new-password" : "current-password";
+    const passwordForm = document.createElement("form"); passwordForm.id = "workspace-backup-form"; passwordForm.method = "dialog";
+    const passwordManager = addPasswordManagerFields(passwordForm, "Nordlys Journal – maler og arbeidsrom");
+    const password = document.createElement("input"); password.id = "workspace-backup-password"; password.name = "password"; password.type = "password"; password.className = "workspace-modal-field"; password.placeholder = copy.password; password.autocomplete = exporting ? "new-password" : "current-password";
     let repeat = null;
     if (exporting && !useUnlockedPassword) {
-      repeat = document.createElement("input"); repeat.type = "password"; repeat.className = "workspace-modal-field"; repeat.placeholder = copy.repeat; repeat.autocomplete = "new-password";
+      repeat = document.createElement("input"); repeat.id = "workspace-backup-confirm"; repeat.name = "password-confirmation"; repeat.type = "password"; repeat.className = "workspace-modal-field"; repeat.placeholder = copy.repeat; repeat.autocomplete = "new-password";
     }
     const actions = document.createElement("div"); actions.className = "workspace-modal-actions";
-    const run = document.createElement("button"); run.type = "button"; run.textContent = exporting ? copy.save : copy.import;
+    const run = document.createElement("button"); run.type = "submit"; run.textContent = exporting ? copy.save : copy.import;
     const back = document.createElement("button"); back.type = "button"; back.textContent = copy.back; actions.append(run, back);
     modal.body.append(notice);
-    if (!useUnlockedPassword) modal.body.append(password);
-    if (repeat) modal.body.append(repeat);
-    modal.body.append(actions); back.addEventListener("click", renderChoiceModal);
-    run.addEventListener("click", async () => {
+    if (!useUnlockedPassword) passwordForm.append(password);
+    if (repeat) passwordForm.append(repeat);
+    passwordForm.append(actions); modal.body.append(passwordForm); back.addEventListener("click", renderChoiceModal);
+    passwordForm.addEventListener("submit", async event => {
+      event.preventDefault();
       const value = useUnlockedPassword ? unlockedPassword : password.value;
       if (exporting && !useUnlockedPassword && value.length < 10) { setModalStatus(copy.passwordMin, true); return; }
       if (exporting && !useUnlockedPassword && value !== repeat.value) { setModalStatus(copy.mismatch, true); return; }
@@ -1697,6 +1701,7 @@ function initTopLevelManager() {
             modalState.provider, accessToken, bundle, value
           );
           CloudBackupSession.unlock(modalState.provider, value);
+          if (!useUnlockedPassword) await offerPasswordSave(passwordManager, value);
           const message = modalState.provider === "oneDrive" ? copy.savedOneDrive : copy.savedGoogle; closeModal(); toast(message);
         } else {
           progress("downloadingAndDecrypting");
@@ -1711,6 +1716,7 @@ function initTopLevelManager() {
               modalState.provider, accessToken, bundle, unlockedPassword
             );
           }
+          if (!useUnlockedPassword && !modalState.legacyPasswordMode) await offerPasswordSave(passwordManager, value);
           showImportPreview(bundle);
         }
       } catch (error) {

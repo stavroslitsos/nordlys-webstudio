@@ -24,3 +24,8 @@ Nøklene lagres fortsatt bare i faneøkten; ny økt krever gjenoppretting fra Dr
 
 ### Kompakt innstillingsmeny og notatrad · 25. september 2026
 Arbeidsrom-/opptaks-/modellraden foldes nå under «Innstillinger», lukket som standard. Originale kontroller beholdes i riktig arbeidsrom. Notatraden samler overskrift, tid, kopier, panel, auto-generering og generer/abort. Korte etiketter: Notat, Tid, Panel, Generer, Abort og Samtale. På smale skjermer kan raden brytes.
+
+## 2026-09-25 – Autofyll av sikkerhetskopipassord
+- Rettet nøkkelimport som feilaktig var merket new-password.
+- Gjenkjennelige passordskjemaer for nøkler, maler og arbeidsrom.
+- Valgfritt tilbud om lagring i nettleserens passordbehandler etter vellykket operasjon; ingen passord i kildekode eller varig app-lagring.

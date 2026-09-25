@@ -2992,13 +2992,13 @@
                 <p class="prompt-backup-modal__help"><a href="./google-drive.html" target="_blank" rel="noopener">Google Drive-oppsett</a> · Første gang: importer malene via JSON og eksporter dem deretter til Google Drive. Originalsidens private sikkerhetskopi er ikke tilgjengelig her.</p>
               </div>
 
-              <div id="promptBackupCloudStep" style="display:none">
+              <form id="promptBackupCloudStep" name="nordlys-prompt-backup" method="dialog" autocomplete="on" style="display:none">
                 <div id="promptBackupCloudNotice" class="prompt-backup-modal__notice"></div>
                 <label id="promptBackupPasswordLabel" class="prompt-backup-modal__field-label" for="promptBackupPassword">
                   Encryption password
                 </label>
                 <input
-                  id="promptBackupPassword"
+                  id="promptBackupPassword" name="password"
                   class="prompt-backup-modal__password"
                   type="password"
                   autocomplete="current-password"
@@ -3008,17 +3008,17 @@
                     Repeat password
                   </label>
                   <input
-                    id="promptBackupPasswordConfirm"
+                    id="promptBackupPasswordConfirm" name="password-confirmation"
                     class="prompt-backup-modal__password"
                     type="password"
                     autocomplete="new-password"
                   >
                 </div>
                 <div class="prompt-backup-modal__actions">
-                  <button id="promptBackupCloudAction" type="button">Save</button>
+                  <button id="promptBackupCloudAction" type="submit">Save</button>
                   <button id="promptBackupCloudBack" class="prompt-backup-modal__back" type="button">Back</button>
                 </div>
-              </div>
+              </form>
 
               <p id="promptBackupModalStatus" aria-live="polite"></p>
             </div>

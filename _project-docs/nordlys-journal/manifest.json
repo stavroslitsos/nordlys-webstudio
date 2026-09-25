@@ -2,7 +2,7 @@
   "name": "Nordlys Journal",
   "id": "nordlys-journal",
   "version": "0.1.0",
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "repository": "https://github.com/stavroslitsos/nordlys-webstudio",
   "branch": "main",
   "website": "https://nordlyswebstudio.no/journal/",
@@ -19,7 +19,9 @@
   "backup": {
     "provider": "Google Drive",
     "scope": "https://www.googleapis.com/auth/drive.appdata",
-    "keysAndPromptsRoundtripVerified": true
+    "keysAndPromptsRoundtripVerified": true,
+    "passwordManagerSupport": true,
+    "userPasswordAutofillVerified": false
   },
   "sensitiveDataIncluded": false
 }

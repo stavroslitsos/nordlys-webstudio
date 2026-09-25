@@ -1,3 +1,4 @@
+import { addPasswordManagerFields, offerPasswordSave } from "./backup-password-manager.js";
 import { PromptManager } from "../promptManager.js";
 import { PromptCloudBackup } from "./prompt-cloud-backup.js";
 import { CloudBackupSession } from "./cloud-backup-session.js";
@@ -901,6 +902,7 @@ async function runPromptCloudAction() {
   }
 
   if (!succeeded) return;
+  if (!usingUnlockedPassword && !migratedLegacyBackup) await offerPasswordSave(promptPasswordManager, password);
 
   let successMessage;
   if (isExport) {
@@ -1087,7 +1089,8 @@ promptBackupModal.oneDriveChoice?.addEventListener("click", () => {
 promptBackupModal.googleDriveChoice?.addEventListener("click", () => {
   showPromptBackupCloudStep("googleDrive");
 });
-promptBackupModal.cloudAction?.addEventListener("click", runPromptCloudAction);
+const promptPasswordManager = promptBackupModal.cloudStep ? addPasswordManagerFields(promptBackupModal.cloudStep, "Nordlys Journal – maler og arbeidsrom") : null;
+promptBackupModal.cloudStep?.addEventListener("submit", event => { event.preventDefault(); runPromptCloudAction(); });
 
 promptBackupModal.jsonChoice?.addEventListener("click", async () => {
   const text = getPromptBackupText();
@@ -1114,14 +1117,6 @@ promptBackupModal.backdrop?.addEventListener("click", (event) => {
   if (event.target === promptBackupModal.backdrop) closePromptBackupModal();
 });
 
-[promptBackupModal.password, promptBackupModal.passwordConfirm].forEach((input) => {
-  input?.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      runPromptCloudAction();
-    }
-  });
-});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && promptBackupModal.backdrop?.classList.contains("active")) {
