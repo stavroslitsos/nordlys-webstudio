@@ -61,3 +61,15 @@ function compactWorkspaceSettings(){
 }
 compactWorkspaceSettings();
 window.addEventListener('load',compactWorkspaceSettings);
+
+function showKeyRestore(){
+ if(document.documentElement.classList.contains('workspace-preset-frame'))return;
+ if(document.getElementById('nj-key-restore'))return;
+ if(sessionStorage.getItem('soniox_api_key')&&sessionStorage.getItem('openai_api_key'))return;
+ const top=document.querySelector('.top-bar');if(!top)return;
+ const notice=document.createElement('div');notice.id='nj-key-restore';notice.className='nj-key-restore';notice.setAttribute('role','status');
+ const message=document.createElement('span');message.textContent='API-nøkler mangler i denne faneøkten. Hent dem fra Google Drive før opptak eller notatgenerering.';
+ const link=document.createElement('a');link.href='./index.html?restore=drive';link.textContent='Importer nøkler fra Google Drive';
+ notice.append(message,link);top.after(notice);
+}
+showKeyRestore();window.addEventListener('load',showKeyRestore);

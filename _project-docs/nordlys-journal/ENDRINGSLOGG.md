@@ -18,3 +18,6 @@
 16. Opprettet dette varige prosjektmanifestet i samme Git-repo som hoveddomenet.
 
 Detaljert filhistorikk, endringsdatoer og commit-ID-er finnes i Git. Dokumentasjonen inneholder ikke private prompttekster, API-nøkler, passord eller pasientdata.
+
+## 25. september 2026 — tydelig Drive-import ved ny økt
+Nøklene lagres fortsatt bare i faneøkten; ny økt krever gjenoppretting fra Drive. Oppsettsiden prioriterer nå Importer/Eksporter nøkler via Google Drive over manuelle felt. Lokal filimport er merket som alternativ under en sammenleggbar seksjon. Arbeidsrom uten Soniox-/OpenAI-nøkkel viser direkte lenke til Drive-import. Ingen automatisk opplasting eller varig lagring av dekrypterte nøkler er innført.

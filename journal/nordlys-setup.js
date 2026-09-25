@@ -50,3 +50,6 @@ async function openDriveKeys(exporting) {
 }
 $('drive-save-keys').addEventListener('click',()=>openDriveKeys(true));
 $('drive-load-keys').addEventListener('click',()=>openDriveKeys(false));
+
+// A workspace without session keys links directly to the Drive restore dialog.
+if(new URLSearchParams(location.search).get('restore')==='drive')openDriveKeys(false);

@@ -30,3 +30,6 @@ Oppdatert 24. september 2026. Gjeldende status erstatter tidligere notater om at
 - Klinisk kvalitet, personvernvilkår og egnethet for ordinær klinisk drift er ikke godkjent av disse tekniske testene.
 
 Ingen reelle pasientsamtaler ble brukt som testdata. Siste layoutendringer utløste ikke nye betalte AI-kall.
+
+## 25. september 2026 — tydelig Drive-import ved ny økt
+Nøklene lagres fortsatt bare i faneøkten; ny økt krever gjenoppretting fra Drive. Oppsettsiden prioriterer nå Importer/Eksporter nøkler via Google Drive over manuelle felt. Lokal filimport er merket som alternativ under en sammenleggbar seksjon. Arbeidsrom uten Soniox-/OpenAI-nøkkel viser direkte lenke til Drive-import. Ingen automatisk opplasting eller varig lagring av dekrypterte nøkler er innført.

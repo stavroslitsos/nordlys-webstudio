@@ -83,3 +83,6 @@ Dette er det varige overleveringsdokumentet for Nordlys Journal. Det beskriver g
 - [manifest.json](manifest.json): maskinlesbar prosjektidentitet og filplasseringer.
 - Ikke anta at historiske feil fortsatt gjelder når nyere bekreftet teststatus erstatter dem.
 - Ikke slett andre Cloud-prosjekter på grunnlag av navn alene. Brukeren ba om å undersøke et eksisterende prosjekt kalt barumscanner; bruken er ikke avklart og prosjektet er ikke slettet.
+
+## 25. september 2026 — tydelig Drive-import ved ny økt
+Nøklene lagres fortsatt bare i faneøkten; ny økt krever gjenoppretting fra Drive. Oppsettsiden prioriterer nå Importer/Eksporter nøkler via Google Drive over manuelle felt. Lokal filimport er merket som alternativ under en sammenleggbar seksjon. Arbeidsrom uten Soniox-/OpenAI-nøkkel viser direkte lenke til Drive-import. Ingen automatisk opplasting eller varig lagring av dekrypterte nøkler er innført.

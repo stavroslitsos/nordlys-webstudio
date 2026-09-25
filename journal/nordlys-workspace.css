@@ -86,3 +86,6 @@
 .nj-prompt-heading .prompt-include-toggle{font-size:12px!important}
 #promptBackupStatus:empty{display:none}
 .workspace-preset-frame .bottom-half{padding-top:10px!important}
+
+.nj-key-restore{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:10px 20px;background:#fff7df;border-bottom:1px solid #e7d59b;color:#594b20;font-size:14px}
+.nj-key-restore a{padding:7px 12px;border-radius:6px;background:#087d71;color:white;white-space:nowrap;text-decoration:none}
