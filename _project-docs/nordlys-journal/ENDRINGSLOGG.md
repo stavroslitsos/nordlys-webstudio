@@ -29,3 +29,6 @@ Arbeidsrom-/opptaks-/modellraden foldes nå under «Innstillinger», lukket som 
 - Rettet nøkkelimport som feilaktig var merket new-password.
 - Gjenkjennelige passordskjemaer for nøkler, maler og arbeidsrom.
 - Valgfritt tilbud om lagring i nettleserens passordbehandler etter vellykket operasjon; ingen passord i kildekode eller varig app-lagring.
+
+## 2026-09-25 – Lesbar feil ved nøkkelimport
+Fang opp dekrypteringsfeil som nettleseren kan returnere uten forklarende melding. Forklar at nøkkelkopiens opprinnelige sikkerhetskopipassord kreves, og at feil passord og skadet kopi ikke kan skilles kryptografisk. Ingen sikkerhetskopier endres av denne rettingen.
