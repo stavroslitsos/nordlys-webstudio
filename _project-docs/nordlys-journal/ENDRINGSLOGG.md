@@ -32,3 +32,6 @@ Arbeidsrom-/opptaks-/modellraden foldes nå under «Innstillinger», lukket som 
 
 ## 2026-09-25 – Lesbar feil ved nøkkelimport
 Fang opp dekrypteringsfeil som nettleseren kan returnere uten forklarende melding. Forklar at nøkkelkopiens opprinnelige sikkerhetskopipassord kreves, og at feil passord og skadet kopi ikke kan skilles kryptografisk. Ingen sikkerhetskopier endres av denne rettingen.
+
+## 2026-09-25 – Kompakt oppsettsside
+Introduksjonen er én liten linje over nøkkeloppsettet. Panelet bruker tilgjengelig bredde, med Drive-handlinger på samme rad og Soniox/OpenAI ved siden av hverandre. Mindre typografi og kontroller; én kolonne på smale skjermer. Kontrollert visuelt i Chrome og med eksisterende ressurs-/krypteringstester.

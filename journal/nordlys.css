@@ -5,3 +5,63 @@
 .drive-key-panel p{font-size:14px;line-height:1.5}
 .drive-key-actions{display:flex;flex-wrap:wrap;gap:10px}
 .drive-key-actions button{padding:10px 14px;border-radius:7px;cursor:pointer}
+
+/* Compact setup page: full-width connections and a single-line introduction. */
+.setup-page{font-size:13px}
+.setup-page>.shell{width:calc(100% - 48px);max-width:1800px}
+.setup-page .header{min-height:64px;gap:16px;padding:12px 0}
+.setup-page .brand{font-size:18px;gap:8px}
+.setup-page .mark{width:30px;height:30px;border-radius:8px;font-size:21px}
+.setup-page nav{font-size:12px;gap:20px}
+.setup-page .version{font-size:11px;padding:4px 9px}
+.setup-page .setup{display:flex;flex-direction:column;gap:12px;padding:14px 0 24px}
+.setup-page .compact-intro{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 16px;padding:0;font-size:12px;color:#52677a}
+.setup-page .compact-intro h1{font-size:13px;line-height:1.5;letter-spacing:0;margin:0}
+.setup-page .compact-intro p{font-size:12px;line-height:1.5;max-width:none;margin:0}
+.setup-page .compact-intro a{font-size:12px;margin-left:auto}
+.setup-page .panel{padding:20px;border-radius:12px}
+.setup-page .panel-heading{margin-bottom:12px}
+.setup-page .panel-heading>div{display:flex;align-items:baseline;gap:12px}
+.setup-page .panel-heading .eyebrow{font-size:10px;letter-spacing:1.4px;margin:0}
+.setup-page .panel-heading h2{font-size:19px;margin:0}
+.setup-page .session-label{max-width:none;font-size:11px}
+.setup-page .drive-key-panel{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:4px 24px;padding:14px 16px;margin-bottom:16px;border-radius:9px}
+.setup-page .drive-key-panel h3{font-size:14px;margin:0}
+.setup-page .drive-key-panel p{font-size:12px;margin:0}
+.setup-page .drive-key-panel>p{grid-column:1}
+.setup-page .drive-key-actions{grid-column:2;grid-row:1 / 4;align-items:center}
+.setup-page .drive-key-actions button{min-height:34px;padding:8px 12px;font-size:12px;border:1px solid #a8d8cb;background:#fff;color:#185b54}
+.setup-page .drive-key-actions .primary{background:#087d71;color:#fff;border-color:#087d71}
+.setup-page #setup-form{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+.setup-page .provider{min-width:0;border:1px solid var(--line);border-radius:9px;background:#fafcfe;padding:14px 16px}
+.setup-page .provider-heading{margin-bottom:8px}
+.setup-page .provider h3{font-size:16px}
+.setup-page .provider-heading>span{font-size:11px;padding:3px 7px}
+.setup-page #setup-form label{font-size:12px;margin:8px 0 6px}
+.setup-page #setup-form input{font-size:13px;min-height:36px;padding:8px 10px}
+.setup-page #setup-form .key-input input{padding-right:48px}
+.setup-page .reveal{top:2px;right:3px;padding:8px;font-size:12px}
+.setup-page .field-bottom{font-size:12px;gap:12px}
+.setup-page .field-bottom select{font-size:12px;padding:3px}
+.setup-page .help{font-size:12px;margin:5px 0}
+.setup-page .optional{padding:10px 0;font-size:12px}
+.setup-page #setup-form>.optional,.setup-page #setup-form>.notice{grid-column:1 / -1}
+.setup-page #setup-form>.notice{margin:0;padding:8px 12px;font-size:12px;line-height:1.5}
+.setup-page #setup-form>.primary{width:auto;justify-self:start;min-width:240px;min-height:38px;padding:9px 14px;border-radius:7px;font-size:13px;gap:24px}
+.setup-page #setup-form>.centered{text-align:right;align-self:center;margin:0}
+.setup-page .panel>.optional{margin-top:12px;border-bottom:0}
+.setup-page .backup-actions{margin-top:8px;padding-top:0;border:0}
+.setup-page .footer{padding:14px 0;font-size:11px;gap:12px}
+.setup-page .footer a{font-size:11px}
+@media(max-width:700px){
+ .setup-page>.shell{width:calc(100% - 24px)}
+ .setup-page .header{gap:10px}
+ .setup-page nav{flex-wrap:wrap;gap:10px}
+ .setup-page .compact-intro a{margin-left:0}
+ .setup-page .panel{padding:14px}
+ .setup-page .drive-key-panel{grid-template-columns:1fr;gap:7px}
+ .setup-page .drive-key-actions{grid-column:1;grid-row:auto}
+ .setup-page #setup-form{grid-template-columns:1fr;gap:10px}
+ .setup-page #setup-form>.centered{text-align:left}
+ .setup-page .panel-heading>div{display:block}
+}
