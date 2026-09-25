@@ -1684,7 +1684,9 @@ function initTopLevelManager() {
     if (!useUnlockedPassword) passwordForm.append(password);
     if (repeat) passwordForm.append(repeat);
     passwordForm.append(actions); modal.body.append(passwordForm); back.addEventListener("click", renderChoiceModal);
-    passwordForm.addEventListener("submit", async event => {
+    passwordForm.addEventListener("submit", event => event.preventDefault());
+    passwordForm.addEventListener("keydown", event => { if (event.key === "Enter" && event.target.tagName === "INPUT") { event.preventDefault(); run.click(); } });
+    run.addEventListener("click", async event => {
       event.preventDefault();
       const value = useUnlockedPassword ? unlockedPassword : password.value;
       if (exporting && !useUnlockedPassword && value.length < 10) { setModalStatus(copy.passwordMin, true); return; }

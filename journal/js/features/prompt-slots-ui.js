@@ -1090,7 +1090,13 @@ promptBackupModal.googleDriveChoice?.addEventListener("click", () => {
   showPromptBackupCloudStep("googleDrive");
 });
 const promptPasswordManager = promptBackupModal.cloudStep ? addPasswordManagerFields(promptBackupModal.cloudStep, "Nordlys Journal – maler og arbeidsrom") : null;
-promptBackupModal.cloudStep?.addEventListener("submit", event => { event.preventDefault(); runPromptCloudAction(); });
+promptBackupModal.cloudStep?.addEventListener("submit", event => { event.preventDefault(); });
+promptBackupModal.cloudAction?.addEventListener("click", event => { event.preventDefault(); runPromptCloudAction(); });
+[promptBackupModal.password, promptBackupModal.passwordConfirm].forEach(input => {
+  input?.addEventListener("keydown", event => {
+    if (event.key === "Enter") { event.preventDefault(); runPromptCloudAction(); }
+  });
+});
 
 promptBackupModal.jsonChoice?.addEventListener("click", async () => {
   const text = getPromptBackupText();
