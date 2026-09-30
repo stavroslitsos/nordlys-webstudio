@@ -1,3 +1,4 @@
+import { CloudBackupSession } from './js/features/cloud-backup-session.js';
 import { setupBundle, validateSetupBundle } from './nordlys-bundle.js';
 import { addPasswordManagerFields, offerPasswordSave } from './js/features/backup-password-manager.js';
 import { PromptCloudBackup } from './js/features/prompt-cloud-backup.js';
@@ -22,7 +23,18 @@ $('clear-keys').addEventListener('click',()=>{if(!confirm('Tømme nøklene i den
 function fill(data){const raw=data?.data||data;if(!raw||typeof raw!=='object'||!Object.keys(fields).some(key=>typeof raw[key]==='string'))throw new Error('Filen inneholder ingen gjenkjennelige API-nøkler.');for(const[key,id]of Object.entries(fields)){if(typeof raw[key]==='string')$(id).value=raw[key];}status('Nøkkelfeltene er fylt. Kontroller dem og åpne arbeidsrommet.');}
 let pending=null;
 const keyPasswordManager=addPasswordManagerFields($('backup-form'),'Nordlys Journal – API-nøkler');
-function openBackup(mode){$('legacy-prompt-password-wrap').hidden=mode!=='import';$('backup-form').reset();$('backup-error').textContent='';$('backup-confirm-wrap').hidden=mode==='import';$('backup-confirm').required=mode==='export';$('backup-password').minLength=mode==='export'?12:1;$('backup-password').autocomplete=mode==='export'?'new-password':'current-password';$('backup-title').textContent=mode==='export'?'Kryptert sikkerhetskopi':'Åpne kryptert nøkkelfil';$('backup-description').textContent=mode==='export'?'Velg minst 12 tegn. Passordet følger ikke med filen og kan ikke gjenopprettes.':'Skriv inn passordet du brukte da nøkkelfilen ble laget.';$('backup-submit').textContent=mode==='export'?'Last ned kryptert fil':'Åpne fil';$('backup-dialog').dataset.mode=mode;$('backup-dialog').showModal();$('backup-password').focus();}
+let useSessionPassword=false;
+const reusePasswordButton=document.createElement('button');
+reusePasswordButton.type='button';reusePasswordButton.textContent='Bruk allerede opplåst Drive-passord';reusePasswordButton.hidden=true;
+reusePasswordButton.style.cssText='margin:10px 0;padding:8px 12px;border:1px solid #a8d8cb;border-radius:6px;background:#eef8f5;color:#185b54';
+$('backup-password').before(reusePasswordButton);
+reusePasswordButton.addEventListener('click',()=>{
+ if(CloudBackupSession.getPassword('googleDrive').length<12)return;
+ useSessionPassword=true;$('backup-password').required=false;$('backup-confirm').required=false;
+ $('backup-password').hidden=true;$('backup-confirm-wrap').hidden=true;
+ reusePasswordButton.textContent='Bruker det opplåste Drive-passordet fra denne økten';reusePasswordButton.disabled=true;
+});
+function openBackup(mode){useSessionPassword=false;$('backup-password').hidden=false;$('backup-password').required=true;reusePasswordButton.disabled=false;reusePasswordButton.textContent='Bruk allerede opplåst Drive-passord';reusePasswordButton.hidden=mode!=='export'||CloudBackupSession.getPassword('googleDrive').length<12;$('legacy-prompt-password-wrap').hidden=mode!=='import';$('backup-form').reset();$('backup-error').textContent='';$('backup-confirm-wrap').hidden=mode==='import';$('backup-confirm').required=mode==='export';$('backup-password').minLength=mode==='export'?12:1;$('backup-password').autocomplete=mode==='export'?'new-password':'current-password';$('backup-title').textContent=mode==='export'?'Kryptert sikkerhetskopi':'Åpne kryptert nøkkelfil';$('backup-description').textContent=mode==='export'?'Velg minst 12 tegn. Passordet følger ikke med filen og kan ikke gjenopprettes.':'Skriv inn passordet du brukte da nøkkelfilen ble laget.';$('backup-submit').textContent=mode==='export'?'Last ned kryptert fil':'Åpne fil';$('backup-dialog').dataset.mode=mode;$('backup-dialog').showModal();$('backup-password').focus();}
 $('export-keys').addEventListener('click',()=>{if(!Object.values(values()).some(Boolean)){status('Legg inn minst én nøkkel først.');return;}openBackup('export');});
 $('import-keys').addEventListener('click',()=>$('key-file').click());
 $('key-file').addEventListener('change',async()=>{try{const file=$('key-file').files[0];if(!file)return;if(file.size>1000000)throw new Error('Nøkkelfilen er for stor.');const data=JSON.parse(await file.text());if(data.format==='nordlys.keys.v1'){pending=data;openBackup('import');}else fill(data);}catch{status('Kunne ikke lese nøkkelfilen. Bruk JSON fra originalen eller en kryptert Nordlys-fil.');}finally{$('key-file').value='';}});
@@ -46,10 +58,10 @@ $('setup-prompt-file').addEventListener('change',async()=>{
  }catch(error){status(error.message||'Kunne ikke lese promptfilen.');}finally{$('setup-prompt-file').value='';}
 });
 $('backup-form').addEventListener('submit',async event=>{
- event.preventDefault();const pass=$('backup-password').value;
+ event.preventDefault();const pass=useSessionPassword?CloudBackupSession.getPassword('googleDrive'):$('backup-password').value;
  const mode=$('backup-dialog').dataset.mode,cloud=mode.startsWith('drive-'),exporting=mode==='export'||mode==='drive-export';
  $('backup-error').textContent='';
- if(exporting&&pass!==$('backup-confirm').value){$('backup-error').textContent='Passordene er ikke like.';return;}
+ if(exporting&&!useSessionPassword&&pass!==$('backup-confirm').value){$('backup-error').textContent='Passordene er ikke like.';return;}
  $('backup-submit').disabled=true;
  try{
   if(cloud){
@@ -79,7 +91,7 @@ $('backup-form').addEventListener('submit',async event=>{
    const a=document.createElement('a');a.href=url;a.download='nordlys-oppsett-kryptert.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);
    status('Samlet kryptert oppsett er lastet ned.');
   }else{const data=await decryptKeys(pending,pass);if(data?.schema==='nordlys.setup')applyBundle(data);else fill(data);}
-  await offerPasswordSave(keyPasswordManager,pass);$('backup-dialog').close();
+  if(!useSessionPassword)await offerPasswordSave(keyPasswordManager,pass);$('backup-dialog').close();
  }catch(error){$('backup-error').textContent=error?.message||'Kunne ikke behandle sikkerhetskopien. Prøv igjen.';}
  finally{$('backup-submit').disabled=false;}
 });
