@@ -42,3 +42,7 @@ Introduksjonen er én liten linje over nøkkeloppsettet. Panelet bruker tilgjeng
 - Startskjermen importerer promptfil og henter/lagrer begge deler med én Google-innlogging.
 - Ved manglende samlet kopi hentes gamle separate kopier med samme tilgangstoken; valgfritt eget gammelt promptpassord. Begge valideres før lokale felt erstattes. Brukeren eksporterer deretter samlet kopi én gang. Gamle kopier slettes ikke.
 - Syntetisk kryptert rundtur, promptgjenoppretting, region, nøkkelfiltrering og ugyldig format/passord kontrollert. Ny samlet Drive-kopi med brukerens data gjenstår å opprette og teste.
+
+
+## 2026-09-30 – Bevar knappfarger etter samlet import
+Gjenopprettet blå verktøyknapper og røde opptaks-/genereringsknapper som ble overskrevet ved oppdateringen av samlet sikkerhetskopi. Notatets Kopier-knapp er fortsatt grønn. Samlet import/eksport av nøkler og prompter er beholdt.
