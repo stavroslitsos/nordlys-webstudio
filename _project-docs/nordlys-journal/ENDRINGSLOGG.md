@@ -35,3 +35,10 @@ Fang opp dekrypteringsfeil som nettleseren kan returnere uten forklarende meldin
 
 ## 2026-09-25 – Kompakt oppsettsside
 Introduksjonen er én liten linje over nøkkeloppsettet. Panelet bruker tilgjengelig bredde, med Drive-handlinger på samme rad og Soniox/OpenAI ved siden av hverandre. Mindre typografi og kontroller; én kolonne på smale skjermer. Kontrollert visuelt i Chrome og med eksisterende ressurs-/krypteringstester.
+
+## 2026-09-30 – Samlet oppsett
+- Grønn Kopier-knapp ved notatet; sekundær notatgenerator skjult.
+- Én kryptert nordlys-setup-backup.enc.json i Drive med godkjente nøkkelfelt, Soniox-region og promptbibliotek (schema nordlys.setup v1). Ingen samtaler, historikk eller notater inkluderes.
+- Startskjermen importerer promptfil og henter/lagrer begge deler med én Google-innlogging.
+- Ved manglende samlet kopi hentes gamle separate kopier med samme tilgangstoken; valgfritt eget gammelt promptpassord. Begge valideres før lokale felt erstattes. Brukeren eksporterer deretter samlet kopi én gang. Gamle kopier slettes ikke.
+- Syntetisk kryptert rundtur, promptgjenoppretting, region, nøkkelfiltrering og ugyldig format/passord kontrollert. Ny samlet Drive-kopi med brukerens data gjenstår å opprette og teste.

@@ -845,7 +845,17 @@ async function saveEncryptedKeys(accessToken, payload) {
 async function loadEncryptedKeys(accessToken) {
   return downloadFromGoogleDrive(accessToken, KEY_BACKUP_FILENAME, "API key backup");
 }
+// One encrypted document for startup keys and prompt library; old copies stay intact.
+async function saveEncryptedSetup(token, payload) {
+  if (payload?.format !== 'nordlys.keys.v1') throw new Error('Expected encrypted setup.');
+  await uploadToGoogleDrive(token, 'nordlys-setup-backup.enc.json', payload);
+}
+async function loadEncryptedSetup(token) {
+  return downloadFromGoogleDrive(token, 'nordlys-setup-backup.enc.json', 'samlet oppsett', {required:false});
+}
 export const PromptCloudBackup = Object.freeze({
+  saveEncryptedSetup,
+  loadEncryptedSetup,
   saveEncryptedKeys,
   loadEncryptedKeys,
   filename: PROMPT_BACKUP_FILENAME,

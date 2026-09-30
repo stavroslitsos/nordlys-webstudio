@@ -601,8 +601,8 @@ function updatePromptBackupChoiceText() {
   }
   if (promptBackupModal.googleDriveChoice) {
     promptBackupModal.googleDriveChoice.textContent = isExport
-      ? text.exportGoogleDrive
-      : text.importGoogleDrive;
+      ? text.exportGoogleDrive + " (eldre separat kopi)"
+      : text.importGoogleDrive + " (eldre separat kopi)";
   }
   if (promptBackupModal.googleDriveHelp) {
     promptBackupModal.googleDriveHelp.textContent = isExport
