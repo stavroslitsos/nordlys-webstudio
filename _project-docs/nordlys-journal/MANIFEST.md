@@ -102,3 +102,6 @@ Samlet Drive-backup ble ifølge den overførte samtalen kontrollert 30. septembe
 
 ## 1. oktober 2026 — kredittlenker i Priser
 Hver leverandørgruppe i prisoversikten har en blå «Fyll på kreditt»-lenke. Soniox og OpenAI bruker adressene brukeren oppga. Mistral går til Billing, Bedrock til AWS Billing and Cost Management, og Requesty til kontosiden med beskjed om å velge Billing. Lenker åpnes i ny fane med noopener/noreferrer. Prisdata og modellvalg er uendret.
+
+## 1. oktober 2026 — primærleverandører øverst
+OpenAI-notatmodeller vises først i Priser, deretter Soniox tale til tekst. Øvrige prisgrupper står nedenfor under Reserve. Kredittlenker og modell-/prisdata er beholdt.

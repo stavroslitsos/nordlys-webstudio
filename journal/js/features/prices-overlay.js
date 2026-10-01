@@ -239,22 +239,32 @@ async function renderPrices() {
   if (heading) heading.textContent = t.heading;
   if (intro) intro.textContent = t.intro;
 
-  const textTables = TEXT_PRICE_GROUPS.map((group) => renderTextTable(group, t)).join("");
-  const sttTables = STT_PRICE_GROUPS.map((group) => renderSttTable(group, t)).join("");
+  const primaryText = TEXT_PRICE_GROUPS.filter((group) => group.provider === "OpenAI");
+  const primaryStt = STT_PRICE_GROUPS.filter((group) => group.provider === "Soniox");
+  const reserveText = TEXT_PRICE_GROUPS.filter((group) => group.provider !== "OpenAI");
+  const reserveStt = STT_PRICE_GROUPS.filter((group) => group.provider !== "Soniox");
 
   body.innerHTML = `
     <section class="prices-section">
       <h4 class="prices-section-title">${escapeHtml(t.textModels)}</h4>
-      ${textTables}
+      ${primaryText.map((group) => renderTextTable(group, t)).join("")}
+    </section>
+    <section class="prices-section">
+      <h4 class="prices-section-title">${escapeHtml(t.speechToText)}</h4>
+      ${primaryStt.map((group) => renderSttTable(group, t)).join("")}
+      <p class="prices-note">${escapeHtml(t.sttNote)}</p>
+    </section>
+    <section class="prices-section">
+      <h4 class="prices-section-title">Reserve · ${escapeHtml(t.textModels)}</h4>
+      ${reserveText.map((group) => renderTextTable(group, t)).join("")}
       <div class="prices-footnotes">
         <p class="prices-note">${escapeHtml(t.contextNote)}</p>
         <p class="prices-note">${escapeHtml(t.requestyNote)}</p>
       </div>
     </section>
     <section class="prices-section">
-      <h4 class="prices-section-title">${escapeHtml(t.speechToText)}</h4>
-      ${sttTables}
-      <p class="prices-note">${escapeHtml(t.sttNote)}</p>
+      <h4 class="prices-section-title">Reserve · ${escapeHtml(t.speechToText)}</h4>
+      ${reserveStt.map((group) => renderSttTable(group, t)).join("")}
     </section>
   `;
 }

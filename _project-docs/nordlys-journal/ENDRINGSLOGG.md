@@ -55,3 +55,6 @@ Rettet eksisterende Responses-strømmeparser som overså response.failed, respon
 
 ## 2026-10-01 — Fyll på kreditt under Priser
 Lagt til kreditt-/faktureringslenke ved Requesty, AWS Bedrock, OpenAI, Mistral og Soniox, i både tekst- og taleoversikten der leverandøren finnes. Syv kompakte knapper åpner ny fane. Betaling skjer hos leverandøren.
+
+## 1. oktober 2026 — primærleverandører øverst
+Flyttet OpenAI-notatmodeller og Soniox til toppen av prisoversikten etter brukerens prioritering. Øvrige tekst- og talemodeller vises under Reserve.

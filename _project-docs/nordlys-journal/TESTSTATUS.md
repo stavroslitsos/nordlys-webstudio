@@ -56,3 +56,6 @@ Arbeidsrom-/opptaks-/modellraden foldes nå under «Innstillinger», lukket som 
 
 ## 1. oktober 2026 — kredittknapper
 JavaScript-syntaks og rendret HTML kontrollert: syv knapper fordelt på fem leverandører, alle med target=_blank og rel=noopener noreferrer. Soniox-/OpenAI-adressene samsvarer med brukerens lenker. AWS- og Mistral-målene er kontrollert mot offisiell dokumentasjon. Requesty åpner den dokumenterte kontosiden; egen direkte Billing-adresse er ikke bekreftet. Ingen betalinger eller kontoendringer utført.
+
+## 1. oktober 2026 — primærleverandører øverst
+JavaScript-syntaks og rendret oversikt kontrollert: OpenAI og Soniox er de to første leverandørgruppene. Alle syv eksisterende prisgrupper og kredittknapper er beholdt. Ingen AI-kall eller pasientdata brukt.
