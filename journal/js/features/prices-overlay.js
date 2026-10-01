@@ -1,5 +1,39 @@
 import { loadLanguageModule } from "../languageLoader.js";
 
+
+const CREDIT_LINKS = {
+  "Soniox": {
+    href: "https://console.soniox.com/org/bb46c26c-80a4-41b4-a13e-fc05964a579e/"
+  },
+  "OpenAI": {
+    href: "https://platform.openai.com/settings/organization/billing/overview"
+  },
+  "AWS Bedrock": {
+    href: "https://console.aws.amazon.com/costmanagement/",
+    note: "Åpner AWS-fakturering"
+  },
+  "Mistral": {
+    href: "https://admin.mistral.ai/organization/billing"
+  },
+  "Requesty": {
+    href: "https://app.requesty.ai/",
+    note: "Velg Billing på kontosiden"
+  }
+};
+
+function renderProviderHeading(provider) {
+  const link = CREDIT_LINKS[provider];
+  return `
+    <div class="prices-provider-heading">
+      <h5 class="prices-provider">${escapeHtml(provider)}</h5>
+      ${link ? `<a class="prices-credit-link" href="${escapeHtml(link.href)}"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Fyll på kreditt hos ${escapeHtml(provider)} – åpnes i ny fane">Fyll på kreditt ↗</a>
+        ${link.note ? `<span class="prices-credit-note">${escapeHtml(link.note)}</span>` : ""}` : ""}
+    </div>
+  `;
+}
+
 const TEXT_PRICE_GROUPS = [
   {
     provider: "Requesty",
@@ -131,7 +165,7 @@ function renderTextTable(group, t) {
   `).join("");
 
   return `
-    <h5 class="prices-provider">${escapeHtml(group.provider)}</h5>
+    ${renderProviderHeading(group.provider)}
     <div class="prices-table-wrap">
       <table class="prices-table">
         <thead>
@@ -173,7 +207,7 @@ function renderSttTable(group, t) {
   `).join("");
 
   return `
-    <h5 class="prices-provider">${escapeHtml(group.provider)}</h5>
+    ${renderProviderHeading(group.provider)}
     <div class="prices-table-wrap">
       <table class="prices-table">
         <thead>

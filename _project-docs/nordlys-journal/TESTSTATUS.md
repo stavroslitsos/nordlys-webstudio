@@ -52,3 +52,7 @@ Arbeidsrom-/opptaks-/modellraden foldes nå under «Innstillinger», lukket som 
 - Test: node --test _project-docs/nordlys-journal/tests/note-streaming.test.mjs
 - Gårsdagens endringer endret ikke noteGeneration_openai.js eller core/note-runner.js (sammenlignet 25.–30. september).
 - Årsaken til det konkrete leverandørsvaret i brukerens to lokale faner er fortsatt ubekreftet. Skyøkten har ikke tilgang til disse fanene. Rettelsen er ikke en bekreftelse på vellykket klinisk notatgenerering i brukerens økt.
+
+
+## 1. oktober 2026 — kredittknapper
+JavaScript-syntaks og rendret HTML kontrollert: syv knapper fordelt på fem leverandører, alle med target=_blank og rel=noopener noreferrer. Soniox-/OpenAI-adressene samsvarer med brukerens lenker. AWS- og Mistral-målene er kontrollert mot offisiell dokumentasjon. Requesty åpner den dokumenterte kontosiden; egen direkte Billing-adresse er ikke bekreftet. Ingen betalinger eller kontoendringer utført.

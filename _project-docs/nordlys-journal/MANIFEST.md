@@ -98,3 +98,7 @@ Sikkerhetskopiskjemaene for nøkler, maler og arbeidsrom har stabile feltnavn, b
 ## 1. oktober 2026 — pålitelig status for OpenAI-notater
 Strømmeparseren behandler nå response.failed, response.incomplete og error som feil. Den støtter LF/CRLF, oppdelte UTF-8-data og siste hendelse ved EOF. Bare response.completed kan fullføre strømmen; et tomt notat kan ikke markeres som vellykket. Fulltekst i sluttsvaret tas i bruk dersom tekst-deltaer mangler. Avbrutt deltekst vises tydelig som ufullstendig. Modellvalg, store:false, layout og backup er uendret.
 Samlet Drive-backup ble ifølge den overførte samtalen kontrollert 30. september med 13 utfylte promptplasser; eldre beskrivelser over av separate kopier gjelder legacy-fallback. Ingen ny Drive-test er utført 1. oktober.
+
+
+## 1. oktober 2026 — kredittlenker i Priser
+Hver leverandørgruppe i prisoversikten har en blå «Fyll på kreditt»-lenke. Soniox og OpenAI bruker adressene brukeren oppga. Mistral går til Billing, Bedrock til AWS Billing and Cost Management, og Requesty til kontosiden med beskjed om å velge Billing. Lenker åpnes i ny fane med noopener/noreferrer. Prisdata og modellvalg er uendret.

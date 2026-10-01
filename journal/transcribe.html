@@ -1652,6 +1652,34 @@
       font-weight: 600;
       color: #263238;
     }
+
+    .prices-provider-heading {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      margin: 18px 0 7px;
+    }
+    .prices-provider-heading .prices-provider { margin: 0; }
+    #pricesView .prices-credit-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: #2563eb;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.35;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    #pricesView .prices-credit-link:hover { background: #1d4ed8; }
+    #pricesView .prices-credit-link:focus-visible {
+      outline: 3px solid #102c43;
+      outline-offset: 3px;
+    }
+    .prices-credit-note { color: #626b77; font-size: 12px; }
     .prices-table-wrap {
       width: 100%;
       overflow-x: auto;
@@ -3297,7 +3325,7 @@
   </div>
 
   <script type="module" src="./js/features/overlays.js"></script>
-  <script type="module" src="./js/features/prices-overlay.js"></script>
+  <script type="module" src="./js/features/prices-overlay.js?v=20261001-credit"></script>
 
 
   <script type="module" src="./js/features/editor-tools.js"></script>

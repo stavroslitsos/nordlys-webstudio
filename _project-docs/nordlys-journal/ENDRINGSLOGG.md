@@ -51,3 +51,7 @@ Gjenopprettet blå verktøyknapper og røde opptaks-/genereringsknapper som ble 
 
 ## 2026-10-01 — ikke meld tomme eller mislykkede OpenAI-svar som fullført
 Rettet eksisterende Responses-strømmeparser som overså response.failed, response.incomplete og error. Fulltekst fra response.completed brukes som reserve når deltaer mangler. EOF, ugyldige data og tom notattekst gir feil. Deltekst etter feil merkes som ufullstendig. 20 syntetiske regresjonstester bestått. Ingen endring av modell, layout eller backup; brukerens lokale økt er ikke tilgjengelig for ende-til-ende-verifisering.
+
+
+## 2026-10-01 — Fyll på kreditt under Priser
+Lagt til kreditt-/faktureringslenke ved Requesty, AWS Bedrock, OpenAI, Mistral og Soniox, i både tekst- og taleoversikten der leverandøren finnes. Syv kompakte knapper åpner ny fane. Betaling skjer hos leverandøren.
