@@ -13,7 +13,7 @@ import {
   resolveCommonNoteInputs,
   startNoteTimer,
   streamResponsesSse
-} from "./core/note-runner.js";
+} from "./core/note-runner.js?v=20261001-stream-fix";
 import {
   DEFAULTS,
   getDefaultOpenAiReasoning,
@@ -133,6 +133,9 @@ async function generateNote() {
 
       const json = await resp.json();
       pushUsage({ model, usage: json?.usage ?? null });
+      if (json?.error || (json?.status && json.status !== "completed")) {
+        throw new Error(json.error?.message || `OpenAI: Svaret ble ikke fullført (${json.incomplete_details?.reason || json.status}).`);
+      }
       generatedNoteField.value = extractResponsesOutputText(json) || "";
     } else {
       await streamResponsesSse(resp, {
@@ -142,6 +145,10 @@ async function generateNote() {
           generatedNoteField.value += textChunk;
         },
         onDone: (finalEvent) => {
+          // The terminal response carries the complete output even if no
+          // text deltas were delivered. Use it without duplicating deltas.
+          const finalText = extractResponsesOutputText(finalEvent?.response);
+          if (finalText.trim()) generatedNoteField.value = finalText;
           pushUsage({
             model,
             usage: finalEvent?.response?.usage ?? finalEvent?.usage ?? null
@@ -153,6 +160,9 @@ async function generateNote() {
       });
     }
 
+    if (!generatedNoteField.value.trim()) {
+      throw new Error("OpenAI returnerte ingen notattekst. Prøv igjen, eventuelt med Mode: non-streaming.");
+    }
     noteTimer.stop("Text generation completed!");
     app.emitNoteFinished?.(runMeta);
   } catch (error) {
@@ -161,8 +171,10 @@ async function generateNote() {
       return;
     }
 
-    noteTimer.stop("");
-    generatedNoteField.value = "Error generating note: " + error;
+    noteTimer.stop("Notatgenerering mislyktes.");
+    const partialText = generatedNoteField.value;
+    generatedNoteField.value = "Feil ved notatgenerering: " + (error?.message || error) +
+      (partialText.trim() ? "\n\nUfullstendig tekst – må ikke brukes som ferdig notat:\n" + partialText : "");
     app.finishNoteGeneration?.();
   }
 }
@@ -172,3 +184,4 @@ function initOpenAiNoteGeneration() {
 }
 
 export { initOpenAiNoteGeneration };
+

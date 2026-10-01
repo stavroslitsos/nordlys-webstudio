@@ -92,3 +92,9 @@ Arbeidsrom-/opptaks-/modellraden foldes nå under «Innstillinger», lukket som 
 
 ## Passordbehandler (25. september 2026)
 Sikkerhetskopiskjemaene for nøkler, maler og arbeidsrom har stabile feltnavn, brukernavn og autocomplete. Nøkkelimport bruker current-password; eksport bruker new-password. Etter vellykket behandling kan nettleseren tilbys passordet gjennom PasswordCredential/store når avkryssingen er på. Avslag eller manglende nettleserstøtte påvirker ikke sikkerhetskopien. Ingen ny varig passordlagring i appen. API-nøkler og maler har separate navn i passordbehandleren. Lagring og autofyll av brukerens faktiske passord må bekreftes i nettleseren; dette er ikke bekreftet av kodetester.
+
+
+
+## 1. oktober 2026 — pålitelig status for OpenAI-notater
+Strømmeparseren behandler nå response.failed, response.incomplete og error som feil. Den støtter LF/CRLF, oppdelte UTF-8-data og siste hendelse ved EOF. Bare response.completed kan fullføre strømmen; et tomt notat kan ikke markeres som vellykket. Fulltekst i sluttsvaret tas i bruk dersom tekst-deltaer mangler. Avbrutt deltekst vises tydelig som ufullstendig. Modellvalg, store:false, layout og backup er uendret.
+Samlet Drive-backup ble ifølge den overførte samtalen kontrollert 30. september med 13 utfylte promptplasser; eldre beskrivelser over av separate kopier gjelder legacy-fallback. Ingen ny Drive-test er utført 1. oktober.

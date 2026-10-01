@@ -316,7 +316,7 @@ async function streamResponsesSse(resp, {
   signal,
   onDelta = () => {},
   onDone = () => {},
-  onError = (e) => { console.error(e); },
+  onError = () => {},
   errorLabel = "OpenAI"
 } = {}) {
   if (!resp.ok || !resp.body) {
@@ -327,95 +327,87 @@ async function streamResponsesSse(resp, {
   const reader = resp.body.getReader();
   const decoder = new TextDecoder();
   let buffer = "";
-  let lastEventPayload = null;
-
+  let completed = false;
+  const interrupted = () => new Error(
+    `${errorLabel}: Svarstrømmen ble avsluttet uten et fullført svar. Prøv igjen, eventuelt med Mode: non-streaming.`
+  );
+  const checkAbort = () => {
+    if (signal?.aborted) throw new DOMException("Aborted", "AbortError");
+  };
   const abortReader = () => {
-    try { reader.cancel(); } catch (_) {}
+    void reader.cancel().catch(() => {});
   };
 
-  if (signal) {
-    if (signal.aborted) {
-      abortReader();
-      throw new DOMException("Aborted", "AbortError");
+  // Parse complete SSE frames, including CRLF and a final frame at EOF.
+  // Only response.completed is success; EOF and [DONE] alone are not.
+  function processFrame(frame) {
+    checkAbort();
+    const lines = frame.split(/\r\n|\n|\r/);
+    const data = lines.filter((line) => line.startsWith("data:"))
+      .map((line) => line.slice(5).replace(/^ /, "")).join("\n").trim();
+    if (!data) return;
+    if (data === "[DONE]") throw interrupted();
+    let payload;
+    try {
+      payload = JSON.parse(data);
+    } catch {
+      throw new Error(`${errorLabel}: Kunne ikke lese svaret fra tjenesten.`);
     }
-    signal.addEventListener("abort", abortReader, { once: true });
+    if (!payload || typeof payload !== "object") return;
+    const eventName = lines.find((line) => line.startsWith("event:"))?.slice(6).trim();
+    const type = payload.type || eventName;
+    if (type === "error" || type === "response.error" ||
+        type === "response.failed" || type === "response.incomplete" ||
+        payload.error || payload.response?.error) {
+      const detail = payload.response?.error || payload.error || payload;
+      const reason = payload.response?.incomplete_details?.reason;
+      const message = detail.message || reason || type || "Ukjent feil";
+      throw new Error(`${errorLabel}: ${message}${detail.code ? ` (${detail.code})` : ""}`);
+    }
+    if (type === "response.output_text.delta" && typeof payload.delta === "string") {
+      onDelta(payload.delta);
+    }
+    if (type === "response.completed") {
+      const status = payload.response?.status;
+      if (status && status !== "completed") throw interrupted();
+      onDone(payload);
+      completed = true;
+    }
+  }
+
+  function drainFrames() {
+    let match;
+    while (!completed && (match = /\r\n\r\n|\n\n|\r\r/.exec(buffer))) {
+      const frame = buffer.slice(0, match.index);
+      buffer = buffer.slice(match.index + match[0].length);
+      processFrame(frame);
+    }
   }
 
   try {
-    while (true) {
-      if (signal?.aborted) {
-        throw new DOMException("Aborted", "AbortError");
-      }
-
+    checkAbort();
+    signal?.addEventListener("abort", abortReader, { once: true });
+    while (!completed) {
+      checkAbort();
       const { value, done } = await reader.read();
-      if (done) break;
-
-      buffer += decoder.decode(value, { stream: true });
-      const parts = buffer.split("\n\n");
-      buffer = parts.pop() ?? "";
-
-      for (const part of parts) {
-        if (signal?.aborted) {
-          throw new DOMException("Aborted", "AbortError");
-        }
-
-        const lines = part.split("\n");
-        let dataStr = null;
-
-        for (const line of lines) {
-          if (line.startsWith("data:")) {
-            dataStr = line.slice(5).trim();
-          }
-        }
-
-        if (!dataStr) continue;
-        if (dataStr === "[DONE]") {
-          onDone(lastEventPayload);
-          return;
-        }
-
-        let payload;
-        try {
-          payload = JSON.parse(dataStr);
-        } catch {
-          continue;
-        }
-
-        if (payload && typeof payload === "object") {
-          if (payload.response && typeof payload.response === "object") {
-            lastEventPayload = payload;
-          } else if (payload.type === "response.completed") {
-            lastEventPayload = payload;
-          }
-        }
-
-        if (payload.type === "response.output_text.delta" && typeof payload.delta === "string") {
-          onDelta(payload.delta);
-        }
-
-        if (payload.type === "response.completed") {
-          onDone(payload);
-          return;
-        }
-
-        if (payload.type === "response.error") {
-          onError(new Error(payload.error?.message || "Unknown streaming error"));
-          return;
-        }
+      checkAbort();
+      buffer += done ? decoder.decode() : decoder.decode(value, { stream: true });
+      drainFrames();
+      if (done) {
+        if (!completed && buffer.trim()) processFrame(buffer);
+        break;
       }
     }
-
-    onDone(lastEventPayload);
+    if (!completed) throw interrupted();
   } catch (error) {
     onError(error);
+    throw error;
   } finally {
-    if (signal) {
-      try { signal.removeEventListener("abort", abortReader); } catch (_) {}
-    }
+    signal?.removeEventListener("abort", abortReader);
+    try { await reader.cancel(); } catch (_) {}
+    reader.releaseLock();
   }
 }
-
-
 
 function extractResponsesOutputText(json) {
   if (!json || typeof json !== "object") {
@@ -483,3 +475,4 @@ export {
   streamChatCompletionsSse,
   streamResponsesSse
 };
+

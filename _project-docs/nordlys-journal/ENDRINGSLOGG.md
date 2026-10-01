@@ -46,3 +46,8 @@ Introduksjonen er én liten linje over nøkkeloppsettet. Panelet bruker tilgjeng
 
 ## 2026-09-30 – Bevar knappfarger etter samlet import
 Gjenopprettet blå verktøyknapper og røde opptaks-/genereringsknapper som ble overskrevet ved oppdateringen av samlet sikkerhetskopi. Notatets Kopier-knapp er fortsatt grønn. Samlet import/eksport av nøkler og prompter er beholdt.
+
+
+
+## 2026-10-01 — ikke meld tomme eller mislykkede OpenAI-svar som fullført
+Rettet eksisterende Responses-strømmeparser som overså response.failed, response.incomplete og error. Fulltekst fra response.completed brukes som reserve når deltaer mangler. EOF, ugyldige data og tom notattekst gir feil. Deltekst etter feil merkes som ufullstendig. 20 syntetiske regresjonstester bestått. Ingen endring av modell, layout eller backup; brukerens lokale økt er ikke tilgjengelig for ende-til-ende-verifisering.

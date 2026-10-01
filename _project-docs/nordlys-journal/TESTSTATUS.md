@@ -42,3 +42,13 @@ Arbeidsrom-/opptaks-/modellraden foldes nå under «Innstillinger», lukket som 
 - Syntetiske tester av avvalg, tomt passord, usikker kontekst, korrekt oppføringsnavn og avvist/utilgjengelig passordbehandler bestått.
 - Nøkkelimportdialog kontrollert i Chrome.
 - Brukerens faktiske passord er ikke lest. Ende-til-ende lagring/autofyll i brukerens passordbehandler avventer brukerens inntasting og nettleserbekreftelse.
+
+
+
+## 1. oktober 2026 — OpenAI fullført uten tekst
+- Gjenskapt med syntetiske Responses-hendelser: gammel parser meldte fullført for response.failed, response.incomplete og error.
+- 20 regresjonstester bestått: LF/CRLF/CR, UTF-8 delt på bytegrenser, siste hendelse uten blanklinje, strømmefeil, brutt forbindelse, avbrudd, tom tekst, fulltekst uten deltaer, ingen duplisering og non-streaming/HTTP-feil.
+- Generatoren bevarer samtale, tillegg, prompt og valgt GPT-5.6 Sol i test; store:false beholdes. Ingen ekte API-kall eller pasientdata brukt.
+- Test: node --test _project-docs/nordlys-journal/tests/note-streaming.test.mjs
+- Gårsdagens endringer endret ikke noteGeneration_openai.js eller core/note-runner.js (sammenlignet 25.–30. september).
+- Årsaken til det konkrete leverandørsvaret i brukerens to lokale faner er fortsatt ubekreftet. Skyøkten har ikke tilgang til disse fanene. Rettelsen er ikke en bekreftelse på vellykket klinisk notatgenerering i brukerens økt.
