@@ -1,9 +1,11 @@
 // One small in-memory metadata record and one small sessionStorage payload per
-// clone family. Large transcript/supplementary/note bodies are delegated to the
-// asynchronous body store and loaded only when a history item is opened.
+// tab. Legacy clone-family records are retained for body recovery. Large text
+// bodies use the asynchronous body store and are loaded only when opened.
 export const HISTORY_PREFIX = "whisper_workspace_history_group_v2::";
 export const LEGACY_HISTORY_PREFIX = "whisper_workspace_history_group_v1::";
 const MAX_ENTRIES = 30;
+export const SHARED_HISTORY_GROUP = "all-workspaces-v1";
+const entryLimit = (groupId) => groupId === SHARED_HISTORY_GROUP ? Infinity : MAX_ENTRIES;
 
 function normalizeMetadataEntry(raw) {
   if (!raw || typeof raw !== "object") return null;
@@ -18,6 +20,8 @@ function normalizeMetadataEntry(raw) {
     promptSlot: String(raw.promptSlot || ""),
     promptLabel: String(raw.promptLabel || ""),
     usedPrompt: raw.usedPrompt !== false,
+    ...(raw.bodyGroupId ? { bodyGroupId: String(raw.bodyGroupId),
+      bodyLegacyKeys: Array.isArray(raw.bodyLegacyKeys) ? raw.bodyLegacyKeys.map(String) : [] } : {}),
   };
 }
 
@@ -52,7 +56,7 @@ function fullEntriesFromSnapshots(snapshots) {
   return [...byId.values()];
 }
 
-export function mergeHistorySnapshots(snapshots) {
+export function mergeHistorySnapshots(snapshots, limit = MAX_ENTRIES) {
   const entriesById = new Map();
   let nextSequence = 1;
   for (const snapshot of snapshots) {
@@ -83,7 +87,7 @@ export function mergeHistorySnapshots(snapshots) {
   }
 
   return {
-    entries: chronological.reverse().slice(0, MAX_ENTRIES),
+    entries: chronological.reverse().slice(0, limit),
     nextSequence: Math.max(nextSequence, highest + 1),
   };
 }
@@ -155,7 +159,7 @@ export function createWorkspaceHistoryStore(storage, bodyStore = null) {
       // active workspace record to metadata. The body store keeps a temporary
       // memory fallback until the IndexedDB write finishes.
       void queueBodies(groupId, fullEntries);
-      record.entries = record.entries.map(toMetadataEntry).filter(Boolean).slice(0, MAX_ENTRIES);
+      record.entries = record.entries.map(toMetadataEntry).filter(Boolean).slice(0, entryLimit(groupId));
     }
 
     const saved = writeMetadata(groupId, record);
@@ -184,7 +188,7 @@ export function createWorkspaceHistoryStore(storage, bodyStore = null) {
       metadataSources = legacySnapshots;
     }
 
-    const record = mergeHistorySnapshots(metadataSources);
+    const record = mergeHistorySnapshots(metadataSources, entryLimit(groupId));
     groups.set(groupId, record);
 
     // IMPORTANT: always inspect every legacy source for recoverable bodies even
@@ -240,7 +244,33 @@ export function createWorkspaceHistoryStore(storage, bodyStore = null) {
     return record;
   }
 
+  function ensureShared(sources) {
+    if (groups.has(SHARED_HISTORY_GROUP)) return groups.get(SHARED_HISTORY_GROUP);
+    // An existing empty index is authoritative: Clear must never resurrect notes.
+    if (Array.isArray(read(HISTORY_PREFIX + SHARED_HISTORY_GROUP)?.entries)) {
+      return ensure(SHARED_HISTORY_GROUP);
+    }
+    const snapshots = sources.map(({ groupId, legacyKeys = [] }) => {
+      const source = ensure(groupId, legacyKeys);
+      return {
+        nextSequence: source.nextSequence,
+        entries: source.entries.map((entry) => ({
+          ...entry, bodyGroupId: entry.bodyGroupId || groupId,
+          bodyLegacyKeys: entry.bodyLegacyKeys || legacyKeys,
+        })),
+      };
+    });
+    // Merge metadata only. Keep encrypted bodies at their original addresses,
+    // including legacy recovery keys, so refresh/closing a workspace cannot
+    // interrupt a destructive body migration. Do not trim existing histories.
+    const record = mergeHistorySnapshots(snapshots, Infinity);
+    groups.set(SHARED_HISTORY_GROUP, record);
+    writeMetadata(SHARED_HISTORY_GROUP, record);
+    return record;
+  }
+
   return {
+    ensureShared,
     ensure,
     persist,
 
@@ -261,13 +291,15 @@ export function createWorkspaceHistoryStore(storage, bodyStore = null) {
       // can still contain its body. Normally persist() strips it immediately.
       if (hasBody(metadata)) return { ...metadata };
 
-      const body = await bodyStore?.get?.(groupId, metadata.id);
+      const bodyGroupId = metadata.bodyGroupId || groupId;
+      if (bodyGroupId !== groupId) ensure(bodyGroupId, metadata.bodyLegacyKeys || []);
+      const body = await bodyStore?.get?.(bodyGroupId, metadata.id);
       if (body) return { ...metadata, ...body };
 
       // Last-resort recovery for legacy snapshots that are still present while a
       // migration is pending or has failed. Only body fields are copied so stale
       // legacy metadata cannot override the authoritative v2 index.
-      const recovered = legacyRecovery.get(groupId)?.get(metadata.id);
+      const recovered = legacyRecovery.get(bodyGroupId)?.get(metadata.id);
       if (!recovered || !hasBody(recovered)) return null;
       return {
         ...metadata,
@@ -280,7 +312,7 @@ export function createWorkspaceHistoryStore(storage, bodyStore = null) {
     replace(groupId, snapshot) {
       const record = ensure(groupId);
       const fullEntries = fullEntriesFromSnapshots([snapshot]);
-      Object.assign(record, mergeHistorySnapshots([snapshot]));
+      Object.assign(record, mergeHistorySnapshots([snapshot], entryLimit(groupId)));
       if (fullEntries.length) void queueBodies(groupId, fullEntries);
       if (!record.entries.length) void bodyStore?.clearGroup?.(groupId);
       persist(groupId);
@@ -289,6 +321,11 @@ export function createWorkspaceHistoryStore(storage, bodyStore = null) {
 
     retain(groupIds) {
       const keep = new Set(groupIds);
+      for (const id of groupIds) {
+        for (const entry of groups.get(id)?.entries || []) {
+          if (entry.bodyGroupId) keep.add(entry.bodyGroupId);
+        }
+      }
       for (const id of [...groups.keys()]) {
         if (keep.has(id)) continue;
         groups.delete(id);

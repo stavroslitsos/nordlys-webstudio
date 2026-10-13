@@ -3,7 +3,7 @@ import { PromptManager } from "../promptManager.js";
 import { PromptCloudBackup } from "./prompt-cloud-backup.js";
 import { CloudBackupSession } from "./cloud-backup-session.js";
 import { registerWorkspaceDisposer } from "../core/workspace-disposal.js";
-import { createWorkspaceHistoryStore } from "../core/workspace-history-store.js";
+import { createWorkspaceHistoryStore, SHARED_HISTORY_GROUP } from "../core/workspace-history-store.js?v=20261013-shared-history";
 import { createWorkspaceHistoryBodyStore } from "../core/workspace-history-body-store.js";
 
 const PRESET_SCHEMA = "whisper.workspace-presets";
@@ -63,13 +63,13 @@ const TEXT = {
     busyClose: "Stop or abort the active recording, transcription, or generation before closing this workspace.",
     closeConfirm: "Close \"{name}\"? Its transcript, notes and other workspace text will be removed from this tab session.",
     importBusy: "Stop or abort all active recordings and generations before importing a workspace set.",
-    helpHtml: `<strong>Workspaces are separate work areas in this browser tab.</strong><br/>Each workspace keeps its own text, prompts, models, settings and active processes. Cloned workspaces share history with their clone family; workspaces added with + keep separate history. Its name automatically follows the selected prompt slot name. Switching workspaces does not stop recording or generation.<br/><br/>Use + to add a workspace and × to close one.<br/><br/><strong>Import/export:</strong> A workspace set backup saves the workspace setup, selected prompts, models and relevant settings. Transcripts, supplementary information, notes, history, audio, API keys and other patient information are never exported. Cloud backups are encrypted. A downloaded JSON file is readable and should be stored securely.`,
+    helpHtml: `<strong>Workspaces are separate work areas in this browser tab.</strong><br/>Each workspace keeps its own text, prompts, models, settings and active processes. All workspaces in this tab share one history, including newly added and cloned workspaces. Closing a workspace keeps its generated notes in history. Its name automatically follows the selected prompt slot name. Switching workspaces does not stop recording or generation.<br/><br/>Use + to add a workspace and × to close one.<br/><br/><strong>Import/export:</strong> A workspace set backup saves the workspace setup, selected prompts, models and relevant settings. Transcripts, supplementary information, notes, history, audio, API keys and other patient information are never exported. Cloud backups are encrypted. A downloaded JSON file is readable and should be stored securely.`,
     exportTitle: "Export workspace set", importTitle: "Import workspace set",
     jsonExport: "Export as JSON file", jsonImport: "Import from JSON file",
     oneDriveExport: "Export to Microsoft OneDrive", oneDriveImport: "Import from Microsoft OneDrive",
     googleExport: "Export to Google Drive", googleImport: "Import from Google Drive",
     exportNotice: "Exports every workspace currently shown in the workspace set, including selected prompts, models and workflow settings. Window text, history, recordings, API keys and patient information are not included.",
-    importNotice: "Choose a previously exported workspace set. Imported workspaces start with empty text fields and empty history.",
+    importNotice: "Choose a previously exported workspace set. Imported workspaces start with empty text fields and use the shared history in this tab.",
     password: "Encryption password", repeat: "Repeat password",
     passwordMin: "Use a password with at least 10 characters.", mismatch: "The passwords do not match.",
     passwordRequired: "Enter the backup password.", save: "Save", back: "Back", cancel: "Cancel",
@@ -79,7 +79,7 @@ const TEXT = {
     cloudRestored: "Selected cloud backups were loaded.",
     addMode: "Add workspaces", replaceMode: "Replace workspace set",
     preview: "{n} workspaces found: {names}",
-    replaceWarning: "Replace the current workspace set? Existing workspace text and history will be discarded. Active jobs must already be stopped.",
+    replaceWarning: "Replace the current workspace set? Existing workspace text will be discarded. Shared history is kept. Active jobs must already be stopped.",
     microsoftSignIn: "Waiting for Microsoft sign-in…", googleSignIn: "Waiting for Google sign-in…",
     encryptingAndSaving: "Encrypting and saving workspace set backup…",
     downloadingAndDecrypting: "Downloading and decrypting workspace set backup…",
@@ -95,15 +95,15 @@ const TEXT = {
     namePrompt: "Navn på Workspace", max: "Du kan ha opptil 12 åpne Workspaces.",
     atLeastOne: "Minst ett Workspace må være åpent.",
     busyClose: "Stopp eller avbryt aktivt opptak, transkribering eller generering før Workspace-et lukkes.",
-    closeConfirm: "Lukk \"{name}\"? Transkripsjon, notater, historikk og annen Workspace-tekst fjernes fra denne faneøkten.",
+    closeConfirm: "Lukk \"{name}\"? Tekstfeltene i arbeidsrommet fjernes. Genererte notater beholdes i felles historikk.",
     importBusy: "Stopp eller avbryt alle aktive opptak og genereringer før du importerer et Workspace set.",
-    helpHtml: `<strong>Workspaces er separate arbeidsområder i denne nettleserfanen.</strong><br/>Hvert Workspace beholder egne tekster, prompts, modeller, innstillinger og aktive prosesser. Klonede Workspaces deler historikk med resten av klonefamilien, mens Workspaces som legges til med + har separat historikk. Navnet følger automatisk navnet på valgt prompt-slot. Bytte mellom Workspaces stopper ikke opptak eller generering.<br/><br/>Bruk + for å legge til et Workspace og × for å lukke det.<br/><br/><strong>Import/eksport:</strong> En Workspace set-backup lagrer Workspace-oppsettet, valgte prompts, modeller og relevante innstillinger. Transkripsjoner, supplerende informasjon, notater, historikk, lyd, API-nøkler og andre pasientopplysninger eksporteres aldri. Skybackup krypteres. En nedlastet JSON-fil er lesbar og bør oppbevares sikkert.`,
+    helpHtml: `<strong>Workspaces er separate arbeidsområder i denne nettleserfanen.</strong><br/>Hvert Workspace beholder egne tekster, prompts, modeller, innstillinger og aktive prosesser. Alle Workspaces i fanen deler én felles historikk, også nye og klonede arbeidsrom. Genererte notater beholdes i historikken når et arbeidsrom lukkes. Navnet følger automatisk navnet på valgt prompt-slot. Bytte mellom Workspaces stopper ikke opptak eller generering.<br/><br/>Bruk + for å legge til et Workspace og × for å lukke det.<br/><br/><strong>Import/eksport:</strong> En Workspace set-backup lagrer Workspace-oppsettet, valgte prompts, modeller og relevante innstillinger. Transkripsjoner, supplerende informasjon, notater, historikk, lyd, API-nøkler og andre pasientopplysninger eksporteres aldri. Skybackup krypteres. En nedlastet JSON-fil er lesbar og bør oppbevares sikkert.`,
     exportTitle: "Eksporter Workspace set", importTitle: "Importer Workspace set",
     jsonExport: "Eksporter som JSON-fil", jsonImport: "Importer fra JSON-fil",
     oneDriveExport: "Eksporter til Microsoft OneDrive", oneDriveImport: "Importer fra Microsoft OneDrive",
     googleExport: "Eksporter til Google Drive", googleImport: "Importer fra Google Drive",
     exportNotice: "Eksporterer alle Workspaces i Workspace set-et, inkludert valgte prompts, modeller og workflow-innstillinger. Tekst i vinduene, historikk, opptak, API-nøkler og pasientopplysninger tas ikke med.",
-    importNotice: "Velg et tidligere eksportert Workspace set. Importerte Workspaces starter med tomme tekstfelt og tom historikk.",
+    importNotice: "Velg et tidligere eksportert Workspace set. Importerte Workspaces starter med tomme tekstfelt og bruker fanens felles historikk.",
     password: "Krypteringspassord", repeat: "Gjenta passord",
     passwordMin: "Bruk et passord med minst 10 tegn.", mismatch: "Passordene er ikke like.",
     passwordRequired: "Skriv inn passordet til backupen.", save: "Lagre", back: "Tilbake", cancel: "Avbryt",
@@ -113,7 +113,7 @@ const TEXT = {
     cloudRestored: "Valgte skysikkerhetskopier ble lastet inn.",
     addMode: "Legg til Workspaces", replaceMode: "Erstatt Workspace set",
     preview: "{n} Workspaces funnet: {names}",
-    replaceWarning: "Erstatt nåværende Workspace set? Eksisterende Workspace-tekst og historikk forkastes. Aktive jobber må allerede være stoppet.",
+    replaceWarning: "Erstatt nåværende Workspace set? Eksisterende Workspace-tekst forkastes. Felles historikk beholdes. Aktive jobber må allerede være stoppet.",
     microsoftSignIn: "Venter på Microsoft-innlogging…", googleSignIn: "Venter på Google-innlogging…",
     encryptingAndSaving: "Krypterer og lagrer Workspace set-backup…",
     downloadingAndDecrypting: "Laster ned og dekrypterer Workspace set-backup…",
@@ -602,8 +602,17 @@ function initTopLevelManager() {
     if (field && "value" in field) field.value = "";
   });
 
-  // Seed/migrate history before the frame runtimes bind to the shared records.
-  definitions.forEach((definition) => getHistoryRecord(definition.id));
+  // Collect every old group before all runtimes bind to the same tab history.
+  const historySources = new Map();
+  definitions.forEach((definition) => {
+    const groupId = String(definition.historyGroupId || definition.id);
+    if (!historySources.has(groupId)) historySources.set(groupId, []);
+    historySources.get(groupId).push(`whisper_workspace_runtime::${definition.id}::note_history_v1`);
+    if (definition.id === legacyPrimaryPresetId || (!legacyPrimaryPresetId && definition === definitions[0])) {
+      historySources.get(groupId).push("note_history_v1");
+    }
+  });
+  historyStore.ensureShared([...historySources].map(([groupId, legacyKeys]) => ({ groupId, legacyKeys })));
   window.addEventListener("message", handleFrameMessage);
   definitions.forEach(createFrameRuntime);
   if (legacyPrimaryDraft && legacyPrimaryPresetId) {
@@ -614,7 +623,7 @@ function initTopLevelManager() {
     }
   }
   installAppDelegation();
-  // The shell history view follows whichever isolated Workspace is active.
+  // The shell and every Workspace share one history record for this tab.
   bindHistoryRuntime(activeId, window.__noteHistory);
   applyActiveWorkspace({ applySavedConfig: true });
 
@@ -785,21 +794,21 @@ function initTopLevelManager() {
         const storage = window[storageName];
         for (let index = storage.length - 1; index >= 0; index -= 1) {
           const key = storage.key(index);
-          if (key?.startsWith(prefix)) storage.removeItem(key);
+          // Legacy history may still be the recovery copy after an IndexedDB
+          // failure. The history store removes it only after a durable write.
+          if (key?.startsWith(prefix) && !key.endsWith("::note_history_v1")) storage.removeItem(key);
         }
       } catch {}
     }
   }
   function findDefinition(id) { return definitions.find((item) => item.id === id); }
 
-  function historyGroupIdFor(workspaceId) {
-    const definition = findDefinition(String(workspaceId || ""));
-    return String(definition?.historyGroupId || definition?.id || workspaceId || "");
+  function historyGroupIdFor() {
+    return SHARED_HISTORY_GROUP;
   }
 
-  function historyGroupDefinitions(workspaceId) {
-    const groupId = historyGroupIdFor(workspaceId);
-    return definitions.filter((definition) => historyGroupIdFor(definition.id) === groupId);
+  function historyGroupDefinitions() {
+    return definitions;
   }
 
   function createFrameRuntime(definition) {
@@ -934,12 +943,8 @@ function initTopLevelManager() {
       : { ok: false, reason: "not-ready" };
   }
 
-  function getHistoryRecord(workspaceId) {
-    const groupId = historyGroupIdFor(workspaceId);
-    const legacyKeys = historyGroupDefinitions(workspaceId).map((definition) =>
-      definition.id === legacyPrimaryPresetId ? "note_history_v1"
-        : `whisper_workspace_runtime::${definition.id}::note_history_v1`);
-    return historyStore.ensure(groupId, legacyKeys);
+  function getHistoryRecord() {
+    return historyStore.ensure(SHARED_HISTORY_GROUP);
   }
 
   function bindHistoryRuntime(id, historyApi) {
@@ -1041,8 +1046,8 @@ function initTopLevelManager() {
       runtime.frame.style.height = `${runtime.height || 900}px`;
     });
 
-    // The shell owns the visible history rail; point it at the selected
-    // Workspace's shared history record and async body loader.
+    // The shell owns the visible history rail. Every Workspace uses the same
+    // tab-wide record and async body loader.
     bindHistoryRuntime(activeId, window.__noteHistory);
 
     if (activeRuntime?.ready) {
@@ -1537,13 +1542,13 @@ function initTopLevelManager() {
         runtime.frame?.remove();
         clearFrameRuntimeStorage(runtime.id);
       });
-      historyStore.retain([]);
+      historyStore.retain([SHARED_HISTORY_GROUP]);
       runtimes.clear();
 
       if (legacyPrimaryPresetId) {
         try {
           sessionStorage.removeItem(`${DRAFT_KEY}::${legacyPrimaryPresetId}`);
-          sessionStorage.removeItem("note_history_v1");
+          // Shared history owns any legacy recovery copies.
         } catch {}
       }
       legacyPrimaryPresetId = "";
