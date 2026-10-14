@@ -6,6 +6,12 @@
   promptnavn. Det fulle arbeidsromnavnet og aktiv status beholdes som
   hjelpetekst og tilgjengelig navn.
 
+## 14. oktober 2026 — direktevalg for kliniske prompter
+- La inn fem kompakte valg rett under «Tilpasset prompt»: `us`, `Beh`,
+  `Epikrise`, `Henvis Spes` og `Henvis MR`.
+- Valgene åpner promptplass 1–5 direkte. Den komplette nedtrekkslisten er
+  beholdt for de øvrige promptene og for omorganisering.
+
 ## 24. september 2026
 1. Kartla offentlig frontend, veiledning, oppsett og arbeidsrom i kollegaens løsning. Offentlig kildearkiv ble beholdt lokalt.
 2. Bygde norsk Nordlys-oppsett med egne nøkler, Soniox EU og OpenAI, fjernet analyse og tredjeparts OAuth-klienter.

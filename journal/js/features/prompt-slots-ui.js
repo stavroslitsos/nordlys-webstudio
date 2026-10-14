@@ -14,6 +14,7 @@ const customPromptTextarea = document.getElementById("customPrompt");
 const clearPromptButton = document.getElementById("clearPromptButton");
 const copyPromptButton = document.getElementById("copyPromptButton");
 const promptSlotNameInput = document.getElementById("promptSlotName");
+const promptQuickSlots = Array.from(document.querySelectorAll("[data-prompt-slot]"));
 
 const promptExportBtn = document.getElementById("promptExportBtn");
 const promptImportBtn = document.getElementById("promptImportBtn");
@@ -324,6 +325,11 @@ function renderPromptSlotTrigger() {
   if (!promptSlotTrigger || !promptSlotTriggerSlot || !promptSlotTriggerName) return;
   const slot = getCurrentSlot();
   promptSlotTriggerSlot.textContent = `${slot}.`;
+  promptQuickSlots.forEach((button) => {
+    const active = String(button.dataset.promptSlot || "") === slot;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", active ? "true" : "false");
+  });
 
   const name = getSlotDisplayName(slot);
   if (name) {
@@ -936,6 +942,14 @@ if (promptSlotTrigger) {
     togglePromptSlotPopover();
   });
 }
+
+promptQuickSlots.forEach((button) => {
+  button.addEventListener("click", () => {
+    const slot = String(button.dataset.promptSlot || "");
+    if (!slot) return;
+    setCurrentSlotValue(slot);
+  });
+});
 
 document.addEventListener("pointerdown", (e) => {
   if (!promptSlotPicker || !promptSlotPopover || promptSlotPopover.hidden) return;

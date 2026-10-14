@@ -19,6 +19,9 @@ Oppdatert 14. oktober 2026. Gjeldende status erstatter tidligere notater om at D
 - Arbeidsromlinjen bruker vertikalt stablet Import/Eksport og nummererte
   arbeidsromknapper. De fulle navnene er fortsatt tilgjengelige via
   knappetittel og skjermleseretikett.
+- Fem direktevalg for promptplass 1–5 er lagt over den ordinære promptvelgeren.
+  Aktivt valg markeres både visuelt og med `aria-pressed`; den komplette listen
+  er fortsatt tilgjengelig.
 - Sekundær generator og redactor åpnet/lukket ved tidligere layoutkontroll.
 
 ## Gjenstår / ikke dokumentert

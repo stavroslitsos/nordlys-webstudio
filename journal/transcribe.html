@@ -1848,6 +1848,35 @@
       margin-bottom: 6px;
       position: relative;
     }
+    .prompt-quick-slots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 1px 0 3px;
+      scrollbar-width: thin;
+    }
+    .prompt-quick-slot {
+      flex: 0 0 auto;
+      min-height: 30px;
+      padding: 4px 9px;
+      border: 1px solid #2563eb;
+      border-radius: 7px;
+      background: transparent;
+      color: #2563eb;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .prompt-quick-slot:hover,
+    .prompt-quick-slot:focus-visible {
+      background: rgba(37, 99, 235, 0.12);
+      outline: none;
+    }
+    .prompt-quick-slot.is-active {
+      background: #2563eb;
+      color: #fff;
+    }
     .prompt-slot-picker {
       position: relative;
       flex: 0 0 auto;
@@ -3052,6 +3081,14 @@
             </div>
           </div>
 
+          <div id="promptQuickSlots" class="prompt-quick-slots" aria-label="Direktevalg for prompter">
+            <button type="button" class="prompt-quick-slot" data-prompt-slot="1" aria-label="Velg prompt 1: Undersøkelse">us</button>
+            <button type="button" class="prompt-quick-slot" data-prompt-slot="2" aria-label="Velg prompt 2: Behandling">Beh</button>
+            <button type="button" class="prompt-quick-slot" data-prompt-slot="3" aria-label="Velg prompt 3: Epikrise">Epikrise</button>
+            <button type="button" class="prompt-quick-slot" data-prompt-slot="4" aria-label="Velg prompt 4: Henvisning til spesialist">Henvis Spes</button>
+            <button type="button" class="prompt-quick-slot" data-prompt-slot="5" aria-label="Velg prompt 5: Henvisning til MR">Henvis MR</button>
+          </div>
+
           <div class="prompt-slot-row">
             <div class="prompt-slot-picker" id="promptSlotPicker">
               <select
@@ -3330,7 +3367,7 @@
 
   <script type="module" src="./js/features/editor-tools.js"></script>
   <!-- Prompt slot control extracted from inline transcribe.html logic -->
-  <script type="module" src="./js/features/prompt-slots-ui.js"></script>
+  <script type="module" src="./js/features/prompt-slots-ui.js?v=20261014-quick-slots"></script>
 
   <!-- Per-workspace history of the 30 most recent successfully generated primary notes -->
   <script type="module" src="./js/features/note-history.js?v=20261013-shared-history"></script>
