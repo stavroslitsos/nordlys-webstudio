@@ -1,4 +1,11 @@
 # Endringslogg — Nordlys Journal
+## 14. oktober 2026 — mer plass i arbeidsromlinjen
+- Forkortet de norske knappene «Importer» og «Eksporter» til «Import» og
+  «Eksport», og stablet dem vertikalt.
+- Arbeidsrommene vises som nummererte knapper (1, 2, 3 …) i stedet for lange
+  promptnavn. Det fulle arbeidsromnavnet og aktiv status beholdes som
+  hjelpetekst og tilgjengelig navn.
+
 ## 24. september 2026
 1. Kartla offentlig frontend, veiledning, oppsett og arbeidsrom i kollegaens løsning. Offentlig kildearkiv ble beholdt lokalt.
 2. Bygde norsk Nordlys-oppsett med egne nøkler, Soniox EU og OpenAI, fjernet analyse og tredjeparts OAuth-klienter.

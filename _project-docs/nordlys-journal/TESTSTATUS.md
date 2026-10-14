@@ -1,5 +1,5 @@
 # Teststatus — Nordlys Journal
-Oppdatert 24. september 2026. Gjeldende status erstatter tidligere notater om at Drive/HTTPS ikke var ferdig.
+Oppdatert 14. oktober 2026. Gjeldende status erstatter tidligere notater om at Drive/HTTPS ikke var ferdig.
 
 ## Bekreftet
 - 56 JavaScript-filer parses; relative moduler og lokale ressursreferanser finnes.
@@ -16,6 +16,9 @@ Oppdatert 24. september 2026. Gjeldende status erstatter tidligere notater om at
 - Mock Drive-test bekreftet opprettelse, oppdatering av eksisterende kopi, nedlasting og avvisning av ukryptert nøkkelobjekt.
 - OpenAI-standard og aktivt leverandørbytte til GPT-5.6 Sol bekreftet.
 - Kompakt layout visuelt kontrollert i Chrome: sideordnede felt, toppinnstillinger, opptaksknapper i samtalekort, notat-/promptknapper ved overskrifter.
+- Arbeidsromlinjen bruker vertikalt stablet Import/Eksport og nummererte
+  arbeidsromknapper. De fulle navnene er fortsatt tilgjengelige via
+  knappetittel og skjermleseretikett.
 - Sekundær generator og redactor åpnet/lukket ved tidligere layoutkontroll.
 
 ## Gjenstår / ikke dokumentert

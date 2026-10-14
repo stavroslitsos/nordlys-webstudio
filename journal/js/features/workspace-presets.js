@@ -89,7 +89,7 @@ const TEXT = {
     recording: "Recording", paused: "Paused", transcribing: "Transcribing", generating: "Generating", complete: "Completed",
   },
   no: {
-    presets: "Workspace set:", help: "Hjelp om Workspace set", import: "Importer", export: "Eksporter",
+    presets: "Workspace set:", help: "Hjelp om Workspace set", import: "Import", export: "Eksport",
     add: "Legg til Workspace", move: "Flytt Workspace", clone: "Klon Workspace", close: "Lukk Workspace", defaultName: "Workspace {n}",
     cloneName: "{name} (kopi)", cloneLoading: "Vent til dette Workspace-et er ferdig lastet før du kloner det.",
     namePrompt: "Navn på Workspace", max: "Du kan ha opptil 12 åpne Workspaces.",
@@ -492,18 +492,18 @@ function injectManagerStyle() {
     .workspace-preset-bar button,.workspace-modal button{margin:0}.workspace-preset-bar button{font:inherit}.workspace-preset-help{position:relative;width:36px;height:36px;padding:0;border:1px solid #b8c6c0;border-radius:50%;background:#fff;color:#46705f;font-weight:700;cursor:help;flex:0 0 auto}
     .workspace-preset-help-content{display:none;position:absolute;z-index:9999;left:0;top:36px;width:min(400px,78vw);padding:10px 12px;border:1px solid #b8c6c0;border-radius:8px;background:#fff;box-shadow:0 7px 22px rgba(0,0,0,.16);color:#27332e;text-align:left;line-height:1.35;font-weight:400}
     .workspace-preset-help:hover .workspace-preset-help-content,.workspace-preset-help:focus .workspace-preset-help-content,.workspace-preset-help.is-open .workspace-preset-help-content{display:block}
-    .workspace-preset-io{min-height:39px;padding:8px 16px;border:1px solid #cbd5d1;border-radius:8px;background:#fff;color:#3d5148;cursor:pointer}.workspace-preset-io:hover{background:#f1f7f4}
+    .workspace-preset-io-stack{display:flex;flex:0 0 auto;flex-direction:column;gap:4px}.workspace-preset-io{min-height:30px;padding:4px 12px;border:1px solid #cbd5d1;border-radius:8px;background:#fff;color:#3d5148;cursor:pointer}.workspace-preset-io:hover{background:#f1f7f4}
     .workspace-preset-label{margin-left:17px;color:#68746f;font-weight:600;white-space:nowrap}.workspace-preset-list{display:flex;align-items:center;gap:10px;min-width:0;overflow-x:auto;padding:4px 6px;scrollbar-width:thin}
-    .workspace-preset-chip{position:relative;display:inline-flex;align-items:center;gap:2px;flex:0 0 auto;min-height:49px;padding:0 9px 0 4px;border:1px solid #d2dad6;border-radius:999px;background:#fff;color:#34463e;max-width:310px;box-sizing:border-box}.workspace-preset-chip:hover{background:#f2f8f5;color:#34463e}
+    .workspace-preset-chip{position:relative;display:inline-flex;align-items:center;gap:1px;flex:0 0 auto;min-height:43px;padding:0 5px 0 2px;border:1px solid #d2dad6;border-radius:999px;background:#fff;color:#34463e;box-sizing:border-box}.workspace-preset-chip:hover{background:#f2f8f5;color:#34463e}
     .workspace-preset-chip.is-active{border-color:#69a98d;background:#edf7f2;box-shadow:inset 0 -2px 0 #5a9}.workspace-preset-chip.is-workspace-dragging{opacity:.5}.workspace-preset-chip.is-workspace-drop-before::before,.workspace-preset-chip.is-workspace-drop-after::after{content:"";position:absolute;z-index:3;top:5px;bottom:5px;width:3px;border-radius:999px;background:#4f9d7b;box-shadow:0 0 0 2px rgba(79,157,123,.14)}.workspace-preset-chip.is-workspace-drop-before::before{left:-7px}.workspace-preset-chip.is-workspace-drop-after::after{right:-7px}
-    .workspace-preset-drag{align-self:stretch;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:25px;padding:0;border:0;border-radius:999px 5px 5px 999px;background:transparent;color:#8a9691;font-size:17px;line-height:1;cursor:grab}.workspace-preset-drag:hover,.workspace-preset-drag:focus-visible{background:rgba(90,169,153,.12);color:#46705f;outline:none}.workspace-preset-drag:active{cursor:grabbing}.workspace-preset-select{display:inline-flex;align-items:center;gap:10px;align-self:stretch;min-width:0;max-width:246px;padding:9px 7px;border:0;border-radius:5px;background:transparent;color:inherit;cursor:pointer}.workspace-preset-select:hover,.workspace-preset-select:focus-visible{background:rgba(90,169,153,.09);outline:none}.workspace-preset-select[aria-pressed="true"]{font-weight:600}.workspace-preset-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .workspace-preset-drag{align-self:stretch;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:20px;padding:0;border:0;border-radius:999px 5px 5px 999px;background:transparent;color:#8a9691;font-size:15px;line-height:1;cursor:grab}.workspace-preset-drag:hover,.workspace-preset-drag:focus-visible{background:rgba(90,169,153,.12);color:#46705f;outline:none}.workspace-preset-drag:active{cursor:grabbing}.workspace-preset-select{display:inline-flex;align-items:center;gap:6px;align-self:stretch;min-width:0;padding:7px 5px;border:0;border-radius:5px;background:transparent;color:inherit;cursor:pointer}.workspace-preset-select:hover,.workspace-preset-select:focus-visible{background:rgba(90,169,153,.09);outline:none}.workspace-preset-select[aria-pressed="true"]{font-weight:700}.workspace-preset-name{min-width:1.2em;text-align:center;white-space:nowrap}
     .workspace-preset-dot{width:10.5px;height:10.5px;border-radius:50%;background:#b8c0bd;flex:0 0 auto}.workspace-preset-dot.recording{background:#d7263d;box-shadow:0 0 0 0 rgba(215,38,61,.5);animation:workspacePulse 1.3s infinite}.workspace-preset-dot.generating{background:#7b61c9;animation:workspaceSpin 1.2s linear infinite}.workspace-preset-dot.transcribing{background:#2c7bd9}.workspace-preset-dot.complete{background:#2f9d61}
     .workspace-preset-clone,.workspace-preset-close{position:relative;flex:0 0 auto;border:0;background:transparent;color:#87918d;padding:0;cursor:pointer}.workspace-preset-clone{width:25px;height:29px;border-radius:5px}.workspace-preset-clone::before,.workspace-preset-clone::after{content:"";position:absolute;width:9px;height:9px;border:1.5px solid currentColor;border-radius:2px;box-sizing:border-box}.workspace-preset-clone::before{left:7px;top:7px}.workspace-preset-clone::after{left:10px;top:10px}.workspace-preset-clone:hover,.workspace-preset-clone:focus-visible{background:rgba(90,169,153,.12);color:#46705f;outline:none}.workspace-preset-close{width:24px;height:29px;border-radius:5px;line-height:1;font-size:19px}.workspace-preset-close:hover,.workspace-preset-close:focus-visible{background:rgba(164,0,30,.07);color:#a4001e;outline:none}.workspace-preset-add{width:47px;height:47px;padding:0;border:1px dashed #aebbb5;border-radius:50%;background:#fff;color:#426857;font-size:26px;line-height:1;cursor:pointer;flex:0 0 auto}
     .workspace-preset-frame-host{position:relative;width:100%}.workspace-preset-frame{border:0;background:#f8f8f8}.workspace-preset-frame.is-active{position:relative;display:block;width:100%;min-height:600px;visibility:visible;opacity:1;pointer-events:auto}.workspace-preset-frame.is-parked{position:absolute;left:0;top:0;display:block;width:100%!important;min-height:600px;visibility:hidden;opacity:0;pointer-events:none}
     .workspace-preset-toast{position:fixed;z-index:10020;left:50%;bottom:18px;transform:translateX(-50%);padding:8px 13px;border-radius:8px;background:#24352d;color:white;font-size:13px;box-shadow:0 5px 20px rgba(0,0,0,.2)}
     .workspace-backdrop{position:fixed;z-index:10010;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.4)}.workspace-backdrop[hidden]{display:none}.workspace-modal{width:min(480px,94vw);max-height:88vh;overflow:auto;background:#fff;border-radius:12px;padding:16px;box-shadow:0 16px 48px rgba(0,0,0,.3)}.workspace-modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.workspace-modal-head h2{font-size:18px;margin:0}.workspace-modal-close{border:0;background:transparent;color:#a4001e;padding:2px 6px;font-size:22px;cursor:pointer}.workspace-modal-notice{padding:9px;border:1px solid #b8d6ca;border-radius:8px;background:#f3faf7;font-size:12px;line-height:1.4}.workspace-modal-option{display:block;width:100%;margin-top:10px!important;padding:9px;border:1px solid #9bc4b2;border-radius:8px;background:#fff;color:#2e5544;text-align:left;cursor:pointer}.workspace-modal-option:hover{background:#f1f8f5;color:#2e5544}.workspace-modal-field{display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:8px;border:1px solid #cbd5d1;border-radius:7px}.workspace-modal-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.workspace-modal-actions button{padding:7px 11px;border-radius:7px;font-size:12px}.workspace-modal-status{min-height:18px;font-size:12px}.workspace-import-preview{margin-top:10px;padding:9px;border:1px solid #d8dfdc;border-radius:8px;background:#fafafa;font-size:12px}
     @keyframes workspacePulse{0%{box-shadow:0 0 0 0 rgba(215,38,61,.48)}70%{box-shadow:0 0 0 5px rgba(215,38,61,0)}100%{box-shadow:0 0 0 0 rgba(215,38,61,0)}}@keyframes workspaceSpin{50%{opacity:.35}}
-    @media(max-width:700px){.workspace-preset-label{margin-left:4px}.workspace-preset-io{min-height:35px;font-size:11px;padding:4px 6px}.workspace-preset-bar{min-height:69px;padding:10px 12px;gap:3.5px}.workspace-preset-help{width:34px;height:34px}.workspace-preset-chip{min-height:46px;padding-right:7px}.workspace-preset-drag{width:23px;font-size:16px}.workspace-preset-select{padding:8px 5px;max-width:210px}.workspace-preset-clone,.workspace-preset-close{height:27px}.workspace-preset-add{width:44px;height:44px;font-size:24px}}
+    @media(max-width:700px){.workspace-preset-label{margin-left:4px}.workspace-preset-io{min-height:29px;font-size:11px;padding:3px 6px}.workspace-preset-bar{min-height:69px;padding:10px 12px;gap:3.5px}.workspace-preset-help{width:34px;height:34px}.workspace-preset-chip{min-height:42px;padding-right:5px}.workspace-preset-drag{width:19px;font-size:14px}.workspace-preset-select{padding:7px 4px}.workspace-preset-clone,.workspace-preset-close{height:27px}.workspace-preset-add{width:44px;height:44px;font-size:24px}}
   `;
   document.head.appendChild(style);
 }
@@ -1076,10 +1076,13 @@ function initTopLevelManager() {
     importButton.type = "button"; importButton.className = "workspace-preset-io";
     const exportButton = document.createElement("button");
     exportButton.type = "button"; exportButton.className = "workspace-preset-io";
+    const ioStack = document.createElement("div");
+    ioStack.className = "workspace-preset-io-stack";
+    ioStack.append(importButton, exportButton);
     const label = document.createElement("span"); label.className = "workspace-preset-label";
     const list = document.createElement("div"); list.className = "workspace-preset-list";
     const add = document.createElement("button"); add.type = "button"; add.className = "workspace-preset-add"; add.textContent = "+";
-    bar.append(help, importButton, exportButton, label, list, add);
+    bar.append(help, ioStack, label, list, add);
     importButton.addEventListener("click", () => openBackupModal("import"));
     exportButton.addEventListener("click", () => openBackupModal("export"));
     add.addEventListener("click", addPreset);
@@ -1199,9 +1202,12 @@ function initTopLevelManager() {
       const active = definition.id === activeId;
       ui.chip.classList.toggle("is-active", active);
       ui.select.setAttribute("aria-pressed", active ? "true" : "false");
-      ui.select.title = statusTitle(snapshot, copy);
+      const workspaceLabel = `${index + 1}: ${definition.name}`;
+      const workspaceStatus = statusTitle(snapshot, copy);
+      ui.select.title = workspaceStatus ? `${workspaceLabel} — ${workspaceStatus}` : workspaceLabel;
+      ui.select.setAttribute("aria-label", ui.select.title);
       ui.dot.className = `workspace-preset-dot ${statusClass(snapshot)}`;
-      ui.name.textContent = definition.name;
+      ui.name.textContent = String(index + 1);
       ui.dragHandle.setAttribute("aria-label", copy.move);
       ui.dragHandle.title = copy.move;
       ui.clone.setAttribute("aria-label", copy.clone);
