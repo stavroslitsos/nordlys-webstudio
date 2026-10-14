@@ -7,9 +7,9 @@
   hjelpetekst og tilgjengelig navn.
 
 ## 14. oktober 2026 — direktevalg for kliniske prompter
-- La inn fem kompakte valg rett under «Tilpasset prompt»: `us`, `Beh`,
-  `Epikrise`, `Henvis Spes` og `Henvis MR`.
-- Valgene åpner promptplass 1–5 direkte. Den komplette nedtrekkslisten er
+- La inn seks kompakte valg rett under «Tilpasset prompt»: `us`, `Beh`,
+  `Epikrise`, `Henvis Spes`, `Henvis MR` og `Tverrfaglig`.
+- Valgene åpner promptplass 1–6 direkte. Den komplette nedtrekkslisten er
   beholdt for de øvrige promptene og for omorganisering.
 
 ## 24. september 2026
