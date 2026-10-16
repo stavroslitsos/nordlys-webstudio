@@ -1742,7 +1742,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function resolveNoteModulePath(choice) {
     const path = resolveNoteModulePathFromRegistry(choice || getSelectedEffectiveNoteProvider());
-    return path ? `${path}?v=20261016-helfo` : path;
+    return path ? `${path}?v=20261016-helfo-kilder` : path;
   }
 
   function resolveNoteInitExportName(choice) {

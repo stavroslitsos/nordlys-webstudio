@@ -1,5 +1,5 @@
-import { MASTER_RULES_KEY, readMasterRules, saveMasterRules } from '../core/master-rules.js?v=20261016-helfo';
-import { JOURNAL_STANDARD_SECTIONS, JOURNAL_STANDARD_SOURCES } from '../core/journal-standard.js?v=20261016-helfo';
+import { MASTER_RULES_KEY, readMasterRules, saveMasterRules } from '../core/master-rules.js?v=20261016-helfo-kilder';
+import { JOURNAL_STANDARD_SECTIONS, JOURNAL_STANDARD_SOURCES } from '../core/journal-standard.js?v=20261016-helfo-kilder';
 
 const standard = document.getElementById('journalStandard');
 if (standard) {

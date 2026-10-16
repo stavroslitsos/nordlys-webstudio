@@ -89,4 +89,4 @@ function installCompactLabels(){
 }
 installCompactLabels();
 
-import './js/features/master-rules-ui.js?v=20261016-helfo';
+import './js/features/master-rules-ui.js?v=20261016-helfo-kilder';

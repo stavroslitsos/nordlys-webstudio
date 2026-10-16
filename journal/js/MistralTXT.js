@@ -10,7 +10,7 @@ import {
   resolveCommonNoteInputs,
   startNoteTimer,
   streamChatCompletionsSse
-} from "./core/note-runner.js?v=20261016-helfo";
+} from "./core/note-runner.js?v=20261016-helfo-kilder";
 
 const RUN_META = {
   provider: "mistral",

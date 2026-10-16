@@ -119,3 +119,7 @@ Auto clear for Supplerende er på ved åpning og gjenoppretting/import av alle a
 
 ## 16. oktober 2026 — Helfo-grunnstandard
 Grunnstandard for Helfo og journalføring er nå innebygd i journal/js/core/journal-standard.js og aktiv i alle primære notatforespørsler, også uten valgt prompt eller egne tillegg. Regler viser fem faglig organiserte seksjoner og offentlige kilder med dato. Egne lokale regler er bevart som tillegg. Den medleverte standarden versjoneres i Git; bare egne tillegg inngår i masterRules-feltet i kryptert backup. Import av tomt/eldre oppsett slår ikke av grunnstandarden. Tidligere opplysning om at ingen regeltekst ligger i Git gjelder private tillegg, ikke denne offentlige grunnstandarden. Se REGELGRUNNLAG.md.
+
+
+## 16. oktober 2026 — Aktiv bruk av alle tilgjengelige kilder
+Grunnstandardens første seksjon krever nå aktiv sammenstilling av hele transkripsjonen og alle henvisninger, epikriser, bildesvar, tidligere notater og øvrige opplysninger som faktisk inngår i forespørselen. Relevante detaljer skal brukes selv om de er spredt. Kilde, tidspunkt og motstrid bevares. Indikasjon/begrunnelse skal beskrives med tilgjengelig grunnlag, eller konkret mangel markeres før signering. Ingen ny automatisk dokumentinnhenting er innført.

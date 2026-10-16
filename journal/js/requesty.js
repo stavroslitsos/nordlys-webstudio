@@ -48,7 +48,7 @@ import {
   resolveCommonNoteInputs,
   startNoteTimer,
   streamChatCompletionsSse
-} from "./core/note-runner.js?v=20261016-helfo";
+} from "./core/note-runner.js?v=20261016-helfo-kilder";
 import {
   getDefaultRequestyReasoning,
   normalizeRequestyModel,

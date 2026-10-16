@@ -818,7 +818,7 @@ function initTopLevelManager() {
     frame.allow = "microphone; clipboard-read; clipboard-write";
     const url = new URL(window.location.href);
     url.searchParams.set("workspacePresetFrame", definition.id);
-    url.searchParams.set("workspaceVersion", "20261016-helfo");
+    url.searchParams.set("workspaceVersion", "20261016-helfo-kilder");
     url.hash = "";
     frame.src = url.toString();
     frameHost.appendChild(frame);

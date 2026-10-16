@@ -1,6 +1,6 @@
-import { readMasterRules, saveMasterRules } from './js/core/master-rules.js?v=20261016-helfo';
+import { readMasterRules, saveMasterRules } from './js/core/master-rules.js?v=20261016-helfo-kilder';
 import { CloudBackupSession } from './js/features/cloud-backup-session.js';
-import { setupBundle, validateSetupBundle } from './nordlys-bundle.js?v=20261016-helfo';
+import { setupBundle, validateSetupBundle } from './nordlys-bundle.js?v=20261016-helfo-kilder';
 import { addPasswordManagerFields, offerPasswordSave } from './js/features/backup-password-manager.js';
 import { PromptCloudBackup } from './js/features/prompt-cloud-backup.js';
 import { encryptKeys, decryptKeys } from './nordlys-crypto.js';

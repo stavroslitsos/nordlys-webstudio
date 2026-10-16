@@ -88,3 +88,7 @@ Priser er flyttet til venstre ved Nøkler og oppsett, før Guide. Ny knapp Regle
 
 ## 16. oktober 2026 — Helfo-grunnstandard
 Lagt inn aktiv, kildebelagt grunnstandard fra gjennomgått Helfo-materiale og journalføringsregler. Skiller dokumenterte krav, praktisk PRP-kontrolliste og uavklarte refusjons-/betalingsforhold. Prompten styrer fortsatt struktur. Ingen privat korrespondanse eller pasientdata publisert. Egne lokale tillegg og backupformat bevart. Versjonerte moduler og arbeidsromrammer oppdatert.
+
+
+## 16. oktober 2026 — Aktiv bruk av alle tilgjengelige kilder
+Presisert Regler etter brukerens ønske: bruk alle tilgjengelige muntlige/skriftlige kilder og alle relevante detaljer aktivt for å belyse dokumentasjonspunktene. Kontroller hele grunnlaget før noe merkes manglende. Unngå at krav om korthet fjerner relevant indikasjon eller begrunnelse. Motstrid og mangler synliggjøres; ingen oppdiktet klinisk vurdering. Cacheversjoner oppdatert.
