@@ -76,3 +76,5 @@ JavaScript-syntaks, HTML-ID-er, knapprekkefølge og diff kontrollert. Lokal forh
 26 syntetiske tester bestått, inkludert OpenAI streaming/non-streaming med regler i forespørselen, felles regler ved bytte av arbeidsrom, tomt promptvalg, stopp ved utilgjengelig regellagring, kryptert backup-rundtur, eldre backup, ugyldig regeltekst og Auto clear. JavaScript-syntaks og diff kontrollert. Ingen virkelige API-kall, mikrofonopptak eller pasientdata. Bedrock, Mistral og Requesty er kontrollert for bruk av felles inputfunksjon; reelle leverandørkall er ikke testet. Visuell kontroll av publisert panel utføres etter utrulling.
 
 Første utrulling fullført (Pages success). Nettleserkontroll avdekket blanding av nye HTML-filer og gamle moduler i cache. Oppdatert versjonsparameter for berørte arbeidsrom-/oppsettsmoduler og primære notatleverandører.
+
+Regler-panelet åpnet, lagret syntetisk tekst og gjenopprettet teksten etter omlasting i sky-Chrome. Testteksten fjernet igjen. Utforming kontrollert visuelt. Eksisterende iframe-adresser kunne fortsatt hente gammel HTML; arbeidsromrammene får derfor egen versjonsparameter ved oppstart.
