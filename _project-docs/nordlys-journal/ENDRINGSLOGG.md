@@ -84,3 +84,7 @@ Priser er flyttet til venstre ved Nøkler og oppsett, før Guide. Ny knapp Regle
 - Lagt reglene til i samlet kryptert oppsettseksport, med bakoverkompatibel import.
 - Publiseringsklar Auto clear-standard for Supplerende, tidligere forberedt 15. oktober, er gjenopprettet etter opprydding av midlertidig arbeidsområde.
 - Brukeren bekreftet publisering 16. oktober; den tidligere ventestatusen er opphevet.
+
+
+## 16. oktober 2026 — Helfo-grunnstandard
+Lagt inn aktiv, kildebelagt grunnstandard fra gjennomgått Helfo-materiale og journalføringsregler. Skiller dokumenterte krav, praktisk PRP-kontrolliste og uavklarte refusjons-/betalingsforhold. Prompten styrer fortsatt struktur. Ingen privat korrespondanse eller pasientdata publisert. Egne lokale tillegg og backupformat bevart. Versjonerte moduler og arbeidsromrammer oppdatert.

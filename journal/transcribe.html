@@ -2205,7 +2205,7 @@
 
 </style>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-<link rel="stylesheet" href="./nordlys-workspace.css?v=20261016-master-rules">
+<link rel="stylesheet" href="./nordlys-workspace.css?v=20261016-helfo">
 </head>
 <body>
   <header class="nordlys-header"><a href="./index.html" class="nordlys-brand">N<span>Nordlys Journal</span></a><span>Arbeidsrom <small>· utviklingsversjon 0.1</small></span><a href="./veiledning.html" target="_blank" rel="noopener">Veiledning</a></header>
@@ -3318,7 +3318,7 @@
 
 
   <!-- Ensure main boot script runs after provider wiring -->
-  <script type="module" src="./js/main.js?v=20261016-master-rules"></script>
+  <script type="module" src="./js/main.js?v=20261016-helfo"></script>
 
   <!-- Secondary Note Generator (independent generation session beside the
        Recording Transcript). Loads after main.js so window.__app helpers
@@ -3338,10 +3338,14 @@
       <h2 id="rulesHeading">Regler</h2>
       <button id="masterRulesClose" type="button" aria-label="Lukk regler">Lukk</button>
     </div>
-    <p id="masterRulesDescription">Felles masterstandard for journalføring i alle arbeidsrom. Legg inn relevant lovtekst, føringer og retningslinjer. Valgt prompt styrer journalens overskrifter, oppbygning og presentasjon innenfor disse føringene.</p>
-    <label for="masterRulesText">Lovverk, føringer og retningslinjer</label>
-    <textarea id="masterRulesText" rows="12" maxlength="100000" aria-describedby="masterRulesDescription masterRulesStorage" placeholder="Lim inn selve teksten, gjerne med kilde og dato. Lenker alene blir ikke hentet automatisk."></textarea>
-    <p id="masterRulesStorage">Lagres i denne nettleseren og sendes til valgt notatleverandør sammen med neste notatforespørsel. Tas med i samlet kryptert oppsettseksport fra «Nøkler og oppsett». Legg bare inn generelle regler, ikke pasientopplysninger.</p>
+    <p id="masterRulesDescription">Felles masterstandard for journalføring i alle arbeidsrom. Grunnstandarden under er aktiv ved primær notatgenerering, også når «Bruk prompt» er av. Valgt prompt styrer overskrifter, oppbygning og presentasjon. Manglende dokumentasjon markeres for avklaring før signering.</p>
+    <h3>Grunnstandard · Helfo og journalføring</h3>
+    <p>Versjon 16.10.2026 · Aktiv. Kildebaserte føringer og praktisk dokumentasjonsstøtte. PRP-punktene er en klinisk kontrolliste, ikke en særskilt Helfo-godkjenning.</p>
+    <div id="journalStandard"></div>
+    <h3>Egne tillegg</h3>
+    <label for="masterRulesText">Supplerende lovverk, føringer og retningslinjer</label>
+    <textarea id="masterRulesText" rows="8" maxlength="100000" aria-describedby="masterRulesDescription masterRulesStorage" placeholder="Legg til egne føringer med kilde og dato. Eksisterende regler beholdes her. Lenker alene blir ikke hentet automatisk."></textarea>
+    <p id="masterRulesStorage">Egne tillegg lagres i denne nettleseren og tas med i samlet kryptert oppsettseksport. Grunnstandard og tillegg sendes til valgt notatleverandør med notatforespørselen. Tomt tilleggsfelt slår ikke av grunnstandarden. Legg bare inn generelle regler, ikke pasientopplysninger.</p>
     <div class="nj-rules-footer"><button id="masterRulesSave" type="button">Lagre regler</button><span id="masterRulesStatus" role="status" aria-live="polite"></span></div>
   </dialog>
   <div id="guideView">
@@ -3381,7 +3385,7 @@
   <script type="module" src="./js/features/prices-overlay.js?v=20261001-order"></script>
 
 
-  <script type="module" src="./js/features/editor-tools.js?v=20261016-master-rules"></script>
+  <script type="module" src="./js/features/editor-tools.js?v=20261016-helfo"></script>
   <!-- Prompt slot control extracted from inline transcribe.html logic -->
   <script type="module" src="./js/features/prompt-slots-ui.js?v=20261014-quick-slots"></script>
 
@@ -3393,10 +3397,10 @@
 
 
   <!-- Concurrent preset workspaces, preset backup, and preset toolbar. -->
-  <script type="module" src="./js/features/workspace-presets.js?v=20261016-master-rules-frames"></script>
+  <script type="module" src="./js/features/workspace-presets.js?v=20261016-helfo"></script>
 
 
 
-<script type="module" src="./nordlys-workspace.js?v=20261016-master-rules"></script>
+<script type="module" src="./nordlys-workspace.js?v=20261016-helfo"></script>
 </body>
 </html>

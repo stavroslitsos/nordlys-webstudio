@@ -1,4 +1,29 @@
-import { MASTER_RULES_KEY, readMasterRules, saveMasterRules } from '../core/master-rules.js';
+import { MASTER_RULES_KEY, readMasterRules, saveMasterRules } from '../core/master-rules.js?v=20261016-helfo';
+import { JOURNAL_STANDARD_SECTIONS, JOURNAL_STANDARD_SOURCES } from '../core/journal-standard.js?v=20261016-helfo';
+
+const standard = document.getElementById('journalStandard');
+if (standard) {
+  for (const {title, text} of JOURNAL_STANDARD_SECTIONS) {
+    const section = document.createElement('details');
+    const heading = document.createElement('summary');
+    heading.textContent = title;
+    section.append(heading);
+    for (const paragraph of text.split('\n')) {
+      const p = document.createElement('p'); p.textContent = paragraph; section.append(p);
+    }
+    standard.append(section);
+  }
+  const sources = document.createElement('details');
+  const heading = document.createElement('summary'); heading.textContent = 'Kilder og dato'; sources.append(heading);
+  const date = document.createElement('p'); date.textContent = 'Kontrollert 16.10.2026. Rundskrivets faglige endring: 09.10.2026. Ingen automatisk oppdatering av regelverket.'; sources.append(date);
+  const list = document.createElement('ul');
+  for (const [title, url] of JOURNAL_STANDARD_SOURCES) {
+    const item = document.createElement('li'); const link = document.createElement('a');
+    link.textContent = title; link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    item.append(link); list.append(item);
+  }
+  sources.append(list); standard.append(sources);
+}
 
 const button = document.getElementById('btnRules');
 const view = document.getElementById('rulesView');
@@ -10,7 +35,8 @@ let dirty = false;
 
 function updateButton() {
   try {
-    const active = Boolean(readMasterRules().trim());
+    readMasterRules();
+    const active = true;
     button?.classList.toggle('nj-rules-active', active);
     if (button) button.title = active ? 'Felles regler brukes ved all primær notatgenerering' : 'Legg inn felles regler for journalføring';
   } catch { if (button) button.title = 'Reglene kan ikke leses fra nettleseren'; }
@@ -28,7 +54,7 @@ button?.addEventListener('click', () => {
     editor.value = baseline;
     editor.disabled = false;
     save.disabled = false;
-    status.textContent = baseline.trim() ? 'Lagrede regler er aktive i alle arbeidsrom.' : 'Ingen regler er lagret ennå.';
+    status.textContent = baseline.trim() ? 'Grunnstandard og egne tillegg er aktive i alle arbeidsrom.' : 'Grunnstandarden er aktiv. Ingen egne tillegg lagret.';
   } catch {
     editor.value = '';
     editor.disabled = true;
@@ -51,7 +77,7 @@ save?.addEventListener('click', () => {
     saveMasterRules(editor.value);
     baseline = editor.value;
     dirty = false;
-    status.textContent = baseline.trim() ? 'Lagret. Reglene brukes fra neste generering i alle arbeidsrom.' : 'Lagret. Ingen felles regler er aktive.';
+    status.textContent = baseline.trim() ? 'Lagret. Grunnstandard og tillegg brukes fra neste generering i alle arbeidsrom.' : 'Lagret. Grunnstandarden er fortsatt aktiv.';
     updateButton();
   } catch {
     status.textContent = 'Kunne ikke lagre reglene. Endringene er fortsatt i tekstfeltet; prøv igjen eller kopier teksten før du lukker.';

@@ -98,6 +98,8 @@ async function generate(response, mode = 'streaming') {
     assert.equal(request.model, 'gpt-5.6-sol');
     assert.equal(request.store, false);
     assert.match(request.input[0].content[0].text, /Syntetisk masterregel/);
+    assert.match(request.input[0].content[0].text, /NORDLYS GRUNNSTANDARD/);
+    assert.match(request.input[0].content[0].text, /Må avklares før signering/);
     assert.match(request.input[0].content[0].text, /Skriv kort/);
     return { fields, completed, finished };
   } finally { globalThis.fetch = originalFetch; }

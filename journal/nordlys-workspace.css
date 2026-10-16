@@ -133,3 +133,6 @@ button:focus-visible{outline-color:#2563eb!important}
 .nj-rules-footer{display:flex;align-items:center;flex-wrap:wrap;gap:14px}
 #masterRulesStatus{font-size:14px}
 #btnRules.nj-rules-active::after{content:' •';color:#a7f3d0}
+#journalStandard details{border:1px solid var(--nj-line);border-radius:8px;padding:10px 14px;margin:8px 0;background:#f7fafc}
+#journalStandard summary{cursor:pointer;font-weight:600}
+#journalStandard p,#journalStandard li{font-size:14px}

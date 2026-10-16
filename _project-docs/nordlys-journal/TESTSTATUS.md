@@ -80,3 +80,7 @@ Første utrulling fullført (Pages success). Nettleserkontroll avdekket blanding
 Regler-panelet åpnet, lagret syntetisk tekst og gjenopprettet teksten etter omlasting i sky-Chrome. Testteksten fjernet igjen. Utforming kontrollert visuelt. Eksisterende iframe-adresser kunne fortsatt hente gammel HTML; arbeidsromrammene får derfor egen versjonsparameter ved oppstart.
 
 Sluttkontroll 16. oktober: Pages-utrulling 7163ed1 fullført med success. Sky-Chrome viser Priser og Regler til venstre, Priser åpner fortsatt oversikten, Regler lagrer og gjenåpner tekst etter omlasting, og eksisterende arbeidsrom lastes med versjonert iframe og Auto clear på (checked=1). Syntetisk regeltekst fjernet etter test. Ingen reelle modellkall utført.
+
+
+## 16. oktober 2026 — Helfo-grunnstandard
+27 syntetiske Node-tester bestått. Kontrollert at innebygd standard og egne tillegg følger faktiske mockede OpenAI-forespørsler, at standarden gjelder uten prompt og med tomme/eldre regler, og at kryptert backup bevarer egne tillegg. Alle fire primærleverandører bruker samme resolver. Ingen klinisk modelltest eller reell API-forespørsel utført. Nettleser-/utrullingskontroll gjenstår ved denne committen.

@@ -24,8 +24,12 @@ test('shared rules are read afresh for each workspace and work without a selecte
  assert.match(next,/Ny felles regel/);assert.match(next,/overskriftene A og B/);assert.doesNotMatch(next,/Syntetisk regel/);
  assert.equal(fields.generatedNote.value,'Tidligere notat');
 });
-test('empty rules preserve the selected prompt; factual and presentation precedence is explicit', () => {
- assert.equal(composeMasterNotePrompt('Min mal',''),'Min mal');
+test('built-in standard is active with no custom rules and preserves the chosen presentation', () => {
+ const base=composeMasterNotePrompt('Min mal','');
+ assert.match(base,/NORDLYS GRUNNSTANDARD/);
+ assert.match(base,/Min mal/);
+ assert.match(base,/PRP/);
+ assert.match(base,/Må avklares før signering/);
  const prompt=composeMasterNotePrompt('Min mal',rule);
  assert.match(prompt,/masterstandarden forrang/);assert.match(prompt,/visuell presentasjon/);assert.match(prompt,/Ikke konstruer funn/);
 });
@@ -68,5 +72,20 @@ test('supplementary defaults on, respects manual opt-out, and restored presets c
   toggle.checked=false;
   vm.runInNewContext(apply,{checks:{autoClearSupplementaryToggle:stored},doc:{getElementById:()=>({type:'checkbox',set checked(v){toggle.checked=v;}})},win:{},dispatchChange(){}});
   assert.equal(toggle.checked,true);
+ }
+});
+
+test('new and legacy-empty workspaces receive baseline without replacing custom rules', () => {
+ memory();
+ const fields={transcription:{value:'Syntetisk samtale om PRP'},generatedNote:{value:'Behold'},customPrompt:{value:''}};
+ globalThis.document={getElementById:id=>fields[id]};
+ for(const custom of ['', 'Behold min egen regel']) {
+  saveMasterRules(custom);
+  const resolved=resolveCommonNoteInputs({});
+  assert.match(resolved.promptText,/NORDLYS GRUNNSTANDARD/);
+  assert.match(resolved.promptText,/Ikke fyll manglende indikasjon/);
+  assert.match(resolved.promptText,/ikke en særskilt PRP-bestemmelse/);
+  assert.equal(readMasterRules(),custom);
+  if(custom) assert.ok(resolved.promptText.includes(custom));
  }
 });
