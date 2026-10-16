@@ -461,7 +461,7 @@
     .top-bar-center button {
       margin: 0;         /* avoid global button margins breaking “equal spacing” */
     }
-    /* Right-side top-bar controls: Prices sits immediately before language. */
+    /* Right-side language control. */
     .top-bar-right {
       display: flex;
       align-items: center;
@@ -2255,8 +2255,11 @@
       <!-- Top Bar inside Main Content -->
 <!-- Top Bar inside Main Content -->
 <div class="top-bar">
-  <!-- Back to frontpage button stays on the far left -->
-  <button id="backToHomeButton" type="button">Back to frontpage</button>
+  <div class="nj-topbar-actions">
+    <button id="backToHomeButton" type="button">Back to frontpage</button>
+    <button id="btnPrices" type="button" aria-controls="pricesView" aria-haspopup="dialog">Prices</button>
+    <button id="btnRules" type="button" aria-controls="rulesView" aria-haspopup="dialog">Regler</button>
+  </div>
 <script>
   document.getElementById('backToHomeButton').addEventListener('click', () => {
     const loc = window.location;
@@ -2301,9 +2304,8 @@
       <button id="medicalCalcOpenBtn" type="button" disabled>Open</button>
     </div>
   </div>
-<!-- Keep the existing center controls in place; Prices sits between Clinical Tools and language. -->
+<!-- Language stays on the right. -->
   <div class="top-bar-right">
-    <button id="btnPrices" type="button" aria-controls="pricesView" aria-haspopup="dialog">Prices</button>
     <div id="lang-container-transcribe">
       <img src="language-icon.png" alt="Language Icon" id="lang-icon-transcribe" />
       <select id="lang-select-transcribe">
@@ -3331,6 +3333,13 @@
   <script type="module" src="./js/features/mini-controller.js"></script>
 
   <!-- Guide Overlay (outside the grid container) -->
+  <dialog id="rulesView" aria-labelledby="rulesHeading">
+    <div class="nj-rules-heading">
+      <h2 id="rulesHeading">Regler</h2>
+      <form method="dialog"><button type="submit" aria-label="Lukk regler">Lukk</button></form>
+    </div>
+    <p>Ingen regler er lagt inn ennå.</p>
+  </dialog>
   <div id="guideView">
     <button id="guideClose" type="button" aria-label="Close">×</button>
     <h3 id="guideHeading">Guide & Instructions</h3>

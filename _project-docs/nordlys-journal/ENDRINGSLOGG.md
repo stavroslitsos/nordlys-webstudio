@@ -72,3 +72,7 @@ Lagt til kreditt-/faktureringslenke ved Requesty, AWS Bedrock, OpenAI, Mistral o
 
 ## 1. oktober 2026 — primærleverandører øverst
 Flyttet OpenAI-notatmodeller og Soniox til toppen av prisoversikten etter brukerens prioritering. Øvrige tekst- og talemodeller vises under Reserve.
+
+
+## 16. oktober 2026 — Priser og Regler i venstre knappgruppe
+Priser er flyttet til venstre ved Nøkler og oppsett, før Guide. Ny knapp Regler åpner et eget panel med tomstatus; regelinnhold er ikke spesifisert eller koblet til notatgenereringen.

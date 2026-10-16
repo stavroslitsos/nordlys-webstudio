@@ -117,3 +117,12 @@ html.workspace-preset-frame:not(.nj-settings-expanded) .nj-settings-dock{display
 #startButton:disabled,#generateNoteButton:disabled,#secondaryGenerateButton:disabled{background:#ccc!important;color:#666!important}
 .nj-key-restore a{background:#2563eb}
 button:focus-visible{outline-color:#2563eb!important}
+
+/* Primary navigation stays together on the left, before Guide. */
+.nj-topbar-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.nj-topbar-actions>button{margin:0;white-space:nowrap}
+#rulesView{width:min(520px,calc(100vw - 48px));box-sizing:border-box;padding:24px;border:1px solid var(--nj-line);border-radius:15px;background:#fff;color:var(--nj-ink);font:inherit;line-height:1.6}
+#rulesView::backdrop{background:rgba(0,0,0,.45)}
+.nj-rules-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nj-rules-heading h2{margin:0;font-size:22px}
+.nj-rules-heading form{margin:0}

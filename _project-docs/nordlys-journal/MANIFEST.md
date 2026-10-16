@@ -105,3 +105,7 @@ Hver leverandørgruppe i prisoversikten har en blå «Fyll på kreditt»-lenke. 
 
 ## 1. oktober 2026 — primærleverandører øverst
 OpenAI-notatmodeller vises først i Priser, deretter Soniox tale til tekst. Øvrige prisgrupper står nedenfor under Reserve. Kredittlenker og modell-/prisdata er beholdt.
+
+
+## 16. oktober 2026 — Priser og Regler i venstre knappgruppe
+Priser er flyttet til venstre ved Nøkler og oppsett, før Guide. Ny knapp Regler åpner et eget panel med tomstatus; regelinnhold er ikke spesifisert eller koblet til notatgenereringen.

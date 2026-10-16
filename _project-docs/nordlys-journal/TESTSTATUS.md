@@ -66,3 +66,7 @@ JavaScript-syntaks og rendret HTML kontrollert: syv knapper fordelt på fem leve
 
 ## 1. oktober 2026 — primærleverandører øverst
 JavaScript-syntaks og rendret oversikt kontrollert: OpenAI og Soniox er de to første leverandørgruppene. Alle syv eksisterende prisgrupper og kredittknapper er beholdt. Ingen AI-kall eller pasientdata brukt.
+
+
+## 16. oktober 2026 — Priser og Regler
+JavaScript-syntaks, HTML-ID-er, knapprekkefølge og diff kontrollert. Lokal forhåndsvisning kunne ikke åpnes fra sky-nettleseren (connection refused); visuell kontroll av ny versjon gjenstår før publisering. Ingen pasientdata eller betalte API-kall brukt.
