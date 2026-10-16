@@ -109,3 +109,9 @@ OpenAI-notatmodeller vises først i Priser, deretter Soniox tale til tekst. Øvr
 
 ## 16. oktober 2026 — Priser og Regler i venstre knappgruppe
 Priser er flyttet til venstre ved Nøkler og oppsett, før Guide. Ny knapp Regler åpner et eget panel med tomstatus; regelinnhold er ikke spesifisert eller koblet til notatgenereringen.
+
+
+## 16. oktober 2026 — Felles masterstandard for journalføring
+Regler er nå et redigerbart, felles regelsett for alle arbeidsrom i samme nettleser/origin (localStorage nordlys_master_rules_v1). Lagre regler aktiverer endringene fra neste primære notatforespørsel. OpenAI, Mistral, Requesty og Bedrock bruker felles inputfunksjon. Reglene gjelder også når Bruk prompt er av. Masterstandarden prioriteres for dokumentasjonskrav; valgt prompt styrer struktur, språk og presentasjon. Det kreves dekning i kildene, og manglende fakta skal ikke oppfinnes. Dette er modellinstruksjoner, ikke automatisk juridisk validering. Lenker hentes ikke automatisk; brukeren legger inn regelteksten selv.
+Reglene inngår som valgfritt masterRules-felt i samlet kryptert oppsett (nordlys.setup v1). Eldre sikkerhetskopier uten feltet bevarer gjeldende regler ved import. Vanlig prompt-eksport og arbeidsromeksport inkluderer ikke dette globale regelsettet. Regeltekst lagres aldri i Git eller notathistorikk. Ingen reelle regler er lagt inn av utvikleren.
+Auto clear for Supplerende er på ved åpning og gjenoppretting/import av alle arbeidsrom; eldre av-verdier overstyrer ikke standarden. Manuelt avvalg gjelder det åpne arbeidsrommet. Tømming skjer ved Start opptak, med eksisterende datohåndtering.

@@ -2,7 +2,7 @@
   "name": "Nordlys Journal",
   "id": "nordlys-journal",
   "version": "0.1.0",
-  "updated": "2026-09-25",
+  "updated": "2026-10-16",
   "repository": "https://github.com/stavroslitsos/nordlys-webstudio",
   "branch": "main",
   "website": "https://nordlyswebstudio.no/journal/",
@@ -14,7 +14,8 @@
     "transcription": "soniox",
     "region": "eu",
     "notes": "openai-gpt56-sol",
-    "mode": "streaming"
+    "mode": "streaming",
+    "autoClearSupplementary": true
   },
   "backup": {
     "provider": "Google Drive",
@@ -23,5 +24,11 @@
     "passwordManagerSupport": true,
     "userPasswordAutofillVerified": false
   },
-  "sensitiveDataIncluded": false
+  "sensitiveDataIncluded": false,
+  "masterRules": {
+    "scope": "all-primary-note-workspaces-on-origin",
+    "storage": "localStorage",
+    "includedInCombinedEncryptedSetup": true,
+    "promptControlsPresentation": true
+  }
 }

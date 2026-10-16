@@ -248,7 +248,7 @@ async function applyConfig(win, doc, config = {}) {
       dispatchChange(win, el);
     }
   });
-  Object.entries(checks).forEach(([id, checked]) => {
+  Object.entries({ ...checks, autoClearSupplementaryToggle: true }).forEach(([id, checked]) => {
     const el = doc.getElementById(id);
     if (el?.type !== "checkbox") return;
     el.checked = Boolean(checked);

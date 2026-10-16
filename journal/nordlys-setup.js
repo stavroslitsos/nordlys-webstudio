@@ -1,3 +1,4 @@
+import { readMasterRules, saveMasterRules } from './js/core/master-rules.js';
 import { CloudBackupSession } from './js/features/cloud-backup-session.js';
 import { setupBundle, validateSetupBundle } from './nordlys-bundle.js';
 import { addPasswordManagerFields, offerPasswordSave } from './js/features/backup-password-manager.js';
@@ -40,9 +41,10 @@ $('import-keys').addEventListener('click',()=>$('key-file').click());
 $('key-file').addEventListener('change',async()=>{try{const file=$('key-file').files[0];if(!file)return;if(file.size>1000000)throw new Error('Nøkkelfilen er for stor.');const data=JSON.parse(await file.text());if(data.format==='nordlys.keys.v1'){pending=data;openBackup('import');}else fill(data);}catch{status('Kunne ikke lese nøkkelfilen. Bruk JSON fra originalen eller en kryptert Nordlys-fil.');}finally{$('key-file').value='';}});
 $('backup-cancel').addEventListener('click',()=>$('backup-dialog').close());
 $('backup-dialog').addEventListener('close',()=>{$('backup-form').reset();pending=null;});
-function currentBundle(){return setupBundle(values(),$('soniox-region').value,PromptManager.buildPromptExportBundle());}
+function currentBundle(){return setupBundle(values(),$('soniox-region').value,PromptManager.buildPromptExportBundle(),readMasterRules());}
 function applyBundle(data){
  const bundle=validateSetupBundle(data);
+ if(Object.prototype.hasOwnProperty.call(bundle,'masterRules'))saveMasterRules(bundle.masterRules);
  PromptManager.importPromptsFromBundle(bundle.prompts,{confirm:false});
  fill(bundle.keys);$('soniox-region').value=bundle.region;persist();updatePromptCount();
 }

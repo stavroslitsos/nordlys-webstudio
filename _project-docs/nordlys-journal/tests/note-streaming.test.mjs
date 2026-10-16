@@ -86,6 +86,7 @@ async function generate(response, mode = 'streaming') {
   } };
   globalThis.document = { getElementById: (id) => fields[id] };
   globalThis.sessionStorage = { getItem: () => 'synthetic-test-key' };
+  globalThis.localStorage = { getItem: () => 'Syntetisk masterregel: marker manglende opplysninger.' };
   const originalFetch = globalThis.fetch;
   globalThis.fetch = async (_, options) => { request = JSON.parse(options.body); return response; };
   try {
@@ -96,6 +97,8 @@ async function generate(response, mode = 'streaming') {
     assert.equal(fields.supplementaryInfo.value, 'Syntetisk tillegg.');
     assert.equal(request.model, 'gpt-5.6-sol');
     assert.equal(request.store, false);
+    assert.match(request.input[0].content[0].text, /Syntetisk masterregel/);
+    assert.match(request.input[0].content[0].text, /Skriv kort/);
     return { fields, completed, finished };
   } finally { globalThis.fetch = originalFetch; }
 }

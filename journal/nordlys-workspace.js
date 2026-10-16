@@ -89,14 +89,4 @@ function installCompactLabels(){
 }
 installCompactLabels();
 
-// A dedicated rules panel; its contents will be supplied by the user.
-const rulesButton=document.getElementById('btnRules');
-const rulesView=document.getElementById('rulesView');
-rulesButton?.addEventListener('click',()=>{
- for(const id of ['guideView','newsView','pricesView','billingLinksView']){
-  const view=document.getElementById(id);
-  view?.classList.remove('active');view?.setAttribute('aria-hidden','true');
- }
- if(rulesView&&!rulesView.open)rulesView.showModal();
-});
-rulesView?.addEventListener('close',()=>rulesButton?.focus());
+import './js/features/master-rules-ui.js';

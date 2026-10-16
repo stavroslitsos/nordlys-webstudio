@@ -2253,16 +2253,9 @@ import { registerWorkspaceDisposer } from '../core/workspace-disposal.js';
 
     bindSupplementaryStickyDateBlur();
 
-    // Auto-clear toggle (default OFF; persist in localStorage)
-    const AUTO_CLEAR_KEY = 'auto_clear_supplementary';
+    // Always enabled on opening; manual opt-out applies to this open workspace.
     const autoClearToggle = document.getElementById('autoClearSupplementaryToggle');
-    if (autoClearToggle) {
-      const stored = localStorage.getItem(AUTO_CLEAR_KEY);
-      autoClearToggle.checked = stored === '1';
-      autoClearToggle.addEventListener('change', () => {
-        localStorage.setItem(AUTO_CLEAR_KEY, autoClearToggle.checked ? '1' : '0');
-      });
-    }
+    if (autoClearToggle) autoClearToggle.checked = true;
 
     // When enabled: starting a new recording clears + resets Supplementary info,
     // while preserving the sticky date if that toggle is enabled.

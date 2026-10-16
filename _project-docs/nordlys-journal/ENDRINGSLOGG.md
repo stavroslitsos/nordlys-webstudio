@@ -76,3 +76,11 @@ Flyttet OpenAI-notatmodeller og Soniox til toppen av prisoversikten etter bruker
 
 ## 16. oktober 2026 — Priser og Regler i venstre knappgruppe
 Priser er flyttet til venstre ved Nøkler og oppsett, før Guide. Ny knapp Regler åpner et eget panel med tomstatus; regelinnhold er ikke spesifisert eller koblet til notatgenereringen.
+
+
+## 16. oktober 2026 — Felles masterstandard for journalføring
+- Utvidet Regler-panelet med tekstfelt, eksplisitt lagring, lagringsstatus og vern mot overskriving fra en annen fane. Knappgruppen er Nøkler og oppsett, Priser, Regler, før Guide.
+- Knyttet felles masterstandard til alle fire primære notatleverandører. Valgt prompt bestemmer struktur og presentasjon innenfor dokumentasjonskravene.
+- Lagt reglene til i samlet kryptert oppsettseksport, med bakoverkompatibel import.
+- Publiseringsklar Auto clear-standard for Supplerende, tidligere forberedt 15. oktober, er gjenopprettet etter opprydding av midlertidig arbeidsområde.
+- Brukeren bekreftet publisering 16. oktober; den tidligere ventestatusen er opphevet.

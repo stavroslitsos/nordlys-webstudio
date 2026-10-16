@@ -2584,7 +2584,7 @@
           <div class="supp-row-left">
             <div class="auto-clear-toggle" aria-label="Auto clear supplementary information">
               <label class="switch" title="Auto clear">
-                <input id="autoClearSupplementaryToggle" type="checkbox" />
+                <input id="autoClearSupplementaryToggle" type="checkbox" checked />
                 <span class="slider"></span>
               </label>
               <span class="auto-clear-label">Auto clear</span>
@@ -3336,9 +3336,13 @@
   <dialog id="rulesView" aria-labelledby="rulesHeading">
     <div class="nj-rules-heading">
       <h2 id="rulesHeading">Regler</h2>
-      <form method="dialog"><button type="submit" aria-label="Lukk regler">Lukk</button></form>
+      <button id="masterRulesClose" type="button" aria-label="Lukk regler">Lukk</button>
     </div>
-    <p>Ingen regler er lagt inn ennå.</p>
+    <p id="masterRulesDescription">Felles masterstandard for journalføring i alle arbeidsrom. Legg inn relevant lovtekst, føringer og retningslinjer. Valgt prompt styrer journalens overskrifter, oppbygning og presentasjon innenfor disse føringene.</p>
+    <label for="masterRulesText">Lovverk, føringer og retningslinjer</label>
+    <textarea id="masterRulesText" rows="12" maxlength="100000" aria-describedby="masterRulesDescription masterRulesStorage" placeholder="Lim inn selve teksten, gjerne med kilde og dato. Lenker alene blir ikke hentet automatisk."></textarea>
+    <p id="masterRulesStorage">Lagres i denne nettleseren og sendes til valgt notatleverandør sammen med neste notatforespørsel. Tas med i samlet kryptert oppsettseksport fra «Nøkler og oppsett». Legg bare inn generelle regler, ikke pasientopplysninger.</p>
+    <div class="nj-rules-footer"><button id="masterRulesSave" type="button">Lagre regler</button><span id="masterRulesStatus" role="status" aria-live="polite"></span></div>
   </dialog>
   <div id="guideView">
     <button id="guideClose" type="button" aria-label="Close">×</button>

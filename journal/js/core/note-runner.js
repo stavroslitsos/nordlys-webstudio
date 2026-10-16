@@ -1,3 +1,4 @@
+import { readMasterRules, composeMasterNotePrompt } from './master-rules.js';
 // js/core/note-runner.js
 import { registerWorkspaceDisposer } from './workspace-disposal.js';
 
@@ -85,7 +86,7 @@ function buildStandardNotePrompt(promptText) {
     "All headings should be plain text with a colon, like 'Bakgrunn:'."
   ].join("\n");
 
-  return promptText ? `${promptText}\n\n${baseInstruction}` : baseInstruction;
+  return promptText ? `${promptText}\n\nStandard presentation (only where the selected prompt does not specify otherwise):\n${baseInstruction}` : baseInstruction;
 }
 
 function beginNoteRun(runMeta) {
@@ -150,7 +151,14 @@ function resolveCommonNoteInputs(app) {
     return null;
   }
 
-  const promptText = customPromptTextarea ? customPromptTextarea.value : "";
+  let promptText = customPromptTextarea ? customPromptTextarea.value : "";
+  try {
+    promptText = composeMasterNotePrompt(promptText, readMasterRules());
+  } catch (_) {
+    app?.finishNoteGeneration?.();
+    alert("Kunne ikke lese felles regler. Notatgenerering er stoppet slik at masterstandarden ikke utelates. Kontroller lokal lagring og åpne Regler på nytt.");
+    return null;
+  }
   const supplementaryRaw = supplementaryElem?.value?.trim() || "";
 
   return {
