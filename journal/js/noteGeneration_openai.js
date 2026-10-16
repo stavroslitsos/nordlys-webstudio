@@ -13,7 +13,7 @@ import {
   resolveCommonNoteInputs,
   startNoteTimer,
   streamResponsesSse
-} from "./core/note-runner.js?v=20261001-stream-fix";
+} from "./core/note-runner.js?v=20261016-master-rules";
 import {
   DEFAULTS,
   getDefaultOpenAiReasoning,

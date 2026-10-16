@@ -14,7 +14,7 @@ import {
   pushNormalizedNoteUsage,
   resolveCommonNoteInputs,
   startNoteTimer
-} from "./core/note-runner.js";
+} from "./core/note-runner.js?v=20261016-master-rules";
 
 // Only allow known model keys to be sent to the backend.
 // (Prevents weird/stale values from sessionStorage from causing confusing backend errors.)

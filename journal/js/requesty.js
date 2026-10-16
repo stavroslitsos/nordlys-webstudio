@@ -48,7 +48,7 @@ import {
   resolveCommonNoteInputs,
   startNoteTimer,
   streamChatCompletionsSse
-} from "./core/note-runner.js";
+} from "./core/note-runner.js?v=20261016-master-rules";
 import {
   getDefaultRequestyReasoning,
   normalizeRequestyModel,

@@ -1,6 +1,6 @@
 import { readMasterRules, saveMasterRules } from './js/core/master-rules.js';
 import { CloudBackupSession } from './js/features/cloud-backup-session.js';
-import { setupBundle, validateSetupBundle } from './nordlys-bundle.js';
+import { setupBundle, validateSetupBundle } from './nordlys-bundle.js?v=20261016-master-rules';
 import { addPasswordManagerFields, offerPasswordSave } from './js/features/backup-password-manager.js';
 import { PromptCloudBackup } from './js/features/prompt-cloud-backup.js';
 import { encryptKeys, decryptKeys } from './nordlys-crypto.js';

@@ -74,3 +74,5 @@ JavaScript-syntaks, HTML-ID-er, knapprekkefølge og diff kontrollert. Lokal forh
 
 ## 16. oktober 2026 — Felles masterstandard for journalføring
 26 syntetiske tester bestått, inkludert OpenAI streaming/non-streaming med regler i forespørselen, felles regler ved bytte av arbeidsrom, tomt promptvalg, stopp ved utilgjengelig regellagring, kryptert backup-rundtur, eldre backup, ugyldig regeltekst og Auto clear. JavaScript-syntaks og diff kontrollert. Ingen virkelige API-kall, mikrofonopptak eller pasientdata. Bedrock, Mistral og Requesty er kontrollert for bruk av felles inputfunksjon; reelle leverandørkall er ikke testet. Visuell kontroll av publisert panel utføres etter utrulling.
+
+Første utrulling fullført (Pages success). Nettleserkontroll avdekket blanding av nye HTML-filer og gamle moduler i cache. Oppdatert versjonsparameter for berørte arbeidsrom-/oppsettsmoduler og primære notatleverandører.

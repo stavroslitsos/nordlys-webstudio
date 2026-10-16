@@ -1741,7 +1741,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function resolveNoteModulePath(choice) {
-    return resolveNoteModulePathFromRegistry(choice || getSelectedEffectiveNoteProvider());
+    const path = resolveNoteModulePathFromRegistry(choice || getSelectedEffectiveNoteProvider());
+    return path ? `${path}?v=20261016-master-rules` : path;
   }
 
   function resolveNoteInitExportName(choice) {
