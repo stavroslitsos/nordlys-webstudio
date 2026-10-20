@@ -2205,7 +2205,7 @@
 
 </style>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-<link rel="stylesheet" href="./nordlys-workspace.css?v=20261016-helfo-kilder">
+<link rel="stylesheet" href="./nordlys-workspace.css?v=20261020-review">
 </head>
 <body>
   <header class="nordlys-header"><a href="./index.html" class="nordlys-brand">N<span>Nordlys Journal</span></a><span>Arbeidsrom <small>· utviklingsversjon 0.1</small></span><a href="./veiledning.html" target="_blank" rel="noopener">Veiledning</a></header>
@@ -2994,6 +2994,11 @@
             <div id="generatedNoteLiveCounter" class="field-live-counter" aria-live="polite">0 words · 0 tokens</div>
             <textarea id="generatedNote" placeholder="Generated note will appear here..." autocomplete="off"></textarea>
           </div>
+          <section id="noteReviewPanel" class="note-review-panel" aria-labelledby="noteReviewTitle" hidden>
+            <h3 id="noteReviewTitle">Må avklares før signering</h3>
+            <p>Se gjennom og suppler journalnotatet ved behov. Denne seksjonen tas ikke med når du trykker Kopier.</p>
+            <textarea id="noteReviewText" aria-label="Må avklares før signering" autocomplete="off" spellcheck="true"></textarea>
+          </section>
         </div>
         <div class="column">
           <div class="bottom-section-header custom-prompt-header">
@@ -3318,7 +3323,7 @@
 
 
   <!-- Ensure main boot script runs after provider wiring -->
-  <script type="module" src="./js/main.js?v=20261016-helfo-kilder"></script>
+  <script type="module" src="./js/main.js?v=20261020-review"></script>
 
   <!-- Secondary Note Generator (independent generation session beside the
        Recording Transcript). Loads after main.js so window.__app helpers
@@ -3389,15 +3394,15 @@
   <!-- Prompt slot control extracted from inline transcribe.html logic -->
   <script type="module" src="./js/features/prompt-slots-ui.js?v=20261014-quick-slots"></script>
 
-  <!-- Per-workspace history of the 30 most recent successfully generated primary notes -->
-  <script type="module" src="./js/features/note-history.js?v=20261013-shared-history"></script>
+  <!-- Shared history of successfully generated primary notes across workspaces -->
+  <script type="module" src="./js/features/note-history.js?v=20261020-review"></script>
 
   <!-- Page-owned field feedback helpers (kept after main boot on purpose) -->
   <script type="module" src="./js/features/field-feedback.js"></script>
 
 
   <!-- Concurrent preset workspaces, preset backup, and preset toolbar. -->
-  <script type="module" src="./js/features/workspace-presets.js?v=20261016-helfo-kilder"></script>
+  <script type="module" src="./js/features/workspace-presets.js?v=20261020-review"></script>
 
 
 

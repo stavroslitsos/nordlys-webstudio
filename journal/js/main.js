@@ -1,3 +1,4 @@
+import { syncNoteReview, splitNoteReview } from './core/note-review.js?v=20261020-review';
 import { getRecordingLifecycle, requestRecordingAction, resetRecordingLifecycle } from './core/recording-lifecycle.js';
 import { hasNonEmptyText } from './core/text-performance.js';
 import {
@@ -428,12 +429,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getCurrentMiniHubContentText(kind, presetId = '') {
     const managedContent = window.__workspacePresets?.getContent?.(kind, presetId);
-    if (managedContent != null) return String(managedContent);
+    if (managedContent != null) return String(kind || '').toLowerCase() === 'note' ? splitNoteReview(managedContent).note : String(managedContent);
 
     const normalizedKind = String(kind || '').trim().toLowerCase();
     const fieldId = normalizedKind === 'note' ? 'generatedNote' : 'transcription';
     const field = document.getElementById(fieldId);
-    return String(field?.value || '');
+    return normalizedKind === 'note' ? splitNoteReview(field?.value).note : String(field?.value || '');
   }
 
   function bindMiniHubBridge() {
@@ -931,6 +932,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = getApp();
     if (app.noteGenerationInFlight) return null;
 
+    const review = document.getElementById('noteReviewText');
+    const reviewPanel = document.getElementById('noteReviewPanel');
+    if (review) review.value = '';
+    if (reviewPanel) reviewPanel.hidden = true;
     const controller = new AbortController();
     app.noteGenerationInFlight = true;
     app.noteGenerationAbortController = controller;
@@ -1013,9 +1018,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function buildFinishedNoteDetail(meta = {}) {
-    const noteEl = document.getElementById('generatedNote');
-    const text = String(noteEl?.value || '');
+    const separated = syncNoteReview(document);
+    const text = separated.note;
     return {
+      fullText: separated.fullText,
       status: meta?.aborted ? 'aborted' : 'success',
       text,
       textLength: text.length,
@@ -2095,7 +2101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function copyGeneratedNoteToClipboard() {
     const noteEl = document.getElementById('generatedNote');
-    const text = String(noteEl?.value || '').trim();
+    const text = syncNoteReview(document).note.trim();
     if (!text) return false;
 
     const emitCopied = () => {

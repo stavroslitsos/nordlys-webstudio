@@ -1,3 +1,4 @@
+import { syncNoteReview, splitNoteReview } from '../core/note-review.js?v=20261020-review';
 import { addPasswordManagerFields, offerPasswordSave } from "./backup-password-manager.js";
 import { PromptManager } from "../promptManager.js";
 import { PromptCloudBackup } from "./prompt-cloud-backup.js";
@@ -35,7 +36,7 @@ const CHECKBOX_IDS = [
 ];
 
 const DRAFT_FIELD_IDS = [
-  "transcription", "supplementaryInfo", "generatedNote",
+  "transcription", "supplementaryInfo", "generatedNote", "noteReviewText",
   "secondarySourceText", "secondaryGeneratedNote", "redactorTerms",
   "redactorOcrRawOutput", "redactorBirthdateInput",
 ];
@@ -303,6 +304,7 @@ function applyDraft(win, doc, draft) {
     el.value = String(fields[id] ?? "");
     dispatchInput(win, el);
   });
+  syncNoteReview(doc, { replace: !Object.prototype.hasOwnProperty.call(fields, 'noteReviewText') });
 }
 
 function hasDraftText(draft) {
@@ -431,7 +433,8 @@ function initFrameRuntime() {
     },
     getContent(kind) {
       const idForKind = String(kind || "").toLowerCase() === "note" ? "generatedNote" : "transcription";
-      return String(document.getElementById(idForKind)?.value || "");
+      const value = String(document.getElementById(idForKind)?.value || "");
+      return idForKind === "generatedNote" ? splitNoteReview(value).note : value;
     },
     dispose(options = {}) {
       saveDraftNow();
@@ -818,7 +821,7 @@ function initTopLevelManager() {
     frame.allow = "microphone; clipboard-read; clipboard-write";
     const url = new URL(window.location.href);
     url.searchParams.set("workspacePresetFrame", definition.id);
-    url.searchParams.set("workspaceVersion", "20261016-helfo-kilder");
+    url.searchParams.set("workspaceVersion", "20261020-review");
     url.hash = "";
     frame.src = url.toString();
     frameHost.appendChild(frame);
@@ -901,6 +904,7 @@ function initTopLevelManager() {
         transcription: String(entry?.transcript || ""),
         supplementaryInfo: String(entry?.supplementary || ""),
         generatedNote: String(entry?.note || ""),
+        noteReviewText: "",
       },
       preserveSupplementaryDate: true,
       savedAt: new Date().toISOString(),

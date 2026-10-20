@@ -718,7 +718,7 @@ function capturePendingRun() {
 function addFinishedNote(detail) {
   if (detail?.status === "aborted") return;
 
-  const note = String(detail?.text ?? byId("generatedNote")?.value ?? "");
+  const note = String(detail?.fullText ?? detail?.text ?? byId("generatedNote")?.value ?? "");
   const transcript = String(
     state.pendingRun?.transcript ?? byId("transcription")?.value ?? ""
   ).trim();
