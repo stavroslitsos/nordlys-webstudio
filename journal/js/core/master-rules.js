@@ -1,4 +1,4 @@
-import { JOURNAL_STANDARD_TEXT } from './journal-standard.js?v=20261016-helfo-kilder';
+import { JOURNAL_STANDARD_TEXT } from './journal-standard.js?v=20261023-avklaringer';
 // Custom additions are shared across workspaces. Never stored in Git or note history.
 export const MASTER_RULES_KEY = 'nordlys_master_rules_v1';
 export const MASTER_RULES_MAX_LENGTH = 100000;
