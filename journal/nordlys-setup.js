@@ -10,6 +10,7 @@ const $ = id => document.getElementById(id);
 const status = message => { $('setup-status').textContent=message; };
 for (const [key,id] of Object.entries(fields)) $(id).value=sessionStorage.getItem(key)||'';
 $('soniox-region').value=sessionStorage.getItem('soniox_region')||'eu';
+window.addEventListener('nordlys-session-restored',()=>{for(const[key,id]of Object.entries(fields))if(!$(id).value)$(id).value=sessionStorage.getItem(key)||'';$('soniox-region').value=sessionStorage.getItem('soniox_region')||'eu';status('Eksisterende nøkler er hentet automatisk fra en åpen Nordlys-fane.');});
 if (!localStorage.getItem('siteLanguage')) localStorage.setItem('siteLanguage','no');
 function values(){return Object.fromEntries(Object.entries(fields).map(([key,id])=>[key,$(id).value.trim()]));}
 function persist(){

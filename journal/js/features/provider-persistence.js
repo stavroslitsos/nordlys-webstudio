@@ -736,6 +736,11 @@ import {
     });
   }
 
+  window.addEventListener('nordlys-session-restored', () => {
+    const provider = document.getElementById('transcribeProvider')?.value || readSession(STORAGE_KEYS.transcribeProvider, DEFAULTS.transcribeProvider);
+    writeSession(STORAGE_KEYS.activeApiKey, readSession(getTranscribeActiveApiKeyStorageKey(provider)));
+  });
+
   function init() {
     initTranscribeProviderPersistence();
     initNoteProviderPersistence();
