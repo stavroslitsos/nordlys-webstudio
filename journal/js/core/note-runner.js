@@ -82,7 +82,7 @@ function buildSupplementaryWrapped(rawValue) {
 
 function buildStandardNotePrompt(promptText) {
   const baseInstruction = [
-    "Do not use bold text. Do not use asterisks (*) or Markdown formatting anywhere in the output.",
+    "Do not use bold text. Do not use Markdown formatting. A literal asterisk is allowed only for an explicitly confirmed examination footnote.",
     "All headings should be plain text with a colon, like 'Bakgrunn:'."
   ].join("\n");
 
