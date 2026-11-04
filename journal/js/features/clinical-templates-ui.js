@@ -14,7 +14,7 @@ if (field) {
   const selected = () => library.find(row => row.id === select.value);
   let creating = false;
   function editor() {
-    const row = selected(); creating=false; confirmed.checked=false;
+    const row = selected(); creating=false; confirmed.checked=row?.kind==='examination';
     confirmed.parentElement.hidden=row?.kind!=='examination';
     el('clinicalTemplateInsert').disabled=!row;
     el('clinicalTemplateName').value=row?.name||'';
@@ -41,7 +41,7 @@ if (field) {
     const row=selected();if(!row)return;
     field.value=insertTemplate(field.value,row,confirmed.checked);
     field.dispatchEvent(new Event('input',{bubbles:true}));field.dispatchEvent(new Event('change',{bubbles:true}));
-    confirmed.checked=false;status(`${row.name} lagt til i Supplerende informasjon.`);
+    confirmed.checked=row.kind==='examination';status(`${row.name} lagt til i Supplerende informasjon.`);
   });
   el('clinicalTemplateImport').addEventListener('click',()=>el('clinicalTemplateFile').click());
   el('clinicalTemplateFile').addEventListener('change',async event=>{
