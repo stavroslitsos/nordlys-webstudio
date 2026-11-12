@@ -13,7 +13,7 @@ import {
   resolveCommonNoteInputs,
   startNoteTimer,
   streamResponsesSse
-} from "./core/note-runner.js?v=20261016-helfo-kilder";
+} from "./core/note-runner.js?v=20261112-tests-compact";
 import {
   DEFAULTS,
   getDefaultOpenAiReasoning,

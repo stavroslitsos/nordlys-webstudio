@@ -1,4 +1,4 @@
-import { MASTER_RULES_KEY, readMasterRules, saveMasterRules } from '../core/master-rules.js?v=20261016-helfo-kilder';
+import { MASTER_RULES_KEY, readMasterRules, saveMasterRules } from '../core/master-rules.js?v=20261112-tests-compact';
 import { JOURNAL_STANDARD_SECTIONS, JOURNAL_STANDARD_SOURCES } from '../core/journal-standard.js?v=20261023-avklaringer';
 
 const standard = document.getElementById('journalStandard');

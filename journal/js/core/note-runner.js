@@ -1,4 +1,4 @@
-import { readMasterRules, composeMasterNotePrompt } from './master-rules.js?v=20261016-helfo-kilder';
+import { readMasterRules, composeMasterNotePrompt } from './master-rules.js?v=20261112-tests-compact';
 // js/core/note-runner.js
 import { registerWorkspaceDisposer } from './workspace-disposal.js';
 

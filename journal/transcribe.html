@@ -1852,15 +1852,17 @@
     .prompt-quick-slots {
       display: flex;
       align-items: center;
-      gap: 6px;
-      overflow-x: auto;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 3px;
+      overflow-x: visible;
       padding: 1px 0 3px;
-      scrollbar-width: thin;
     }
     .prompt-quick-slot {
       flex: 0 0 auto;
       min-height: 30px;
-      padding: 4px 9px;
+      padding: 4px 6px;
+      margin: 0;
       border: 1px solid #2563eb;
       border-radius: 7px;
       background: transparent;
@@ -3325,7 +3327,7 @@
 
 
   <!-- Ensure main boot script runs after provider wiring -->
-  <script type="module" src="./js/main.js?v=20261020-review"></script>
+  <script type="module" src="./js/main.js?v=20261112-tests-compact"></script>
 
   <!-- Secondary Note Generator (independent generation session beside the
        Recording Transcript). Loads after main.js so window.__app helpers
@@ -3404,11 +3406,11 @@
 
 
   <!-- Concurrent preset workspaces, preset backup, and preset toolbar. -->
-  <script type="module" src="./js/features/workspace-presets.js?v=20261109-sms"></script>
+  <script type="module" src="./js/features/workspace-presets.js?v=20261112-tests-compact"></script>
 
 
 
-<script type="module" src="./nordlys-workspace.js?v=20261030-session"></script>
+<script type="module" src="./nordlys-workspace.js?v=20261112-tests-compact"></script>
 <script type="module" src="./js/features/clinical-templates-ui.js?v=20261104-default-ua"></script>
 </body>
 </html>
