@@ -1748,7 +1748,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function resolveNoteModulePath(choice) {
     const path = resolveNoteModulePathFromRegistry(choice || getSelectedEffectiveNoteProvider());
-    return path ? `${path}?v=20261112-tests-compact` : path;
+    return path ? `${path}?v=20261112-files` : path;
   }
 
   function resolveNoteInitExportName(choice) {

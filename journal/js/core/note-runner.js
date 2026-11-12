@@ -1,4 +1,4 @@
-import { readMasterRules, composeMasterNotePrompt } from './master-rules.js?v=20261112-tests-compact';
+import { readMasterRules, composeMasterNotePrompt } from './master-rules.js?v=20261112-files';
 // js/core/note-runner.js
 import { registerWorkspaceDisposer } from './workspace-disposal.js';
 
@@ -483,4 +483,3 @@ export {
   streamChatCompletionsSse,
   streamResponsesSse
 };
-

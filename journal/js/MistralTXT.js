@@ -10,7 +10,7 @@ import {
   resolveCommonNoteInputs,
   startNoteTimer,
   streamChatCompletionsSse
-} from "./core/note-runner.js?v=20261112-tests-compact";
+} from "./core/note-runner.js?v=20261112-files";
 
 const RUN_META = {
   provider: "mistral",
