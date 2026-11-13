@@ -2603,22 +2603,8 @@
             </span>
           </div>
 
-          <!-- Right side: Redactor toggle + supplementary clear -->
+          <!-- Supplementary attachment and clear controls -->
           <div class="supp-toolbar-right">
-            <button
-              id="toggleRedactorButton"
-              type="button"
-              aria-expanded="false"
-              aria-controls="redactorPane"
-              style="
-                padding: 4px 10px;
-                font-size: 12px;
-                border-radius: 6px;
-                background-color: #2563eb;
-              "
-            >
-              Show redactor
-            </button>
             <button
               id="clearSupplementaryButton"
               type="button"
@@ -2670,104 +2656,7 @@
           </div>
 
 
-          <aside
-            id="redactorPane"
-            class="redactor-pane"
-            hidden
-            aria-hidden="true"
-          >
-            <div class="redactor-header">
-              <div class="redactor-title" id="redactorTitle">Redactor</div>
-            </div>
-            <div class="redactor-help" id="redactorHelp">
-              Add one term per line. General and specific terms are both used when you click Redact, which will redact these terms from both the transcript output field and the supplementary information field. General terms stay while this tab remains open, but clear when the tab is closed.
-            </div>
 
-            <div class="redactor-section">
-              <div class="redactor-section-title" id="redactorOcrSectionTitle">Screenshot → OCR</div>
-              <div class="redactor-mini-help" id="redactorOcrMiniHelp">
-                Use Windows + Shift + S, then click <strong>Paste image</strong>. You can also press <strong>Ctrl + V</strong> while the image frame is focused, or upload an image file.
-              </div>
-              <div class="redactor-image-toolbar">
-                <button id="pasteRedactorImageButton" type="button" class="redactor-button">Paste image</button>
-                <label class="redactor-file-button" for="redactorImageUpload" id="redactorImageUploadLabel">
-                  <span id="redactorImageUploadLabelText">Upload image</span>
-                  <input id="redactorImageUpload" type="file" accept="image/png,image/jpeg,image/webp,image/bmp,image/gif" />
-                </label>
-                <button id="clearRedactorImageButton" type="button" class="redactor-button">Clear image</button>
-                <button id="fetchRedactorImageTextButton" type="button" class="redactor-button">Fetch OCR → Specific</button>
-                <button id="fetchRedactorRawTextButton" type="button" class="redactor-button">Fetch OCR → Raw text</button>
-              </div>
-              <div id="redactorImageFrame" class="redactor-image-frame" tabindex="0" aria-label="OCR image preview. Paste an image here with Ctrl plus V.">
-                <img id="redactorImagePreview" class="redactor-image-preview" alt="OCR screenshot preview" hidden />
-                <div id="redactorImagePlaceholder" class="redactor-image-placeholder">
-                  No image loaded yet. Paste a screenshot here or upload an image.
-                </div>
-              </div>
-            </div>
-
-            <div class="redactor-section">
-              <div class="redactor-fields-grid">
-                <div class="redactor-field-group">
-                  <label for="redactorGeneralTerms" id="redactorGeneralTermsLabel">General terms</label>
-                  <textarea
-                    id="redactorGeneralTerms"
-                    class="compact"
-                    placeholder="General terms (one per line)&#10;e.g. hospital&#10;Name"
-                  ></textarea>
-                  <div class="redactor-inline-actions">
-                    <button id="uploadGeneralTermsButton" type="button" class="redactor-button">Import General.txt</button>
-                    <input id="generalTermsFileInput" type="file" accept=".txt,text/plain" hidden />
-                    <button id="exportGeneralTermsButton" type="button" class="redactor-button">Export General.txt</button>
-                    <button id="clearGeneralTermsButton" type="button" class="redactor-button">Clear general</button>
-                  </div>
-                </div>
-
-                <div class="redactor-field-group">
-                  <label for="redactorTerms" id="redactorSpecificTermsLabel">Specific terms</label>
-                  <textarea
-                    id="redactorTerms"
-                    class="large"
-                    placeholder="Specific terms (one per line)&#10;Ola Nordmann&#10;12345678"
-                  ></textarea>
-                  <div class="redactor-inline-actions">
-                    <button id="clearRedactorButton" type="button" class="redactor-button">Clear specific</button>
-                    <button id="applyRedactionButton" type="button" class="redactor-button">Redact</button>
-                    <button id="downloadTranscriptButton" type="button" class="redactor-button">Download transcript</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="redactor-field-group" style="margin-top: 12px;">
-                <label for="redactorOcrRawOutput" id="redactorOcrRawOutputLabel">OCR raw text</label>
-                <textarea
-                  id="redactorOcrRawOutput"
-                  class="compact"
-                  placeholder="Raw OCR text appears here without formatting or cleanup. Useful when you just want to copy the transcription."
-                ></textarea>
-                <div class="redactor-inline-actions">
-                  <button id="copyRedactorRawOutputButton" type="button" class="redactor-button">Copy raw</button>
-                  <button id="clearRedactorRawOutputButton" type="button" class="redactor-button">Clear raw</button>
-                </div>
-              </div>
-
-              <div style="margin-top: 12px;">
-                <div class="redactor-birthdate-label" id="redactorBirthdateLabel">Birthdate helper</div>
-                <div class="redactor-birthdate-row">
-                  <input
-                    id="redactorBirthdateInput"
-                    type="text"
-                    inputmode="numeric"
-                    maxlength="10"
-                    placeholder="DDMMYY, e.g. 180289"
-                  />
-                  <button id="addBirthdateFormatsButton" type="button" class="redactor-button">Add dates</button>
-                </div>
-              </div>
-            </div>
-
-            <div id="redactorStatus" class="redactor-status" aria-live="polite"></div>
-          </aside>
         </div>
 
         </section>
@@ -3394,7 +3283,7 @@
   <script type="module" src="./js/features/prices-overlay.js?v=20261001-order"></script>
 
 
-  <script type="module" src="./js/features/editor-tools.js?v=20261016-helfo-kilder"></script>
+  <script type="module" src="./js/features/editor-tools.js?v=20261113-no-redactor"></script>
   <!-- Prompt slot control extracted from inline transcribe.html logic -->
   <script type="module" src="./js/features/prompt-slots-ui.js?v=20261014-quick-slots"></script>
 
@@ -3406,12 +3295,12 @@
 
 
   <!-- Concurrent preset workspaces, preset backup, and preset toolbar. -->
-  <script type="module" src="./js/features/workspace-presets.js?v=20261112-files"></script>
+  <script type="module" src="./js/features/workspace-presets.js?v=20261113-no-redactor"></script>
 
 
 
 <script type="module" src="./nordlys-workspace.js?v=20261112-tests-compact"></script>
 <script type="module" src="./js/features/clinical-templates-ui.js?v=20261104-default-ua"></script>
-<script type="module" src="./js/features/supplementary-files-ui.js?v=20261112-files"></script>
+<script type="module" src="./js/features/supplementary-files-ui.js?v=20261113-no-redactor"></script>
 </body>
 </html>

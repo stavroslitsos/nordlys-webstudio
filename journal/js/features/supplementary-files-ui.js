@@ -1,12 +1,12 @@
 import { PAGE_LIMIT, fileKind, pdfText, sourceBlock, appendSource } from '../core/supplementary-files.js?v=20261112-files';
 import { registerWorkspaceDisposer } from '../core/workspace-disposal.js';
 const field = document.getElementById('supplementaryInfo');
-const toggle = document.getElementById('toggleRedactorButton');
-if (field && toggle) {
+const clear = document.getElementById('clearSupplementaryButton');
+if (field && clear) {
   const button = document.createElement('button');
   button.type='button';button.id='supplementaryFileButton';button.textContent='Legg ved fil';
   button.style.cssText='padding:4px 10px;font-size:12px;border-radius:6px;background:#2563eb';
-  toggle.after(button);
+  clear.before(button);
   const input=document.createElement('input');input.type='file';input.multiple=true;input.hidden=true;
   input.accept='.pdf,.png,.jpg,.jpeg,.webp,.bmp,.gif,.txt,.md,.csv,.json,text/plain,application/pdf,image/png,image/jpeg';
   input.id='supplementaryFileInput';button.after(input);
