@@ -1,6 +1,7 @@
+import { readPortableSettings, applyPortableSettings } from './js/core/portable-settings.js?v=20261125-complete';
 import { readMasterRules, saveMasterRules } from './js/core/master-rules.js?v=20261016-helfo-kilder';
 import { CloudBackupSession } from './js/features/cloud-backup-session.js';
-import { setupBundle, validateSetupBundle } from './nordlys-bundle.js?v=20261016-helfo-kilder';
+import { setupBundle, validateSetupBundle } from './nordlys-bundle.js?v=20261125-complete';
 import { addPasswordManagerFields, offerPasswordSave } from './js/features/backup-password-manager.js';
 import { PromptCloudBackup } from './js/features/prompt-cloud-backup.js';
 import { encryptKeys, decryptKeys } from './nordlys-crypto.js';
@@ -42,9 +43,10 @@ $('import-keys').addEventListener('click',()=>$('key-file').click());
 $('key-file').addEventListener('change',async()=>{try{const file=$('key-file').files[0];if(!file)return;if(file.size>1000000)throw new Error('Nøkkelfilen er for stor.');const data=JSON.parse(await file.text());if(data.format==='nordlys.keys.v1'){pending=data;openBackup('import');}else fill(data);}catch{status('Kunne ikke lese nøkkelfilen. Bruk JSON fra originalen eller en kryptert Nordlys-fil.');}finally{$('key-file').value='';}});
 $('backup-cancel').addEventListener('click',()=>$('backup-dialog').close());
 $('backup-dialog').addEventListener('close',()=>{$('backup-form').reset();pending=null;});
-function currentBundle(){return setupBundle(values(),$('soniox-region').value,PromptManager.buildPromptExportBundle(),readMasterRules());}
+function currentBundle(){return setupBundle(values(),$('soniox-region').value,PromptManager.buildPromptExportBundle(),readMasterRules(),readPortableSettings());}
 function applyBundle(data){
  const bundle=validateSetupBundle(data);
+ if(bundle.settings){applyPortableSettings(bundle.settings);window.dispatchEvent(new Event('nordlys-settings-imported'));}
  if(Object.prototype.hasOwnProperty.call(bundle,'masterRules'))saveMasterRules(bundle.masterRules);
  PromptManager.importPromptsFromBundle(bundle.prompts,{confirm:false});
  fill(bundle.keys);$('soniox-region').value=bundle.region;persist();updatePromptCount();
@@ -52,6 +54,7 @@ function applyBundle(data){
 function updatePromptCount(){
  const bundle=PromptManager.buildPromptExportBundle();
  $('setup-prompt-count').textContent=Object.values(bundle.slots).filter(text=>text.trim()).length+' av 20 utfylt';
+ const count=document.getElementById('setup-template-count');if(count)count.textContent=readPortableSettings().templates.length+' maler og fraser';
 }
 $('setup-import-prompts').addEventListener('click',()=>$('setup-prompt-file').click());
 $('setup-prompt-file').addEventListener('change',async()=>{
@@ -75,10 +78,10 @@ $('backup-form').addEventListener('submit',async event=>{
     await PromptCloudBackup.saveEncryptedSetup(token,payload);
     const restored=validateSetupBundle(await decryptKeys(await PromptCloudBackup.loadEncryptedSetup(token),pass));
     if(JSON.stringify(restored)!==JSON.stringify(bundle))throw new Error('Kontroll av samlet kopi mislyktes.');
-    persist();status('Nøkler og prompter er lagret sammen i Google Drive. Gjenoppretting er kontrollert.');
+    persist();CloudBackupSession.unlock('googleDrive',pass);status(`Hele oppsettet er lagret i Google Drive: nøkler, prompter, regler, ${bundle.settings.templates.length} maler/fraser og ${bundle.settings.workspaces.length} arbeidsrom. Gjenoppretting er kontrollert.`);
    }else{
     const combined=await PromptCloudBackup.loadEncryptedSetup(token);
-    if(combined){applyBundle(await decryptKeys(combined,pass));status('Nøkler og prompter er hentet sammen. Åpne arbeidsrommet.');}
+    if(combined){const data=await decryptKeys(combined,pass);applyBundle(data);CloudBackupSession.unlock('googleDrive',pass);status(data.settings?.templates ? 'Samlet oppsett er hentet. Maler og fraser fra kopien er lagt til. Åpne arbeidsrommet.' : 'Eldre oppsett er hentet. Kopien inneholder ikke maler/fraser; lokale maler er beholdt. Eksporter samlet oppsett fra maskinen med malbiblioteket for å ta det med.');}
     else{
      const keys=await decryptKeys(await PromptCloudBackup.loadEncryptedKeys(token),pass);
      let legacy;
@@ -114,8 +117,8 @@ async function openDriveKeys(exporting) {
   await PromptCloudBackup.prepareGoogleSignIn();
   openBackup(exporting?'export':'import');
   $('backup-dialog').dataset.mode=exporting?'drive-export':'drive-import';
-  $('backup-title').textContent=exporting?'Lagre nøkler og prompter':'Hent nøkler og prompter';
-  $('backup-description').textContent=exporting?'Minst 12 tegn. Nøkler og prompter lagres i én kryptert kopi. Forrige samlede kopi erstattes; gamle separate kopier beholdes.':'Skriv inn passordet til det samlede oppsettet. Ved første overgang fra eldre kopier bruker du nøkkelkopiens passord. Import erstatter nøkler og prompter i denne nettleseren.';
+  $('backup-title').textContent=exporting?'Lagre hele oppsettet':'Hent hele oppsettet';
+  $('backup-description').textContent=exporting?'Minst 12 tegn. Nøkler, prompter, regler, maler, fraser og arbeidsrom lagres i én kryptert kopi. Forrige samlede kopi erstattes; gamle separate kopier beholdes.':'Skriv inn passordet til det samlede oppsettet. Ved første overgang fra eldre kopier bruker du nøkkelkopiens passord. Import gjenoppretter oppsettet. Malbiblioteket slås sammen med lokale maler.';
   $('backup-submit').textContent=exporting?'Lagre i Google Drive':'Hent fra Google Drive';
   status('');
  } catch(error){status(error.message);}

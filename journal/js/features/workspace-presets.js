@@ -1,3 +1,4 @@
+import { readPortableSettings, applyPortableSettings, validatePortableSettings } from '../core/portable-settings.js?v=20261125-complete';
 import { syncNoteReview, splitNoteReview } from '../core/note-review.js?v=20261020-review';
 import { addPasswordManagerFields, offerPasswordSave } from "./backup-password-manager.js";
 import { PromptManager } from "../promptManager.js";
@@ -103,7 +104,7 @@ const TEXT = {
     jsonExport: "Eksporter som JSON-fil", jsonImport: "Importer fra JSON-fil",
     oneDriveExport: "Eksporter til Microsoft OneDrive", oneDriveImport: "Importer fra Microsoft OneDrive",
     googleExport: "Eksporter til Google Drive", googleImport: "Importer fra Google Drive",
-    exportNotice: "Eksporterer alle Workspaces i Workspace set-et, inkludert valgte prompts, modeller og workflow-innstillinger. Tekst i vinduene, historikk, opptak, API-nøkler og pasientopplysninger tas ikke med.",
+    exportNotice: "Eksporterer alle Workspaces i Workspace set-et, inkludert valgte prompts, modeller, workflow-innstillinger, maler og fraser. Tekst i vinduene, historikk, opptak, API-nøkler og pasientopplysninger tas ikke med.",
     importNotice: "Velg et tidligere eksportert Workspace set. Importerte Workspaces starter med tomme tekstfelt og bruker fanens felles historikk.",
     password: "Krypteringspassord", repeat: "Gjenta passord",
     passwordMin: "Bruk et passord med minst 10 tegn.", mismatch: "Passordene er ikke like.",
@@ -821,7 +822,7 @@ function initTopLevelManager() {
     frame.allow = "microphone; clipboard-read; clipboard-write";
     const url = new URL(window.location.href);
     url.searchParams.set("workspacePresetFrame", definition.id);
-    url.searchParams.set("workspaceVersion", "20261113-no-redactor");
+    url.searchParams.set("workspaceVersion", "20261125-complete");
     url.hash = "";
     frame.src = url.toString();
     frameHost.appendChild(frame);
@@ -1479,6 +1480,7 @@ function initTopLevelManager() {
         config: sanitizeConfig(item.config),
       })),
       prompts,
+      library: { templates: readPortableSettings().templates },
     };
   }
 
@@ -1516,7 +1518,7 @@ function initTopLevelManager() {
       const n = Number(slot); if (!Number.isInteger(n) || n < 1 || n > 20) return;
       prompts[String(n)] = { text: String(item?.text || "").slice(0, 100000), label: String(item?.label || "").slice(0, 120) };
     });
-    return { presets, prompts, promptProfileId: String(bundle.promptProfileId || "") };
+    return { presets, prompts, promptProfileId: String(bundle.promptProfileId || ""), ...(bundle.library ? {library:validatePortableSettings(bundle.library)} : {}) };
   }
 
   function importPromptDependencies(prompts) {
@@ -1543,6 +1545,7 @@ function initTopLevelManager() {
     if (mode === "replace" && confirmReplace && !window.confirm(t().replaceWarning)) return false;
     workspaceMutationPending = true;
     try {
+    if(validated.library){applyPortableSettings(validated.library);window.dispatchEvent(new Event("nordlys-settings-imported"));}
     if (importPrompts) importPromptDependencies(validated.prompts);
     if (mode === "replace") {
       const oldRuntimes = [...runtimes.values()];
